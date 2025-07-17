@@ -20,7 +20,7 @@ const HeroSection = () => {
       }}
     >
       {/* Background overlay - reduced darkness */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-indigo-50/30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/15 to-indigo-50/20 z-0"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-10">
@@ -38,7 +38,7 @@ const HeroSection = () => {
             in the Age of AI
           </h1>
           
-          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg">
+          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-bold leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg">
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
