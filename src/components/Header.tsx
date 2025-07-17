@@ -19,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 font-roboto">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/30 font-roboto">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -31,7 +31,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-lg font-bold text-gray-900 leading-tight">
+            <div className="text-lg font-bold text-white leading-tight drop-shadow-lg">
               <div>Dharmaduta</div>
               <div>Services LLP</div>
             </div>
@@ -44,7 +44,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm text-gray-600 hover:text-orange-500 font-normal transition-colors duration-200"
+                  className="text-sm text-white/90 hover:text-white font-normal transition-colors duration-200 drop-shadow-md"
                 >
                   {item.label}
                 </button>
@@ -52,7 +52,7 @@ const Header = () => {
             </nav>
             <Button 
               onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
             >
               Contact Us
             </Button>
@@ -60,26 +60,26 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-white/20 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-gray-700" />
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
+              <Menu className="w-6 h-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 bg-white">
+          <div className="md:hidden py-4 border-t border-white/30 bg-white/10 backdrop-blur-md">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left text-gray-600 hover:text-orange-500 font-normal py-2 transition-colors duration-200"
+                  className="text-left text-white/90 hover:text-white font-normal py-2 transition-colors duration-200"
                 >
                   {item.label}
                 </button>
@@ -87,7 +87,7 @@ const Header = () => {
               <div className="pt-4">
                 <Button 
                   onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
                 >
                   Contact Us
                 </Button>
