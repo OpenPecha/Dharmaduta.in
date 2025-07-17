@@ -22,8 +22,19 @@ const CorePillarsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-teal-500 to-green-500 font-inter">
-      <div className="container mx-auto px-6">
+    <section 
+      className="py-24 font-inter relative"
+      style={{
+        backgroundImage: `url('/lovable-uploads/6e98b5ac-8be2-4c1b-950e-ae35927b6515.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
