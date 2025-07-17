@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -23,12 +22,12 @@ const Header = () => {
 
   const headerBgClass = isMainPage 
     ? "bg-white/20 backdrop-blur-md border-b border-white/30" 
-    : "bg-gray-900/20 backdrop-blur-md border-b border-gray-300/30";
+    : "bg-gray-200/80 backdrop-blur-md border-b border-gray-300/30";
 
   const textColorClass = isMainPage ? "text-white" : "text-gray-900";
   const logoTextClass = isMainPage ? "text-white" : "text-gray-900";
-  const hoverBgClass = isMainPage ? "hover:bg-white/20" : "hover:bg-gray-200/20";
-  const mobileBgClass = isMainPage ? "bg-white/10" : "bg-gray-900/10";
+  const hoverBgClass = isMainPage ? "hover:bg-white/20" : "hover:bg-gray-300/20";
+  const mobileBgClass = isMainPage ? "bg-white/10" : "bg-gray-200/90";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass} font-roboto`}>
