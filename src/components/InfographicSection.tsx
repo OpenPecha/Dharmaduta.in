@@ -1,36 +1,37 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart3, Cog, TrendingUp, Trophy } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Eye, Target, Cog, Layers } from "lucide-react";
 
 const InfographicSection = () => {
   const steps = [
     {
-      icon: BarChart3,
-      title: "Planning",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
-      bgColor: "bg-yellow-50",
-      iconColor: "text-gray-700"
+      icon: Eye,
+      title: "Strategic",
+      description: "We are more than a data labelling service. We bring Industry-tested SMEs, provide training data strategy, and understand the data security and training requirements needed to deliver better client outcomes.",
+      bgColor: "bg-blue-100",
+      iconColor: "text-blue-600"
+    },
+    {
+      icon: Target,
+      title: "Reliable",
+      description: "Our global workforce allows us to deliver high quality work 365 days a year, across 100's and 1000's of data labelers across multiple countries and time zones. With 24/7 coverage, we are agile in responding to changing project needs.",
+      bgColor: "bg-purple-100",
+      iconColor: "text-purple-600"
     },
     {
       icon: Cog,
-      title: "Process",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
-      bgColor: "bg-gray-200",
-      iconColor: "text-gray-700"
+      title: "Consistent",
+      description: "We are lifetime project partners. Your assigned team will stay with you - no rotation. And as your team becomes experts over time, they train more labelers. That's how we achieve scale.",
+      bgColor: "bg-teal-100",
+      iconColor: "text-teal-600"
     },
     {
-      icon: TrendingUp,
-      title: "Growth",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
-      bgColor: "bg-yellow-50",
-      iconColor: "text-gray-700"
-    },
-    {
-      icon: Trophy,
-      title: "Success",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
-      bgColor: "bg-gray-200",
-      iconColor: "text-gray-700"
+      icon: Layers,
+      title: "Flexible",
+      description: "We are platform agnostic. We don't force you to use our tools, we integrate with the technology stack that works best for your project.",
+      bgColor: "bg-green-100",
+      iconColor: "text-green-600"
     }
   ];
 
@@ -40,9 +41,8 @@ const InfographicSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">INFOGRAPHIC</span>
+              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Why choose DDD?</span>
             </h3>
-            <p className="text-lg text-gray-500 uppercase tracking-wider">DESIGN TEMPLATE</p>
           </div>
           
           <div className="relative">
@@ -79,6 +79,15 @@ const InfographicSection = () => {
                 </Card>
               ))}
             </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
+            >
+              LEARN MORE ABOUT DDD
+            </Button>
           </div>
         </div>
       </div>
