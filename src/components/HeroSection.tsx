@@ -19,8 +19,8 @@ const HeroSection = () => {
         paddingTop: '0'
       }}
     >
-      {/* Background overlay - made darker for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-indigo-900/40 z-0"></div>
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/40 to-indigo-50/60 z-0"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-10">
