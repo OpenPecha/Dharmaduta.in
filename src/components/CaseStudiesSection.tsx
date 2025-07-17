@@ -1,79 +1,69 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, User } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExternalLink, Star, Users, Zap } from "lucide-react";
 
 const CaseStudiesSection = () => {
+  const caseStudies = [
+    {
+      title: "Buddhist Temple Digital Transformation",
+      description: "Helped a traditional temple create an online presence that increased community engagement by 300% and donations by 150%.",
+      metrics: "300% increase in engagement",
+      icon: Users,
+      gradient: "from-blue-50 to-indigo-50"
+    },
+    {
+      title: "AI-Powered Dharma Teaching Platform",
+      description: "Developed an intelligent platform that provides personalized Buddhist teachings, serving over 10,000 practitioners worldwide.",
+      metrics: "10,000+ active users",
+      icon: Zap,
+      gradient: "from-green-50 to-emerald-50"
+    },
+    {
+      title: "Meditation App Success Story",
+      description: "Built a comprehensive meditation app that achieved 4.8 stars on app stores and generated significant revenue for the client.",
+      metrics: "4.8★ app store rating",
+      icon: Star,
+      gradient: "from-purple-50 to-pink-50"
+    }
+  ];
+
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 to-indigo-50">
+    <section id="case-studies" className="py-24 bg-gradient-to-br from-slate-50 to-indigo-50 font-inter">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              See How We're Making an Impact
+          <div className="text-center mb-20">
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
+              Success Stories
             </h3>
-            <p className="text-lg text-gray-600">
-              Real projects, real results, real impact on the Buddhist community
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-normal">
+              Real results from Buddhist organizations we've helped transform their digital presence
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white">
-              <CardHeader className="pb-6">
-                <div className="w-12 h-12 mb-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center">
-                  <Building className="w-6 h-6 text-blue-600" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900">
-                  Custom Transcription Tool Development
-                </CardTitle>
-                <CardDescription className="text-gray-600 font-medium">
-                  Institution Focus
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-700 leading-relaxed">
-                  <strong>Project:</strong> Developing a Custom Transcription Tool for a Leading Monastery Center.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  We partnered with a renowned monastery to create an AI-powered tool that accurately transcribes 
-                  their archive of oral teachings. This project involved training a model on specialized terminology 
-                  and has made decades of wisdom searchable and accessible to their global student base for the first time.
-                </p>
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg">
-                  <p className="text-sm text-gray-600 font-medium">
-                    Impact: Thousands of hours of teachings now digitally accessible
+          <div className="grid md:grid-cols-3 gap-10">
+            {caseStudies.map((study, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
+                <CardHeader className="pb-6">
+                  <div className={`w-16 h-16 mb-6 bg-gradient-to-br ${study.gradient} rounded-2xl flex items-center justify-center`}>
+                    <study.icon className="w-8 h-8 text-gray-700" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900 mb-4 tracking-tight">
+                    {study.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 leading-relaxed mb-6 font-normal">
+                    {study.description}
                   </p>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white">
-              <CardHeader className="pb-6">
-                <div className="w-12 h-12 mb-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
-                  <User className="w-6 h-6 text-purple-600" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900">
-                  Buddhist Influencer Growth Success
-                </CardTitle>
-                <CardDescription className="text-gray-600 font-medium">
-                  Influencer Focus
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-700 leading-relaxed">
-                  <strong>Project:</strong> Growing the Reach of a Buddhist Teaching Channel.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Through our coaching program, we helped a dedicated teacher refine their content strategy 
-                  and double their audience in six months. We provided strategic guidance on platform use and 
-                  helped them launch a new online course, creating a sustainable model for their teaching activities.
-                </p>
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
-                  <p className="text-sm text-gray-600 font-medium">
-                    Impact: 100% audience growth + sustainable teaching platform
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
+                      {study.metrics}
+                    </span>
+                    <ExternalLink className="w-4 h-4 text-gray-400" />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

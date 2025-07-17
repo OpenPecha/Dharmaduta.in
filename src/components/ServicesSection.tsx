@@ -1,104 +1,84 @@
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Crown, Settings } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Bot, Database, TrendingUp, Code, Brain, Globe } from "lucide-react";
 
 const ServicesSection = () => {
+  const services = [
+    {
+      icon: Bot,
+      title: "AI Development",
+      description: "Custom AI solutions tailored for Buddhist organizations and communities.",
+      gradient: "from-blue-100 to-indigo-100",
+      iconColor: "text-blue-600"
+    },
+    {
+      icon: Database,
+      title: "Data Services",
+      description: "Comprehensive data preparation and management for Buddhist texts and resources.",
+      gradient: "from-green-100 to-emerald-100",
+      iconColor: "text-green-600"
+    },
+    {
+      icon: TrendingUp,
+      title: "Digital Marketing",
+      description: "Strategic marketing solutions to amplify your Buddhist message online.",
+      gradient: "from-purple-100 to-pink-100",
+      iconColor: "text-purple-600"
+    },
+    {
+      icon: Code,
+      title: "Web Development",
+      description: "Modern, responsive websites and applications for Buddhist organizations.",
+      gradient: "from-orange-100 to-red-100",
+      iconColor: "text-orange-600"
+    },
+    {
+      icon: Brain,
+      title: "Consulting",
+      description: "Expert guidance on integrating technology with Buddhist practices.",
+      gradient: "from-teal-100 to-cyan-100",
+      iconColor: "text-teal-600"
+    },
+    {
+      icon: Globe,
+      title: "Community Building",
+      description: "Platform development for fostering online Buddhist communities.",
+      gradient: "from-violet-100 to-purple-100",
+      iconColor: "text-violet-600"
+    }
+  ];
+
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-24 bg-white font-inter">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            
-            {/* Buddhist Institutions */}
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gradient-to-br from-indigo-50 to-white">
-              <CardHeader className="text-center pb-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full flex items-center justify-center">
-                  <Settings className="w-8 h-8 text-indigo-600" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
-                  For Buddhist Institutions
-                </CardTitle>
-                <CardDescription className="text-lg text-gray-600 font-medium">
-                  Buddhist Tech Services
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent className="space-y-6">
-                <h3 className="text-xl font-semibold text-gray-900 text-center">
-                  Onboard AI to Amplify Your Mission
-                </h3>
-                
-                <p className="text-gray-700 leading-relaxed">
-                  Your institution excels at sharing Buddhist wisdom. To multiply that impact, we build a dedicated team around your vision, uniting your people with our specialists and open-source contributors. When you partner with us, you're not just building a tool for your institution; you are investing in the entire Buddhist open-source ecosystem.
-                </p>
-                
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-900">Services Offered:</h4>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span><strong>Open-Source Buddhist AI Projects:</strong> Custom AI-powered translation tools, oral teaching transcription services, and OCR, editing, and study tools for your texts.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span><strong>Open Data Annotation & Sangha Sourcing:</strong> Transcribe, edit, and translate teachings through our unique "Sangha Sourcing" model, providing meaningful work to dedicated practitioners.</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="pt-4">
-                  <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium py-3">
-                    Partner With Us
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* Individuals */}
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gradient-to-br from-purple-50 to-white">
-              <CardHeader className="text-center pb-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
-                  <Crown className="w-8 h-8 text-purple-600" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
-                  For Individuals
-                </CardTitle>
-                <CardDescription className="text-lg text-gray-600 font-medium">
-                  Buddhist Influencer Coaching
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent className="space-y-6">
-                <h3 className="text-xl font-semibold text-gray-900 text-center">
-                  Grow Your Audience, Deepen Your Impact
-                </h3>
-                
-                <p className="text-gray-700 leading-relaxed">
-                  You have a powerful message to share. We help you refine it, grow your following, and build a sustainable platform for your work. Our coaching combines modern marketing strategies with a deep understanding of the Dharma, training you to leverage specialized AI and Buddhist technology.
-                </p>
-                
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-900">Services Offered:</h4>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span><strong>Influencer Training:</strong> Learn how to create compelling content, engage your audience authentically, and navigate the digital landscape effectively.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span><strong>Project Incubation:</strong> We provide mentorship, strategic planning, and network access needed to take your Dharma project from idea to successful launch.</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="pt-4">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-3">
-                    Start Growing
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="text-center mb-20">
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+              Our Services
+            </h3>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-normal">
+              Comprehensive solutions to help Buddhist organizations thrive in the digital landscape
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <Card key={service.title} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-white via-white to-gray-50">
+                <CardHeader className="text-center pb-6">
+                  <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center`}>
+                    <service.icon className={`w-8 h-8 ${service.iconColor}`} />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900 mb-4 tracking-tight">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 leading-relaxed font-normal">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
