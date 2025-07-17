@@ -39,22 +39,43 @@ const InfographicSection = () => {
     {
       icon: Database,
       title: "Enterprise-grade AI Grounded in Authentic Tradition",
-      description: "We are a Buddhist tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native Tibetan programmers and developers work in direct collaboration with a vast network of Buddhist specialists in monasteries and nunneries, ensuring every solution we create is built with deep respect and integrity.",
-      iconColor: "text-orange-500"
+      description: "We are a tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native programmers and developers work in direct collaboration with a vast network of specialists.",
+      color: "teal"
     },
     {
       icon: Users,
       title: "Committed to a Collaborative & Open Future",
-      description: "We believe the future of digital Buddhism must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to the OpenPecha project in order to prevent duplicated efforts and save valuable community resources. We aim at dramatically increasing the footprint of Buddhist data online, to ensure AI systems can learn from and share Buddhist wisdom accurately.",
-      iconColor: "text-orange-500"
+      description: "We believe the future of digital solutions must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to open projects.",
+      color: "lime"
     },
     {
       icon: BookOpen,
-      title: "Empowering Buddhist communities",
-      description: "Think of us as your personal technology partner. We don't just deliver a product, we build your team's capacity. Our primary focus is to install lasting innovation capabilities, ensuring your Buddhist activities can thrive with independence and impact for years to come.",
-      iconColor: "text-orange-500"
+      title: "Empowering Communities",
+      description: "Think of us as your personal technology partner. We don't just deliver a product, we build your team's capacity. Our primary focus is to install lasting innovation capabilities.",
+      color: "orange"
     }
   ];
+
+  const getColorClasses = (color: string) => {
+    const colorMap = {
+      teal: {
+        pillar: "bg-teal-500",
+        roof: "border-teal-600",
+        base: "bg-teal-600"
+      },
+      lime: {
+        pillar: "bg-lime-500", 
+        roof: "border-lime-600",
+        base: "bg-lime-600"
+      },
+      orange: {
+        pillar: "bg-orange-500",
+        roof: "border-orange-600", 
+        base: "bg-orange-600"
+      }
+    };
+    return colorMap[color as keyof typeof colorMap];
+  };
 
   return (
     <section className="py-24 bg-white font-inter">
@@ -103,7 +124,7 @@ const InfographicSection = () => {
             </div>
           </div>
 
-          {/* Second Section - Our Three Core Pillars with Temple Design */}
+          {/* Second Section - Our Three Core Pillars */}
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               <span className="bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">Our Three Core Pillars</span>
@@ -113,49 +134,76 @@ const InfographicSection = () => {
             </p>
           </div>
 
-          {/* Temple Structure */}
-          <div className="relative bg-teal-500 rounded-lg overflow-hidden mb-16">
-            {/* Temple Roof/Top */}
-            <div className="bg-gradient-to-b from-gray-200 to-gray-300 h-8 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
-              {/* Decorative corners */}
-              <div className="absolute top-0 left-0 w-8 h-8 bg-teal-500 transform rotate-45 -translate-x-4 -translate-y-4"></div>
-              <div className="absolute top-0 right-0 w-8 h-8 bg-teal-500 transform rotate-45 translate-x-4 -translate-y-4"></div>
-            </div>
-
-            {/* Main Temple Body */}
-            <div className="bg-gray-100 relative">
-              <div className="grid grid-cols-3 min-h-[400px]">
-                {corePillars.map((pillar, index) => (
-                  <div key={pillar.title} className="relative">
-                    {/* Pillar Column (Teal Separator) */}
-                    {index < 2 && (
-                      <div className="absolute right-0 top-0 bottom-0 w-8 bg-teal-500 z-10"></div>
-                    )}
-                    
-                    {/* Content Area */}
-                    <div className="p-8 bg-white h-full flex flex-col items-center justify-center text-center relative z-0">
-                      <div className="mb-6">
-                        <pillar.icon className={`w-16 h-16 ${pillar.iconColor} mx-auto`} />
-                      </div>
-                      <h4 className="text-lg font-bold text-gray-900 mb-4 leading-tight">
-                        {pillar.title}
-                      </h4>
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        {pillar.description}
-                      </p>
+          {/* Three Pillars Architectural Design */}
+          <div className="relative max-w-5xl mx-auto mb-16">
+            {/* Main Roof Structure */}
+            <div className="relative mb-8">
+              {/* Large Triangle Roof */}
+              <div className="w-full h-24 relative">
+                <div 
+                  className="absolute inset-0 bg-gradient-to-r from-slate-600 via-slate-700 to-slate-600"
+                  style={{
+                    clipPath: "polygon(10% 100%, 50% 0%, 90% 100%)"
+                  }}
+                ></div>
+                {/* Roof Text */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h4 className="text-white font-bold text-lg tracking-wide">DHARMADUTA FOUNDATION</h4>
+                </div>
+              </div>
+              
+              {/* Small Roof Caps for each pillar */}
+              <div className="grid grid-cols-3 gap-8 mt-2">
+                {corePillars.map((pillar, index) => {
+                  const colors = getColorClasses(pillar.color);
+                  return (
+                    <div key={index} className="relative">
+                      <div 
+                        className={`h-4 ${colors.roof}`}
+                        style={{
+                          clipPath: "polygon(20% 100%, 50% 0%, 80% 100%)"
+                        }}
+                      ></div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
-            {/* Temple Foundation/Base */}
-            <div className="bg-gradient-to-t from-gray-200 to-gray-300 h-8 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
-              {/* Decorative corners */}
-              <div className="absolute bottom-0 left-0 w-8 h-8 bg-teal-500 transform rotate-45 -translate-x-4 translate-y-4"></div>
-              <div className="absolute bottom-0 right-0 w-8 h-8 bg-teal-500 transform rotate-45 translate-x-4 translate-y-4"></div>
+            {/* Three Pillars */}
+            <div className="grid grid-cols-3 gap-8">
+              {corePillars.map((pillar, index) => {
+                const colors = getColorClasses(pillar.color);
+                return (
+                  <div key={index} className="relative">
+                    {/* Pillar Content */}
+                    <div className={`${colors.pillar} text-white p-8 min-h-[400px] flex flex-col justify-center text-center relative`}>
+                      {/* Icon */}
+                      <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                        <pillar.icon className="w-12 h-12 text-white" />
+                      </div>
+                      
+                      {/* Title */}
+                      <h4 className="text-xl font-bold text-white mb-6 leading-tight">
+                        {pillar.title}
+                      </h4>
+                      
+                      {/* Description */}
+                      <p className="text-white/90 leading-relaxed text-sm">
+                        {pillar.description}
+                      </p>
+                    </div>
+                    
+                    {/* Pillar Base */}
+                    <div className={`${colors.base} h-6 w-full`}></div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Foundation Base */}
+            <div className="bg-red-600 h-12 w-full rounded-full flex items-center justify-center mt-4">
+              <h5 className="text-white font-bold text-lg tracking-wide">KNOWLEDGE FOUNDATION</h5>
             </div>
           </div>
 
