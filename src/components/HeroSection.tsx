@@ -9,13 +9,13 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-end justify-start overflow-hidden font-inter pt-0 -mt-16"
+      className="relative h-screen flex items-end justify-start overflow-hidden font-inter pt-0 -mt-16"
       style={{
         backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: '100vh',
+        height: '100vh',
         paddingTop: '0'
       }}
     >
@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full border border-indigo-200"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-20 pb-32">
+      <div className="container mx-auto px-6 relative z-20 pb-20">
         <div className="max-w-5xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
             Multiply Your Buddhist Activity
