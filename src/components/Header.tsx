@@ -50,12 +50,12 @@ const Header = () => {
                 </button>
               ))}
             </nav>
-            <Button 
+            <button
               onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
+              className="bg-orange-500/20 hover:bg-orange-500/60 text-white px-6 py-2 rounded-lg border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 ease-in-out text-center font-medium shadow-lg backdrop-blur-sm"
             >
               Contact Us
-            </Button>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,12 +85,12 @@ const Header = () => {
                 </button>
               ))}
               <div className="pt-4">
-                <Button 
+                <button
                   onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
+                  className="w-full bg-orange-500/20 hover:bg-orange-500/60 text-white px-6 py-2 rounded-lg border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 ease-in-out text-center font-medium shadow-lg backdrop-blur-sm"
                 >
                   Contact Us
-                </Button>
+                </button>
               </div>
             </nav>
           </div>
