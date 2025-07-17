@@ -8,8 +8,8 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
-              Your Dedicated Team of Specialists
+            <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
+              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Your Dedicated Team of Specialists</span>
             </h3>
             <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-normal">
               Dharmaduta Services was founded on our "Virtuous Cycle" principle—that technology and media 

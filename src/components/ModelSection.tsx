@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Infinity, Users } from "lucide-react";
 
@@ -7,8 +6,8 @@ const ModelSection = () => {
     <section id="model" className="py-24 bg-gradient-to-br from-slate-50 to-indigo-50 font-inter">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
-            Our Model: A Bridge Between Commerce and Community
+          <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
+            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Our Model: A Bridge Between Commerce and Community</span>
           </h3>
           
           <h4 className="text-2xl font-semibold text-gray-800 mb-10 tracking-wide">How We Work</h4>

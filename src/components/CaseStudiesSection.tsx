@@ -32,8 +32,8 @@ const CaseStudiesSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
-              Success Stories
+            <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
+              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Success Stories</span>
             </h3>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-normal">
               Real results from Buddhist organizations we've helped transform their digital presence
