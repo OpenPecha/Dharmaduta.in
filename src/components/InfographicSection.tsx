@@ -40,22 +40,22 @@ const InfographicSection = () => {
       icon: Database,
       title: "Enterprise-grade AI Grounded in Authentic Tradition",
       description: "We are a Buddhist tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native Tibetan programmers and developers work in direct collaboration with a vast network of Buddhist specialists in monasteries and nunneries, ensuring every solution we create is built with deep respect and integrity.",
-      bgColor: "bg-red-600",
-      textColor: "text-white"
+      gradient: "from-indigo-600 to-purple-600",
+      height: "h-80"
     },
     {
       icon: Share2,
       title: "Committed to a Collaborative & Open Future",
       description: "We believe the future of digital Buddhism must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to the OpenPecha project in order to prevent duplicated efforts and save valuable community resources. We aim at dramatically increasing the footprint of Buddhist data online, to ensure AI systems can learn from and share Buddhist wisdom accurately.",
-      bgColor: "bg-orange-500",
-      textColor: "text-white"
+      gradient: "from-teal-500 to-blue-600",
+      height: "h-96"
     },
     {
       icon: Users,
       title: "Empowering Buddhist communities",
       description: "Think of us as your personal technology partner. We don't just deliver a product; we build your team's capacity. Our primary focus is to install lasting innovation capabilities, ensuring your Buddhist activities can thrive with independence and impact for years to come.",
-      bgColor: "bg-teal-600",
-      textColor: "text-white"
+      gradient: "from-orange-500 to-red-600",
+      height: "h-72"
     }
   ];
 
@@ -117,86 +117,84 @@ const InfographicSection = () => {
       </div>
 
       {/* Three Core Pillars Section */}
-      <div className="py-24 bg-gray-50">
+      <div className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-800">
-                Our Three Core Pillars
+              <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Our Three Core Pillars</span>
               </h3>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                 We focus on three core areas to serve the Buddhist knowledge supply chain.
               </p>
             </div>
             
-            {/* Temple Structure with Pillars */}
-            <div className="relative max-w-4xl mx-auto">
-              {/* Temple Roof */}
-              <div className="flex justify-center mb-8">
-                <div className="relative">
-                  {/* Triangle Roof */}
-                  <div 
-                    className="w-64 h-20 bg-gradient-to-b from-gray-300 to-gray-400 shadow-lg"
-                    style={{
-                      clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
-                    }}
-                  ></div>
-                  {/* Temple Icon */}
-                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-8 bg-white rounded-sm flex items-center justify-center shadow-md">
-                      <div className="flex space-x-1">
-                        <div className="w-1 h-4 bg-gray-600"></div>
-                        <div className="w-1 h-4 bg-gray-600"></div>
-                        <div className="w-1 h-4 bg-gray-600"></div>
-                        <div className="w-1 h-4 bg-gray-600"></div>
-                        <div className="w-1 h-4 bg-gray-600"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Modern Pillar Graph */}
+            <div className="relative max-w-5xl mx-auto">
+              {/* Base Platform */}
+              <div className="bg-gradient-to-r from-gray-300 to-gray-400 h-8 w-full rounded-lg shadow-lg mb-8"></div>
               
-              {/* Three Pillars */}
-              <div className="grid md:grid-cols-3 gap-8">
+              {/* Pillars Container */}
+              <div className="grid md:grid-cols-3 gap-8 items-end">
                 {pillars.map((pillar, index) => (
-                  <div key={pillar.title} className="relative">
-                    {/* Pillar Shape */}
-                    <div className={`${pillar.bgColor} ${pillar.textColor} p-8 shadow-xl relative`}
-                         style={{
-                           clipPath: 'polygon(10% 0%, 90% 0%, 95% 15%, 95% 85%, 90% 100%, 10% 100%, 5% 85%, 5% 15%)'
-                         }}>
-                      {/* Icon */}
-                      <div className="flex justify-center mb-6">
-                        <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                          <pillar.icon className="w-8 h-8 text-white" />
+                  <div key={pillar.title} className="relative group">
+                    {/* Pillar */}
+                    <div className={`bg-gradient-to-t ${pillar.gradient} ${pillar.height} rounded-t-lg shadow-xl relative overflow-hidden transition-all duration-500 hover:scale-105`}>
+                      {/* Pillar Content */}
+                      <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
+                        {/* Icon at top */}
+                        <div className="flex justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <pillar.icon className="w-8 h-8 text-white" />
+                          </div>
+                        </div>
+                        
+                        {/* Title */}
+                        <div className="text-center">
+                          <h4 className="text-lg font-bold mb-4 leading-tight">
+                            {pillar.title}
+                          </h4>
+                        </div>
+                        
+                        {/* Description at bottom */}
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <p className="text-sm leading-relaxed text-center">
+                            {pillar.description}
+                          </p>
                         </div>
                       </div>
                       
-                      {/* Title */}
-                      <h4 className="text-lg font-bold mb-6 text-center leading-tight">
-                        {pillar.title}
-                      </h4>
-                      
-                      {/* Description */}
-                      <p className="text-sm leading-relaxed text-center opacity-90">
-                        {pillar.description}
-                      </p>
+                      {/* Pillar Lines/Texture */}
+                      <div className="absolute inset-x-0 top-0 bottom-0 opacity-10">
+                        {[...Array(8)].map((_, i) => (
+                          <div key={i} className="h-full border-l border-white ml-4 first:ml-0" style={{ marginLeft: `${i * 12.5}%` }}></div>
+                        ))}
+                      </div>
                     </div>
+                    
+                    {/* Pillar Base */}
+                    <div className={`bg-gradient-to-t ${pillar.gradient} h-4 rounded-b-lg shadow-lg opacity-80`}></div>
                   </div>
                 ))}
               </div>
               
-              {/* Base Foundation */}
-              <div className="mt-8">
-                <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-6 w-full shadow-lg rounded-sm"></div>
+              {/* Top Connecting Element */}
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 h-3 w-24 rounded-full shadow-lg"></div>
               </div>
             </div>
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed mb-8">
                 Join us in building powerful AI and open data solutions that honor tradition while embracing the future. Let's work together to ensure the Dharma continues to flourish for generations to come.
               </p>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
+              >
+                Get Started with Us
+              </Button>
             </div>
           </div>
         </div>
