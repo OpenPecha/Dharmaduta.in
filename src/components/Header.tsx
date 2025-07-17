@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -26,10 +27,10 @@ const Header = () => {
           <div className="flex items-center space-x-8">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-sm">D</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-lg">D</span>
               </div>
-              <div className="text-xl font-bold text-gray-900">
+              <div className="text-lg font-bold text-gray-900 leading-tight">
                 <div>Dharmaduta</div>
                 <div>Services LLP</div>
               </div>
@@ -102,3 +103,4 @@ const Header = () => {
 };
 
 export default Header;
+
