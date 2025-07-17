@@ -29,7 +29,7 @@ const Header = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
                 <span className="text-white font-bold text-sm">D</span>
               </div>
-              <span className="text-xl font-playfair font-semibold text-gray-900">Dharmaduta Services</span>
+              <span className="text-xl font-bold text-gray-900">Dharmaduta Services</span>
             </div>
 
             {/* Desktop Navigation */}
