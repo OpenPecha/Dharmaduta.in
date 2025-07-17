@@ -4,7 +4,7 @@ const HowWeHelpSection = () => {
     <section className="py-16 bg-gradient-to-br from-teal-500 to-teal-600 font-inter">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-sm font-semibold text-teal-800 mb-6 tracking-wide uppercase">
+          <h3 className="text-sm font-semibold bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent mb-6 tracking-wide uppercase">
             HOW WE HELP
           </h3>
           <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-relaxed">
