@@ -33,7 +33,9 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-20 pb-32">
         <div className="max-w-5xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
-            What we Offer
+            Multiply Your Buddhist Activity
+            <br />
+            in the Age of AI
           </h1>
           
           <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg">
@@ -44,7 +46,7 @@ const HeroSection = () => {
             <Button 
               onClick={scrollToServices}
               size="lg" 
-              className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/90 hover:to-purple-700/90 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
             >
               Explore Our Services
               <ArrowDown className="ml-2 h-5 w-5" />
