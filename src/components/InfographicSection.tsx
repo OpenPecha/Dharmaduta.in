@@ -9,28 +9,28 @@ const InfographicSection = () => {
       title: "Planning",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
       bgColor: "bg-yellow-50",
-      iconColor: "text-yellow-600"
+      iconColor: "text-gray-700"
     },
     {
       icon: Cog,
       title: "Process",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
-      bgColor: "bg-gray-100",
-      iconColor: "text-gray-600"
+      bgColor: "bg-gray-200",
+      iconColor: "text-gray-700"
     },
     {
       icon: TrendingUp,
       title: "Growth",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
       bgColor: "bg-yellow-50",
-      iconColor: "text-yellow-600"
+      iconColor: "text-gray-700"
     },
     {
       icon: Trophy,
       title: "Success",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.",
-      bgColor: "bg-gray-100",
-      iconColor: "text-gray-600"
+      bgColor: "bg-gray-200",
+      iconColor: "text-gray-700"
     }
   ];
 
@@ -47,32 +47,32 @@ const InfographicSection = () => {
           
           <div className="relative">
             {/* Connecting Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-400 to-yellow-400 transform -translate-y-1/2 hidden lg:block"></div>
+            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-400 transform -translate-y-1/2 hidden lg:block"></div>
             
             {/* Yellow Dots */}
-            <div className="absolute top-1/2 left-0 w-6 h-6 bg-yellow-400 rounded-full transform -translate-y-1/2 hidden lg:block"></div>
-            <div className="absolute top-1/2 right-0 w-6 h-6 bg-yellow-400 rounded-full transform -translate-y-1/2 hidden lg:block"></div>
+            <div className="absolute top-1/2 left-0 w-4 h-4 bg-yellow-400 rounded-full transform -translate-y-1/2 hidden lg:block"></div>
+            <div className="absolute top-1/2 right-0 w-4 h-4 bg-yellow-400 rounded-full transform -translate-y-1/2 hidden lg:block"></div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
               {steps.map((step, index) => (
                 <Card 
                   key={step.title} 
-                  className={`border-2 border-gray-300 shadow-lg transition-all duration-500 transform hover:scale-110 ${step.bgColor} text-center animate-[scale-in_0.6s_ease-out] rounded-3xl`}
+                  className={`border-2 border-gray-300 shadow-md transition-all duration-500 transform hover:scale-105 ${step.bgColor} text-center animate-[scale-in_0.6s_ease-out] rounded-3xl overflow-hidden`}
                   style={{
                     animationDelay: `${index * 0.2}s`,
                     animationFillMode: 'both'
                   }}
                 >
-                  <CardHeader className="pb-6">
-                    <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-md">
+                  <CardHeader className="pb-4 pt-8">
+                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
                       <step.icon className={`w-8 h-8 ${step.iconColor}`} />
                     </div>
-                    <CardTitle className="text-xl font-bold text-gray-900 mb-4 tracking-tight">
+                    <CardTitle className="text-lg font-bold text-gray-900 mb-3 tracking-tight">
                       {step.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-700 leading-relaxed font-normal text-sm">
+                  <CardContent className="px-6 pb-8">
+                    <p className="text-gray-600 leading-relaxed font-normal text-xs">
                       {step.description}
                     </p>
                   </CardContent>
