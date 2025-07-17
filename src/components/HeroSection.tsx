@@ -16,7 +16,7 @@ const HeroSection = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         minHeight: '100vh',
-        paddingTop: '4rem'
+        paddingTop: '0'
       }}
     >
       {/* Background overlay */}
@@ -38,7 +38,7 @@ const HeroSection = () => {
             in the <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Age of AI</span>
           </h1>
           
-          <h2 className="text-sm md:text-base font-roboto text-gray-600 mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left">
+          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg">
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
