@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -12,10 +11,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Services", id: "services" },
+    { label: "Who we are", id: "about" },
+    { label: "Our Services", id: "services" },
     { label: "Our Model", id: "model" },
-    { label: "About", id: "about" },
-    { label: "Case Studies", id: "case-studies" },
+    { label: "Our Team", id: "case-studies" },
   ];
 
   return (
