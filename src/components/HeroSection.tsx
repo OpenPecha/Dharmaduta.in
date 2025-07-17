@@ -20,7 +20,7 @@ const HeroSection = () => {
       }}
     >
       {/* Background overlay - reduced darkness */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-indigo-50/30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-indigo-50/20 z-0"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-10">
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-20 pb-32">
         <div className="max-w-5xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-red-700 via-red-600 to-red-800 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-red-700 via-red-600 to-red-800 bg-clip-text text-transparent drop-shadow-2xl shadow-red-900/50" style={{ textShadow: '0 4px 8px rgba(153, 27, 27, 0.5), 0 8px 16px rgba(127, 29, 29, 0.3)' }}>
             Multiply Your Buddhist Activity
             <br />
             in the Age of AI
