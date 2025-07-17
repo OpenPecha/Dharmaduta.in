@@ -46,9 +46,9 @@ const HeroSection = () => {
             <Button 
               onClick={scrollToServices}
               size="lg" 
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
+              className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
             >
-              Explore Our Services
+              What we can offer
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
           </div>
