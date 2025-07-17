@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToServices = () => {
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('why-choose')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
