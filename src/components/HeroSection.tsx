@@ -38,7 +38,7 @@ const HeroSection = () => {
             in the <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Age of AI</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-gray-600 mb-12 font-normal leading-relaxed max-w-4xl mx-auto tracking-wide">
+          <h2 className="text-sm md:text-base font-roboto text-gray-600 mb-12 font-normal leading-relaxed max-w-2xl mx-auto tracking-normal">
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
