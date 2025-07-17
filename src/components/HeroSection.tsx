@@ -9,7 +9,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-end justify-start overflow-hidden font-inter pt-0 -mt-16"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden font-inter pt-0 -mt-16"
       style={{
         backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
         backgroundSize: 'cover',
@@ -20,7 +20,7 @@ const HeroSection = () => {
       }}
     >
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-indigo-900/40 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/40 to-indigo-50/60 z-0"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-10">
@@ -30,15 +30,15 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full border border-indigo-200"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-20 pb-24 pl-8">
-        <div className="max-w-4xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+      <div className="container mx-auto px-6 relative z-20 pt-16">
+        <div className="max-w-5xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
             Multiply Your Buddhist Activity
             <br />
             in the Age of AI
           </h1>
           
-          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-3xl tracking-normal text-left drop-shadow-lg">
+          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg">
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
