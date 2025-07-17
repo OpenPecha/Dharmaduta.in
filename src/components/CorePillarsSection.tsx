@@ -25,7 +25,7 @@ const CorePillarsSection = () => {
     <section 
       className="py-24 font-inter relative"
       style={{
-        backgroundImage: `url('/lovable-uploads/6e98b5ac-8be2-4c1b-950e-ae35927b6515.png')`,
+        backgroundImage: `url('/lovable-uploads/712a882a-63ac-490d-856d-098b109b133d.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
