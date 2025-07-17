@@ -22,12 +22,12 @@ const Header = () => {
 
   const headerBgClass = isMainPage 
     ? "bg-white/20 backdrop-blur-md border-b border-white/30" 
-    : "bg-gray-200/80 backdrop-blur-md border-b border-gray-300/30";
+    : "bg-slate-200/90 backdrop-blur-md border-b border-slate-300/40";
 
   const textColorClass = isMainPage ? "text-white" : "text-gray-900";
   const logoTextClass = isMainPage ? "text-white" : "text-gray-900";
-  const hoverBgClass = isMainPage ? "hover:bg-white/20" : "hover:bg-gray-300/20";
-  const mobileBgClass = isMainPage ? "bg-white/10" : "bg-gray-200/90";
+  const hoverBgClass = isMainPage ? "hover:bg-white/20" : "hover:bg-slate-300/30";
+  const mobileBgClass = isMainPage ? "bg-white/10" : "bg-slate-200/95";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass} font-roboto`}>
