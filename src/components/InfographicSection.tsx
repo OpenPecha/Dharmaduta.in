@@ -39,23 +39,17 @@ const InfographicSection = () => {
     {
       icon: Database,
       title: "Enterprise-grade AI Grounded in Authentic Tradition",
-      description: "We are a tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native programmers and developers work in direct collaboration with a vast network of specialists in monasteries and nunneries, ensuring every solution we create is built with deep respect and integrity.",
-      bgColor: "bg-orange-100",
-      iconColor: "text-orange-600"
+      description: "We are a tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native programmers and developers work in direct collaboration with a vast network of specialists in monasteries and nunneries, ensuring every solution we create is built with deep respect and integrity."
     },
     {
       icon: Users,
       title: "Committed to a Collaborative & Open Future",
-      description: "We believe the future of digital solutions must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to open projects in order to prevent duplicated efforts and save valuable community resources. We aim at dramatically increasing the footprint of data online, to ensure AI systems can learn from and share wisdom accurately.",
-      bgColor: "bg-teal-100",
-      iconColor: "text-teal-600"
+      description: "We believe the future of digital solutions must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to open projects in order to prevent duplicated efforts and save valuable community resources. We aim at dramatically increasing the footprint of data online, to ensure AI systems can learn from and share wisdom accurately."
     },
     {
       icon: BookOpen,
       title: "Empowering Communities",
-      description: "Think of us as your personal technology partner. We don't just deliver a product, we build your team's capacity. Our primary focus is to install lasting innovation capabilities, ensuring your activities can thrive with independence and impact for years to come.",
-      bgColor: "bg-emerald-100",
-      iconColor: "text-emerald-600"
+      description: "Think of us as your personal technology partner. We don't just deliver a product, we build your team's capacity. Our primary focus is to install lasting innovation capabilities, ensuring your activities can thrive with independence and impact for years to come."
     }
   ];
 
@@ -116,31 +110,42 @@ const InfographicSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {corePillars.map((pillar, index) => (
-              <Card 
-                key={pillar.title} 
-                className={`border-2 border-teal-200 shadow-lg transition-all duration-500 transform hover:scale-105 ${pillar.bgColor} text-center animate-[scale-in_0.6s_ease-out] rounded-2xl overflow-hidden`}
-                style={{
-                  animationDelay: `${index * 0.2}s`,
-                  animationFillMode: 'both'
-                }}
-              >
-                <CardHeader className="pb-6 pt-8">
-                  <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                    <pillar.icon className={`w-10 h-10 ${pillar.iconColor}`} />
+          {/* Pillar Design Section */}
+          <div className="relative bg-gray-100 rounded-2xl p-8 mb-16 overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-0 relative">
+              {corePillars.map((pillar, index) => (
+                <div key={pillar.title} className="relative">
+                  {/* Content Area */}
+                  <div className="bg-white p-8 text-center min-h-[400px] flex flex-col justify-center">
+                    {/* Icon */}
+                    <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                      <pillar.icon className="w-12 h-12 text-orange-500" />
+                    </div>
+                    
+                    {/* Title */}
+                    <h4 className="text-xl font-bold text-orange-500 mb-6 leading-tight">
+                      {pillar.title}
+                    </h4>
+                    
+                    {/* Description */}
+                    <p className="text-gray-700 leading-relaxed text-sm">
+                      {pillar.description}
+                    </p>
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
-                    {pillar.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="px-6 pb-8">
-                  <p className="text-gray-700 leading-relaxed font-normal text-sm">
-                    {pillar.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+                  
+                  {/* Vertical Pillar Separator */}
+                  {index < corePillars.length - 1 && (
+                    <div className="absolute top-0 right-0 w-8 h-full bg-teal-500 hidden md:block"></div>
+                  )}
+                </div>
+              ))}
+            </div>
+            
+            {/* Decorative Corner Elements */}
+            <div className="absolute top-0 left-0 w-16 h-16 bg-gray-300 transform -translate-x-8 -translate-y-8 rotate-45"></div>
+            <div className="absolute top-0 right-0 w-16 h-16 bg-gray-300 transform translate-x-8 -translate-y-8 rotate-45"></div>
+            <div className="absolute bottom-0 left-0 w-16 h-16 bg-gray-300 transform -translate-x-8 translate-y-8 rotate-45"></div>
+            <div className="absolute bottom-0 right-0 w-16 h-16 bg-gray-300 transform translate-x-8 translate-y-8 rotate-45"></div>
           </div>
 
           <div className="text-center">
