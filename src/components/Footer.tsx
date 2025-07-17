@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-20 font-inter">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-16">
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div className="md:col-span-2">
               <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent tracking-tight">
                 Dharmaduta Services
@@ -32,14 +32,22 @@ const Footer = () => {
             </div>
             
             <div>
-              <h4 className="text-xl font-semibold mb-6 tracking-tight">Navigation</h4>
+              <h4 className="text-xl font-semibold mb-6 tracking-tight">Quick Links</h4>
               <ul className="space-y-3">
+                <li>
+                  <button 
+                    onClick={() => scrollToSection('about')}
+                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  >
+                    Who we are
+                  </button>
+                </li>
                 <li>
                   <button 
                     onClick={() => scrollToSection('services')}
                     className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
                   >
-                    Services
+                    Our Services
                   </button>
                 </li>
                 <li>
@@ -52,29 +60,12 @@ const Footer = () => {
                 </li>
                 <li>
                   <button 
-                    onClick={() => scrollToSection('about')}
-                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
-                  >
-                    About
-                  </button>
-                </li>
-                <li>
-                  <button 
                     onClick={() => scrollToSection('case-studies')}
                     className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
                   >
-                    Case Studies
+                    Our Team
                   </button>
                 </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-semibold mb-6 tracking-tight">Contact</h4>
-              <ul className="space-y-3 text-gray-300 text-lg font-normal">
-                <li>contact@dharmadutaservices.com</li>
-                <li>Buddhist Tech Specialists</li>
-                <li>Open Source Community</li>
               </ul>
             </div>
           </div>
