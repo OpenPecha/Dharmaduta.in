@@ -7,6 +7,7 @@ import ModelSection from "@/components/ModelSection";
 import AboutSection from "@/components/AboutSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import Footer from "@/components/Footer";
+import BackgroundRemover from "@/components/BackgroundRemover";
 
 const Index = () => {
   return (
@@ -27,6 +28,9 @@ const Index = () => {
       <div className="relative z-10">
         <Header />
         <HeroSection />
+        
+        {/* Background Remover Section */}
+        <BackgroundRemover />
         
         {/* All sections after hero will have the background */}
         <div className="relative">
