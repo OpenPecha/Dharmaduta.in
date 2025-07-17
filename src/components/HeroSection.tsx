@@ -32,7 +32,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-20 pb-24 pl-8">
         <div className="max-w-4xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
             Multiply Your Buddhist Activity
             <br />
             in the Age of AI
