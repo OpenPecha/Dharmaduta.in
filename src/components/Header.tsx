@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -31,7 +30,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-lg font-bold text-white leading-tight drop-shadow-lg">
+            <div className="text-lg font-bold text-white leading-tight drop-shadow-lg bg-gray-500/20 hover:bg-gray-500/40 px-3 py-2 rounded-lg border border-gray-500/30 hover:border-gray-500/50 transition-all duration-300 ease-in-out backdrop-blur-sm">
               <div>Dharmaduta</div>
               <div>Services LLP</div>
             </div>
