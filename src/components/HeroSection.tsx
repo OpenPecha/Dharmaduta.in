@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -8,9 +9,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 pt-16 font-inter">
-      {/* Background Image */}
-      <div className="absolute inset-0 opacity-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 font-inter">
+      {/* Background Image - Full viewport coverage */}
+      <div className="fixed inset-0 opacity-20 z-0">
         <img 
           src="/lovable-uploads/ffa081dc-9787-4d82-98af-b3ad2d1e5e16.png" 
           alt="Buddhist manuscript background" 
@@ -20,7 +21,7 @@ const HeroSection = () => {
       </div>
 
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 z-10">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full border border-indigo-200"></div>
         <div className="absolute top-40 right-32 w-24 h-24 rounded-full border border-purple-200"></div>
         <div className="absolute bottom-32 left-1/4 w-40 h-40 rounded-full border border-blue-200"></div>
@@ -28,7 +29,7 @@ const HeroSection = () => {
       </div>
       
       {/* Lotus Circuit Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 z-10">
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <defs>
             <pattern id="circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -40,7 +41,7 @@ const HeroSection = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-20 pt-16">
         <div className="max-w-5xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight tracking-tight text-left">
             Multiply Your Buddhist Activity
@@ -66,11 +67,12 @@ const HeroSection = () => {
       </div>
       
       {/* Floating elements */}
-      <div className="absolute top-1/4 left-10 w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-1/3 right-16 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute top-2/3 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-500"></div>
+      <div className="absolute top-1/4 left-10 w-2 h-2 bg-indigo-400 rounded-full animate-pulse z-20"></div>
+      <div className="absolute bottom-1/3 right-16 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000 z-20"></div>
+      <div className="absolute top-2/3 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-500 z-20"></div>
     </section>
   );
 };
 
 export default HeroSection;
+
