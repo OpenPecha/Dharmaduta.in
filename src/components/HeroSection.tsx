@@ -1,8 +1,32 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const HeroSection = () => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLHeadingElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-slide-up');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (titleRef.current) observer.observe(titleRef.current);
+    if (subtitleRef.current) observer.observe(subtitleRef.current);
+    if (buttonRef.current) observer.observe(buttonRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToServices = () => {
     document.getElementById('why-choose')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -33,17 +57,26 @@ const HeroSection = () => {
       {/* Content Container - Centered */}
       <div className="container mx-auto px-6 relative z-30 text-center">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
+          <h1 
+            ref={titleRef}
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent opacity-0 translate-y-10"
+          >
             Multiply Your Buddhist Activity
             <br />
             in the Age of AI
           </h1>
           
-          <h2 className="text-lg md:text-xl lg:text-2xl font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl mx-auto tracking-normal drop-shadow-lg">
+          <h2 
+            ref={subtitleRef}
+            className="text-lg md:text-xl lg:text-2xl font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl mx-auto tracking-normal drop-shadow-lg opacity-0 translate-y-10"
+          >
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
-          <div className="flex justify-center">
+          <div 
+            ref={buttonRef}
+            className="flex justify-center opacity-0 translate-y-10"
+          >
             <Button 
               onClick={scrollToServices}
               size="lg" 
