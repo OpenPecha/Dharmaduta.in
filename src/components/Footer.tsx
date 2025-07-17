@@ -1,5 +1,5 @@
 
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, Twitter, Youtube, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -18,7 +18,7 @@ const Footer = () => {
               <p className="text-gray-300 leading-relaxed mb-8 text-lg font-normal">
                 Bridging ancient wisdom and modern technology to multiply your Buddhist impact in the digital age.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 flex-wrap">
                 <a href="mailto:contact@dharmadutaservices.com" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
@@ -27,6 +27,18 @@ const Footer = () => {
                 </a>
                 <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Github className="w-6 h-6" />
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                  <Twitter className="w-6 h-6" />
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                  <Youtube className="w-6 h-6" />
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                  <Facebook className="w-6 h-6" />
                 </a>
               </div>
             </div>
