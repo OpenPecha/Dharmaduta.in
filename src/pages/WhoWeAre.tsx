@@ -10,11 +10,11 @@ const WhoWeAre = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <div className="max-w-4xl mx-auto text-left">
+            <h1 className="text-4xl md:text-5xl font-roboto font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent whitespace-nowrap">
               About Dharmaduta Services LLP
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-lg font-roboto text-gray-600 leading-relaxed">
               We are a team of technologists, archivists, and scholars dedicated to preserving and sharing cultural heritage through modern technology and open-source principles.
             </p>
           </div>
