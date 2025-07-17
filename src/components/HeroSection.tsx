@@ -42,11 +42,6 @@ const HeroSection = () => {
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
-          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
-            We bridge ancient wisdom and modern technology by uniting our Buddhist tech specialists, 
-            extensive scholarly network, and expert marketing coaches to help you multiply your impact.
-          </p>
-          
           <Button 
             onClick={scrollToServices}
             size="lg" 
