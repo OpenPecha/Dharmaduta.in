@@ -33,8 +33,9 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Multiply Your Buddhist Activity in the 
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"> Age of AI</span>
+            Multiply Your Buddhist Activity
+            <br />
+            in the <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Age of AI</span>
           </h1>
           
           <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-light leading-relaxed max-w-3xl mx-auto">
