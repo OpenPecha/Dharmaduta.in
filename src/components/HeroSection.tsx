@@ -33,7 +33,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative w-full h-screen flex items-center overflow-hidden font-inter"
+      className="relative w-full h-screen flex items-center overflow-hidden font-roboto"
       style={{
         backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
         backgroundSize: 'cover',
@@ -59,7 +59,7 @@ const HeroSection = () => {
         <div className="max-w-4xl">
           <h1 
             ref={titleRef}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent opacity-0 translate-y-10"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent opacity-0 translate-y-10 font-roboto"
           >
             Multiply Your Buddhist Activity
             <br />
@@ -80,7 +80,7 @@ const HeroSection = () => {
             <Button 
               onClick={scrollToServices}
               size="lg" 
-              className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
+              className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg font-roboto"
             >
               What we can offer
               <ArrowDown className="ml-3 h-6 w-6" />
