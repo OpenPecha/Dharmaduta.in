@@ -9,7 +9,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden font-inter pt-0 -mt-16"
+      className="relative min-h-screen flex items-end justify-start overflow-hidden font-inter pt-0 -mt-16"
       style={{
         backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
         backgroundSize: 'cover',
@@ -19,8 +19,8 @@ const HeroSection = () => {
         paddingTop: '0'
       }}
     >
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/40 to-indigo-50/60 z-0"></div>
+      {/* Background overlay - reduced darkness */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-indigo-50/30 z-0"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-10">
@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full border border-indigo-200"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-20 pt-16">
+      <div className="container mx-auto px-6 relative z-20 pb-32">
         <div className="max-w-5xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
             Multiply Your Buddhist Activity
