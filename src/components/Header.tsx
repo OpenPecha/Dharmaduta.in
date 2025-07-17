@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -28,7 +29,10 @@ const Header = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
                 <span className="text-white font-bold text-sm">D</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Dharmaduta Services</span>
+              <div className="text-xl font-bold text-gray-900">
+                <div>Dharmaduta</div>
+                <div>Services LLP</div>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
