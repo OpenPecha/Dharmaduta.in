@@ -19,8 +19,8 @@ const HeroSection = () => {
         paddingTop: '0'
       }}
     >
-      {/* Background overlay - reduced darkness */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-indigo-50/20 z-0"></div>
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-indigo-900/40 z-0"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-10">
@@ -30,15 +30,15 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full border border-indigo-200"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-20 pb-32">
-        <div className="max-w-5xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-red-700 via-red-600 to-red-800 bg-clip-text text-transparent drop-shadow-2xl shadow-red-900/50" style={{ textShadow: '0 4px 8px rgba(153, 27, 27, 0.5), 0 8px 16px rgba(127, 29, 29, 0.3)' }}>
+      <div className="container mx-auto px-6 relative z-20 pb-24 pl-8">
+        <div className="max-w-4xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
             Multiply Your Buddhist Activity
             <br />
             in the Age of AI
           </h1>
           
-          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg">
+          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-3xl tracking-normal text-left drop-shadow-lg">
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
