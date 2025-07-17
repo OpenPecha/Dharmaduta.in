@@ -8,16 +8,17 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 font-inter">
-      {/* Background Image - Full viewport coverage including header */}
-      <div className="fixed inset-0 top-0 opacity-20 z-0">
-        <img 
-          src="/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png" 
-          alt="Buddha with technology background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/40 to-indigo-50/60"></div>
-      </div>
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 font-inter"
+      style={{
+        backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/40 to-indigo-50/60 z-0"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-10">
