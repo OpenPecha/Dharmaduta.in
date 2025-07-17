@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -38,12 +39,12 @@ const Header = () => {
 
           {/* Desktop Navigation and CTA Button */}
           <div className="hidden md:flex items-center space-x-6">
-            <nav className="flex items-center space-x-4">
+            <nav className="flex items-center space-x-1">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm text-white font-normal px-4 py-2 rounded-lg bg-transparent hover:bg-white/20 transition-all duration-300 ease-in-out drop-shadow-md"
+                  className="text-sm text-white font-normal px-3 py-2 rounded-lg bg-transparent hover:bg-white/20 transition-all duration-300 ease-in-out drop-shadow-md"
                 >
                   {item.label}
                 </button>
