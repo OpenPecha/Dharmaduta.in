@@ -32,17 +32,18 @@ const CaseStudiesSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
+            <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight animate-slide-up">
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Success Stories</span>
             </h3>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-normal">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-normal animate-slide-up-delayed">
               Real results from Buddhist organizations we've helped transform their digital presence
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-10">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
+              <Card key={index} className={`border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50 animate-slide-up`}
+                style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader className="pb-6">
                   <div className={`w-16 h-16 mb-6 bg-gradient-to-br ${study.gradient} rounded-2xl flex items-center justify-center`}>
                     <study.icon className="w-8 h-8 text-gray-700" />

@@ -8,10 +8,10 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
+            <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight animate-slide-up">
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Your Dedicated Team of Specialists</span>
             </h3>
-            <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-normal">
+            <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-normal animate-slide-up-delayed">
               Dharmaduta Services was founded on our "Virtuous Cycle" principle—that technology and media 
               should sustainably serve the Dharma. We are a unique blend of practitioners, technologists, 
               and storytellers committed to this vision.
@@ -19,7 +19,7 @@ const AboutSection = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-10">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-blue-50 to-white">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-blue-50 to-white animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <CardHeader className="text-center pb-8">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center">
                   <Brain className="w-10 h-10 text-blue-600" />
@@ -36,7 +36,7 @@ const AboutSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-green-50 to-white">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-green-50 to-white animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <CardHeader className="text-center pb-8">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center">
                   <GraduationCap className="w-10 h-10 text-green-600" />
@@ -53,7 +53,7 @@ const AboutSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-purple-50 to-white">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-purple-50 to-white animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <CardHeader className="text-center pb-8">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center">
                   <TrendingUp className="w-10 h-10 text-purple-600" />
