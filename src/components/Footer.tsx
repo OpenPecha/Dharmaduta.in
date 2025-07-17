@@ -1,5 +1,6 @@
 
 import { Mail, Linkedin, Github, Twitter, Youtube, Instagram, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -46,12 +47,12 @@ const Footer = () => {
             <div>
               <ul className="space-y-3 mt-6">
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('about')}
+                  <Link 
+                    to="/who-we-are"
                     className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
                   >
                     Who we are
-                  </button>
+                  </Link>
                 </li>
                 <li>
                   <button 
