@@ -43,7 +43,7 @@ const CorePillarsSection = () => {
                       <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center">
                         <pillar.icon className="w-8 h-8 text-white" />
                       </div>
-                      <CardTitle className="text-xl font-bold text-orange-500 mb-4 tracking-tight">
+                      <CardTitle className="text-xl font-bold mb-4 tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
                         {pillar.title}
                       </CardTitle>
                     </CardHeader>
