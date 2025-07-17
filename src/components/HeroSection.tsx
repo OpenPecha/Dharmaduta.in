@@ -9,12 +9,14 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 font-inter"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden font-inter pt-0 -mt-16"
       style={{
         backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh',
+        paddingTop: '4rem'
       }}
     >
       {/* Background overlay */}
