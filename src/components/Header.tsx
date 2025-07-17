@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -30,7 +31,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-lg font-bold text-white leading-tight drop-shadow-lg bg-gray-500/20 hover:bg-gray-500/40 px-3 py-2 rounded-lg border border-gray-500/30 hover:border-gray-500/50 transition-all duration-300 ease-in-out backdrop-blur-sm">
+            <div className="text-lg font-bold text-white leading-tight drop-shadow-lg">
               <div>Dharmaduta</div>
               <div>Services LLP</div>
             </div>
@@ -49,12 +50,12 @@ const Header = () => {
                 </button>
               ))}
             </nav>
-            <button
+            <Button 
               onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-              className="bg-orange-500/20 hover:bg-orange-500/60 text-white px-6 py-2 rounded-lg border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 ease-in-out text-center font-medium shadow-lg backdrop-blur-sm"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
             >
               Contact Us
-            </button>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,12 +85,12 @@ const Header = () => {
                 </button>
               ))}
               <div className="pt-4">
-                <button
+                <Button 
                   onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-                  className="w-full bg-orange-500/20 hover:bg-orange-500/60 text-white px-6 py-2 rounded-lg border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 ease-in-out text-center font-medium shadow-lg backdrop-blur-sm"
+                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
                 >
                   Contact Us
-                </button>
+                </Button>
               </div>
             </nav>
           </div>
