@@ -12,10 +12,10 @@ const WhoWeAre = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Who We Are
+              About Dharmaduta Services LLP
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Bridging ancient wisdom with modern technology to multiply your Buddhist impact in the digital age.
+              We are a team of technologists, archivists, and scholars dedicated to preserving and sharing cultural heritage through modern technology and open-source principles.
             </p>
           </div>
         </div>
