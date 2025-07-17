@@ -1,6 +1,4 @@
 
-
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -27,19 +25,6 @@ const HeroSection = () => {
         <div className="absolute top-40 right-32 w-24 h-24 rounded-full border border-purple-200"></div>
         <div className="absolute bottom-32 left-1/4 w-40 h-40 rounded-full border border-blue-200"></div>
         <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full border border-indigo-200"></div>
-      </div>
-      
-      {/* Lotus Circuit Pattern */}
-      <div className="absolute inset-0 opacity-10 z-10">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <defs>
-            <pattern id="circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <path d="M0 10h5M15 10h5M10 0v5M10 15v5" stroke="currentColor" strokeWidth="0.5" className="text-indigo-400"/>
-              <circle cx="10" cy="10" r="1" fill="currentColor" className="text-indigo-400"/>
-            </pattern>
-          </defs>
-          <rect width="100" height="100" fill="url(#circuit)"/>
-        </svg>
       </div>
 
       <div className="container mx-auto px-6 relative z-20 pt-16">
@@ -76,5 +61,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
