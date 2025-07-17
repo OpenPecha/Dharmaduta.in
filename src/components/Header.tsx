@@ -2,10 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isMainPage = location.pathname === '/';
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -19,8 +21,17 @@ const Header = () => {
     { label: "Our Team", type: "scroll", id: "case-studies" },
   ];
 
+  const headerBgClass = isMainPage 
+    ? "bg-white/20 backdrop-blur-md border-b border-white/30" 
+    : "bg-gray-900/20 backdrop-blur-md border-b border-gray-300/30";
+
+  const textColorClass = isMainPage ? "text-white" : "text-gray-900";
+  const logoTextClass = isMainPage ? "text-white" : "text-gray-900";
+  const hoverBgClass = isMainPage ? "hover:bg-white/20" : "hover:bg-gray-200/20";
+  const mobileBgClass = isMainPage ? "bg-white/10" : "bg-gray-900/10";
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/30 font-roboto">
+    <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass} font-roboto`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -32,7 +43,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-lg font-bold text-white leading-tight drop-shadow-lg">
+            <div className={`text-lg font-bold ${logoTextClass} leading-tight drop-shadow-lg`}>
               <div>Dharmaduta</div>
               <div>Services LLP</div>
             </div>
@@ -46,7 +57,7 @@ const Header = () => {
                   <Link
                     key={item.label}
                     to={item.path}
-                    className="text-sm text-white font-normal px-3 py-2 rounded-lg bg-transparent hover:bg-white/20 transition-all duration-300 ease-in-out drop-shadow-md"
+                    className={`text-sm ${textColorClass} font-normal px-3 py-2 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out drop-shadow-md`}
                   >
                     {item.label}
                   </Link>
@@ -54,7 +65,7 @@ const Header = () => {
                   <button
                     key={item.label}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-sm text-white font-normal px-3 py-2 rounded-lg bg-transparent hover:bg-white/20 transition-all duration-300 ease-in-out drop-shadow-md"
+                    className={`text-sm ${textColorClass} font-normal px-3 py-2 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out drop-shadow-md`}
                   >
                     {item.label}
                   </button>
@@ -71,20 +82,20 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-white/20 transition-colors"
+            className={`md:hidden p-2 rounded-lg ${hoverBgClass} transition-colors`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-white" />
+              <X className={`w-6 h-6 ${textColorClass}`} />
             ) : (
-              <Menu className="w-6 h-6 text-white" />
+              <Menu className={`w-6 h-6 ${textColorClass}`} />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/30 bg-white/10 backdrop-blur-md">
+          <div className={`md:hidden py-4 border-t border-gray-300/30 ${mobileBgClass} backdrop-blur-md`}>
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 item.type === "link" ? (
@@ -92,7 +103,7 @@ const Header = () => {
                     key={item.label}
                     to={item.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-left text-white font-normal py-2 px-4 rounded-lg bg-transparent hover:bg-white/20 transition-all duration-300 ease-in-out"
+                    className={`text-left ${textColorClass} font-normal py-2 px-4 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out`}
                   >
                     {item.label}
                   </Link>
@@ -100,7 +111,7 @@ const Header = () => {
                   <button
                     key={item.label}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left text-white font-normal py-2 px-4 rounded-lg bg-transparent hover:bg-white/20 transition-all duration-300 ease-in-out"
+                    className={`text-left ${textColorClass} font-normal py-2 px-4 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out`}
                   >
                     {item.label}
                   </button>
