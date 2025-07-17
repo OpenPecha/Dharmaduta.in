@@ -33,7 +33,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden font-inter"
+      className="relative w-full h-screen flex items-center overflow-hidden font-inter"
       style={{
         backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
         backgroundSize: 'cover',
@@ -54,12 +54,12 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full border border-indigo-200"></div>
       </div>
 
-      {/* Content Container - Centered */}
-      <div className="container mx-auto px-6 relative z-30 text-center">
-        <div className="max-w-5xl mx-auto">
+      {/* Content Container - Left Aligned */}
+      <div className="container mx-auto px-6 lg:px-16 xl:px-20 relative z-30 flex items-center h-full">
+        <div className="max-w-4xl">
           <h1 
             ref={titleRef}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent opacity-0 translate-y-10"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent opacity-0 translate-y-10"
           >
             Multiply Your Buddhist Activity
             <br />
@@ -68,14 +68,14 @@ const HeroSection = () => {
           
           <h2 
             ref={subtitleRef}
-            className="text-lg md:text-xl lg:text-2xl font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl mx-auto tracking-normal drop-shadow-lg opacity-0 translate-y-10"
+            className="text-lg md:text-xl lg:text-2xl font-roboto text-white mb-12 font-normal leading-relaxed max-w-3xl tracking-normal drop-shadow-lg opacity-0 translate-y-10"
           >
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
           <div 
             ref={buttonRef}
-            className="flex justify-center opacity-0 translate-y-10"
+            className="opacity-0 translate-y-10"
           >
             <Button 
               onClick={scrollToServices}
