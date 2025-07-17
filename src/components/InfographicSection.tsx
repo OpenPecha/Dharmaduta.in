@@ -40,19 +40,22 @@ const InfographicSection = () => {
       icon: Database,
       title: "Enterprise-grade AI Grounded in Authentic Tradition",
       description: "We are a Buddhist tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native Tibetan programmers and developers work in direct collaboration with a vast network of Buddhist specialists in monasteries and nunneries, ensuring every solution we create is built with deep respect and integrity.",
-      iconColor: "text-orange-500"
+      bgColor: "bg-red-600",
+      textColor: "text-white"
     },
     {
       icon: Share2,
       title: "Committed to a Collaborative & Open Future",
       description: "We believe the future of digital Buddhism must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to the OpenPecha project in order to prevent duplicated efforts and save valuable community resources. We aim at dramatically increasing the footprint of Buddhist data online, to ensure AI systems can learn from and share Buddhist wisdom accurately.",
-      iconColor: "text-orange-500"
+      bgColor: "bg-orange-500",
+      textColor: "text-white"
     },
     {
       icon: Users,
       title: "Empowering Buddhist communities",
       description: "Think of us as your personal technology partner. We don't just deliver a product; we build your team's capacity. Our primary focus is to install lasting innovation capabilities, ensuring your Buddhist activities can thrive with independence and impact for years to come.",
-      iconColor: "text-orange-500"
+      bgColor: "bg-teal-600",
+      textColor: "text-white"
     }
   ];
 
@@ -114,7 +117,7 @@ const InfographicSection = () => {
       </div>
 
       {/* Three Core Pillars Section */}
-      <div className="py-24 bg-gradient-to-b from-teal-500 to-teal-600">
+      <div className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -126,43 +129,66 @@ const InfographicSection = () => {
               </p>
             </div>
             
-            {/* Temple Structure */}
-            <div className="relative">
-              {/* Top Foundation */}
-              <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-6 mx-8 mb-2 shadow-lg" 
-                   style={{
-                     clipPath: 'polygon(2% 0%, 98% 0%, 96% 100%, 4% 100%)'
-                   }}>
-              </div>
-              
-              {/* Main Temple Platform */}
-              <div className="bg-gradient-to-b from-gray-100 to-gray-200 rounded-lg shadow-2xl mx-4 p-8 relative">
-                {/* Three Pillars Container */}
-                <div className="grid md:grid-cols-3 gap-8 relative">
-                  {pillars.map((pillar, index) => (
-                    <div key={pillar.title} className="relative">
-                      {/* Pillar Column */}
-                      <div className="bg-gradient-to-b from-teal-400 to-teal-500 w-4 h-64 mx-auto mb-6 shadow-lg"></div>
-                      
-                      {/* Pillar Content */}
-                      <div className="text-center bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <div className="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
-                          <pillar.icon className={`w-8 h-8 ${pillar.iconColor}`} />
-                        </div>
-                        <h4 className="text-lg font-bold text-gray-900 mb-4 leading-tight">
-                          {pillar.title}
-                        </h4>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {pillar.description}
-                        </p>
+            {/* Temple Structure with Pillars */}
+            <div className="relative max-w-4xl mx-auto">
+              {/* Temple Roof */}
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  {/* Triangle Roof */}
+                  <div 
+                    className="w-64 h-20 bg-gradient-to-b from-gray-300 to-gray-400 shadow-lg"
+                    style={{
+                      clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+                    }}
+                  ></div>
+                  {/* Temple Icon */}
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
+                    <div className="w-12 h-8 bg-white rounded-sm flex items-center justify-center shadow-md">
+                      <div className="flex space-x-1">
+                        <div className="w-1 h-4 bg-gray-600"></div>
+                        <div className="w-1 h-4 bg-gray-600"></div>
+                        <div className="w-1 h-4 bg-gray-600"></div>
+                        <div className="w-1 h-4 bg-gray-600"></div>
+                        <div className="w-1 h-4 bg-gray-600"></div>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
               
-              {/* Bottom Foundation */}
-              <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-8 mx-2 mt-2 shadow-lg rounded-b-lg">
+              {/* Three Pillars */}
+              <div className="grid md:grid-cols-3 gap-8">
+                {pillars.map((pillar, index) => (
+                  <div key={pillar.title} className="relative">
+                    {/* Pillar Shape */}
+                    <div className={`${pillar.bgColor} ${pillar.textColor} p-8 shadow-xl relative`}
+                         style={{
+                           clipPath: 'polygon(10% 0%, 90% 0%, 95% 15%, 95% 85%, 90% 100%, 10% 100%, 5% 85%, 5% 15%)'
+                         }}>
+                      {/* Icon */}
+                      <div className="flex justify-center mb-6">
+                        <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                          <pillar.icon className="w-8 h-8 text-white" />
+                        </div>
+                      </div>
+                      
+                      {/* Title */}
+                      <h4 className="text-lg font-bold mb-6 text-center leading-tight">
+                        {pillar.title}
+                      </h4>
+                      
+                      {/* Description */}
+                      <p className="text-sm leading-relaxed text-center opacity-90">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Base Foundation */}
+              <div className="mt-8">
+                <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-6 w-full shadow-lg rounded-sm"></div>
               </div>
             </div>
 
