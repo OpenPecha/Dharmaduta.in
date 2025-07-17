@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye, Target, Cog, Layers } from "lucide-react";
@@ -41,7 +40,7 @@ const InfographicSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Why choose DDD?</span>
+              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Why choose Dharmaduta Services?</span>
             </h3>
           </div>
           
@@ -86,7 +85,7 @@ const InfographicSection = () => {
               size="lg" 
               className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg"
             >
-              LEARN MORE ABOUT DDD
+              Learn more about us
             </Button>
           </div>
         </div>
