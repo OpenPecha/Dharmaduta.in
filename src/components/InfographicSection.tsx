@@ -39,23 +39,20 @@ const InfographicSection = () => {
     {
       icon: Database,
       title: "Enterprise-grade AI Grounded in Authentic Tradition",
-      description: "We are a tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native programmers and developers work in direct collaboration with a vast network of specialists in monasteries and nunneries, ensuring every solution we create is built with deep respect and integrity.",
-      bgColor: "bg-orange-100",
-      iconColor: "text-orange-600"
+      description: "We are a Buddhist tech company uniquely positioned to build trustworthy AI grounded in authentic sources. Our native Tibetan programmers and developers work in direct collaboration with a vast network of Buddhist specialists in monasteries and nunneries, ensuring every solution we create is built with deep respect and integrity.",
+      iconColor: "text-orange-500"
     },
     {
       icon: Users,
       title: "Committed to a Collaborative & Open Future",
-      description: "We believe the future of digital solutions must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to open projects in order to prevent duplicated efforts and save valuable community resources. We aim at dramatically increasing the footprint of data online, to ensure AI systems can learn from and share wisdom accurately.",
-      bgColor: "bg-teal-100",
-      iconColor: "text-teal-600"
+      description: "We believe the future of digital Buddhism must be built on a foundation of shared, transparent, and collaborative technology. We are major contributors to the OpenPecha project in order to prevent duplicated efforts and save valuable community resources. We aim at dramatically increasing the footprint of Buddhist data online, to ensure AI systems can learn from and share Buddhist wisdom accurately.",
+      iconColor: "text-orange-500"
     },
     {
       icon: BookOpen,
-      title: "Empowering Communities",
-      description: "Think of us as your personal technology partner. We don't just deliver a product, we build your team's capacity. Our primary focus is to install lasting innovation capabilities, ensuring your activities can thrive with independence and impact for years to come.",
-      bgColor: "bg-emerald-100",
-      iconColor: "text-emerald-600"
+      title: "Empowering Buddhist communities",
+      description: "Think of us as your personal technology partner. We don't just deliver a product, we build your team's capacity. Our primary focus is to install lasting innovation capabilities, ensuring your Buddhist activities can thrive with independence and impact for years to come.",
+      iconColor: "text-orange-500"
     }
   ];
 
@@ -106,7 +103,7 @@ const InfographicSection = () => {
             </div>
           </div>
 
-          {/* Second Section - Our Three Core Pillars */}
+          {/* Second Section - Our Three Core Pillars with Temple Design */}
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               <span className="bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">Our Three Core Pillars</span>
@@ -116,31 +113,50 @@ const InfographicSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {corePillars.map((pillar, index) => (
-              <Card 
-                key={pillar.title} 
-                className={`border-2 border-teal-200 shadow-lg transition-all duration-500 transform hover:scale-105 ${pillar.bgColor} text-center animate-[scale-in_0.6s_ease-out] rounded-2xl overflow-hidden`}
-                style={{
-                  animationDelay: `${index * 0.2}s`,
-                  animationFillMode: 'both'
-                }}
-              >
-                <CardHeader className="pb-6 pt-8">
-                  <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                    <pillar.icon className={`w-10 h-10 ${pillar.iconColor}`} />
+          {/* Temple Structure */}
+          <div className="relative bg-teal-500 rounded-lg overflow-hidden mb-16">
+            {/* Temple Roof/Top */}
+            <div className="bg-gradient-to-b from-gray-200 to-gray-300 h-8 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
+              {/* Decorative corners */}
+              <div className="absolute top-0 left-0 w-8 h-8 bg-teal-500 transform rotate-45 -translate-x-4 -translate-y-4"></div>
+              <div className="absolute top-0 right-0 w-8 h-8 bg-teal-500 transform rotate-45 translate-x-4 -translate-y-4"></div>
+            </div>
+
+            {/* Main Temple Body */}
+            <div className="bg-gray-100 relative">
+              <div className="grid grid-cols-3 min-h-[400px]">
+                {corePillars.map((pillar, index) => (
+                  <div key={pillar.title} className="relative">
+                    {/* Pillar Column (Teal Separator) */}
+                    {index < 2 && (
+                      <div className="absolute right-0 top-0 bottom-0 w-8 bg-teal-500 z-10"></div>
+                    )}
+                    
+                    {/* Content Area */}
+                    <div className="p-8 bg-white h-full flex flex-col items-center justify-center text-center relative z-0">
+                      <div className="mb-6">
+                        <pillar.icon className={`w-16 h-16 ${pillar.iconColor} mx-auto`} />
+                      </div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-4 leading-tight">
+                        {pillar.title}
+                      </h4>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        {pillar.description}
+                      </p>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
-                    {pillar.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="px-6 pb-8">
-                  <p className="text-gray-700 leading-relaxed font-normal text-sm">
-                    {pillar.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
+
+            {/* Temple Foundation/Base */}
+            <div className="bg-gradient-to-t from-gray-200 to-gray-300 h-8 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div>
+              {/* Decorative corners */}
+              <div className="absolute bottom-0 left-0 w-8 h-8 bg-teal-500 transform rotate-45 -translate-x-4 translate-y-4"></div>
+              <div className="absolute bottom-0 right-0 w-8 h-8 bg-teal-500 transform rotate-45 translate-x-4 translate-y-4"></div>
+            </div>
           </div>
 
           <div className="text-center">
