@@ -68,9 +68,9 @@ const HeroSection = () => {
           
           <h2 
             ref={subtitleRef}
-            className="text-lg md:text-xl lg:text-2xl font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal drop-shadow-lg opacity-0 translate-y-10 whitespace-nowrap"
+            className="text-sm md:text-base lg:text-lg font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal drop-shadow-lg opacity-0 translate-y-10 whitespace-nowrap"
           >
-            We Transform Your Vision into Digital Reality
+            You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
           <div 
