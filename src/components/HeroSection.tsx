@@ -12,8 +12,8 @@ const HeroSection = () => {
       {/* Background Image - Full viewport coverage including header */}
       <div className="fixed inset-0 top-0 opacity-20 z-0">
         <img 
-          src="/lovable-uploads/ffa081dc-9787-4d82-98af-b3ad2d1e5e16.png" 
-          alt="Buddhist manuscript background" 
+          src="/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png" 
+          alt="Buddha with technology background" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/40 to-indigo-50/60"></div>
