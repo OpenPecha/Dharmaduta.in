@@ -43,8 +43,8 @@ const HeroSection = () => {
         minHeight: '100vh'
       }}
     >
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-indigo-50/30 z-10"></div>
+      {/* Background overlay - slightly darker */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/15 to-indigo-900/20 z-10"></div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 z-20">
