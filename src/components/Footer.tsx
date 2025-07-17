@@ -2,12 +2,16 @@
 import { Mail, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-20 font-inter">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-1 gap-12 mb-16">
-            <div>
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            <div className="md:col-span-2">
               <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent tracking-tight">
                 Dharmaduta Services
               </h3>
@@ -25,6 +29,43 @@ const Footer = () => {
                   <Github className="w-6 h-6" />
                 </a>
               </div>
+            </div>
+            
+            <div>
+              <ul className="space-y-3 mt-6">
+                <li>
+                  <button 
+                    onClick={() => scrollToSection('about')}
+                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  >
+                    Who we are
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => scrollToSection('services')}
+                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  >
+                    Our Services
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => scrollToSection('model')}
+                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  >
+                    Our Model
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => scrollToSection('case-studies')}
+                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  >
+                    Our Team
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
           
