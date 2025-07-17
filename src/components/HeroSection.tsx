@@ -1,5 +1,6 @@
 
 
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -10,8 +11,8 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 font-inter">
-      {/* Background Image - Full viewport coverage */}
-      <div className="fixed inset-0 opacity-20 z-0">
+      {/* Background Image - Full viewport coverage including header */}
+      <div className="fixed inset-0 top-0 opacity-20 z-0">
         <img 
           src="/lovable-uploads/ffa081dc-9787-4d82-98af-b3ad2d1e5e16.png" 
           alt="Buddhist manuscript background" 
@@ -75,4 +76,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
