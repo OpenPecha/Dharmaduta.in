@@ -23,7 +23,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Navigation */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-6">
             {/* Logo */}
             <div className="flex items-center">
               <div className="w-10 h-10 mr-3">
@@ -40,12 +40,12 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200"
+                  className="text-sm text-gray-600 hover:text-orange-500 font-normal transition-colors duration-200"
                 >
                   {item.label}
                 </button>
@@ -84,7 +84,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left text-gray-700 hover:text-orange-500 font-medium py-2 transition-colors duration-200"
+                  className="text-left text-gray-600 hover:text-orange-500 font-normal py-2 transition-colors duration-200"
                 >
                   {item.label}
                 </button>
