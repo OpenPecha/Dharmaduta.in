@@ -32,17 +32,17 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-20 pb-32">
         <div className="max-w-5xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent animate-slide-up">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight tracking-tight text-left bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
             Multiply Your Buddhist Activity
             <br />
             in the Age of AI
           </h1>
           
-          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg animate-slide-up-delayed">
+          <h2 className="text-sm md:text-base font-roboto text-white mb-12 font-normal leading-relaxed max-w-4xl tracking-normal text-left drop-shadow-lg">
             You have a vision to spread the Dharma. We have the team to make it a reality in the digital age.
           </h2>
           
-          <div className="flex justify-start animate-slide-up-delayed">
+          <div className="flex justify-start">
             <Button 
               onClick={scrollToServices}
               size="lg" 
