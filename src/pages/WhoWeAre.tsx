@@ -48,11 +48,11 @@ const WhoWeAre = () => {
             
             {/* Introduction */}
             <div className="mb-16 text-center">
-              <div className="bg-gray-100 rounded-2xl p-8 mb-8 h-64 flex items-center justify-center">
+              <div className="bg-gray-100 rounded-2xl p-8 mb-8 h-64 overflow-hidden">
                 <img 
                   src="/lovable-uploads/983482c0-df5c-4686-816b-d93c4600ded4.png" 
                   alt="Tillya Tepe Coin showing both sides with Buddhist symbols" 
-                  className="max-h-full max-w-full object-contain rounded-lg"
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
