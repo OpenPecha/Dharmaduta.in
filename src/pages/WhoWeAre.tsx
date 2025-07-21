@@ -58,7 +58,7 @@ const WhoWeAre = () => {
                     This remarkable artifact is not just a historical curiosity; it is a statement of the Dharma's power to adapt, communicate, and establish itself across cultures and eras. The coin's three central images form the core of our visual identity and represent the three pillars of our work.
                   </p>
                 </div>
-                <div className="bg-white/20 rounded-xl h-64 flex items-center justify-center border-2 border-white/30">
+                <div className="bg-white/20 rounded-xl h-full flex items-center justify-center border-2 border-white/30">
                   <span className="text-white/60 text-lg">Tillya Tepe Coin Placeholder</span>
                 </div>
               </div>
