@@ -39,7 +39,7 @@ const WhoWeAre = () => {
       </section>
 
       {/* Symbolism Section */}
-      <section className="py-20 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/lovable-uploads/c8894c1c-109d-4d1c-9711-30359c95e577.png)'}}>
+      <section className="py-20 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/lovable-uploads/e10f0ab5-bf16-4e27-bb26-fadb48bc0f04.png)'}}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
