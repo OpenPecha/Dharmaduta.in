@@ -39,26 +39,20 @@ const WhoWeAre = () => {
       </section>
 
       {/* Symbolism Section */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto">
+      <section className="py-20 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/lovable-uploads/b9b7c56b-a66d-4dac-92ca-9444c4caa3e7.png)'}}>
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
+            <h2 className="text-4xl font-bold mb-12 text-center text-white">
               The Symbolism of Our Identity
             </h2>
             
             {/* Introduction */}
             <div className="mb-16 text-center">
-              <div className="bg-gray-100 rounded-2xl mb-8 h-64 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/983482c0-df5c-4686-816b-d93c4600ded4.png" 
-                  alt="Tillya Tepe Coin showing both sides with Buddhist symbols" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-lg text-white leading-relaxed max-w-4xl mx-auto">
                 At Dharmaduta, our identity is rooted in the deep history of the Dharma's journey. We draw our inspiration and our symbols from the Tillya Tepe coin, one of the earliest and most powerful representations of the Buddha's teachings, minted nearly two millennia ago.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mt-6">
+              <p className="text-lg text-white leading-relaxed max-w-4xl mx-auto mt-6">
                 This remarkable artifact is not just a historical curiosity; it is a statement of the Dharma's power to adapt, communicate, and establish itself across cultures and eras. The coin's three central images form the core of our visual identity and represent the three pillars of our work.
               </p>
             </div>
