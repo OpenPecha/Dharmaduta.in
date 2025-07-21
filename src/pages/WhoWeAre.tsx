@@ -48,13 +48,20 @@ const WhoWeAre = () => {
             </h2>
             
             {/* Introduction */}
-            <div className="mb-16 text-center">
-              <p className="text-lg text-white leading-relaxed max-w-4xl mx-auto">
-                At Dharmaduta, our identity is rooted in the deep history of the Dharma's journey. We draw our inspiration and our symbols from the Tillya Tepe coin, one of the earliest and most powerful representations of the Buddha's teachings, minted nearly two millennia ago.
-              </p>
-              <p className="text-lg text-white leading-relaxed max-w-4xl mx-auto mt-6">
-                This remarkable artifact is not just a historical curiosity; it is a statement of the Dharma's power to adapt, communicate, and establish itself across cultures and eras. The coin's three central images form the core of our visual identity and represent the three pillars of our work.
-              </p>
+            <div className="mb-16">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <p className="text-lg text-white leading-relaxed">
+                    At Dharmaduta, our identity is rooted in the deep history of the Dharma's journey. We draw our inspiration and our symbols from the Tillya Tepe coin, one of the earliest and most powerful representations of the Buddha's teachings, minted nearly two millennia ago.
+                  </p>
+                  <p className="text-lg text-white leading-relaxed mt-6">
+                    This remarkable artifact is not just a historical curiosity; it is a statement of the Dharma's power to adapt, communicate, and establish itself across cultures and eras. The coin's three central images form the core of our visual identity and represent the three pillars of our work.
+                  </p>
+                </div>
+                <div className="bg-white/20 rounded-xl h-64 flex items-center justify-center border-2 border-white/30">
+                  <span className="text-white/60 text-lg">Tillya Tepe Coin Placeholder</span>
+                </div>
+              </div>
             </div>
 
             {/* Three Symbols Grid */}
