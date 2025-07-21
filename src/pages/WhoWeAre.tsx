@@ -73,7 +73,7 @@ const WhoWeAre = () => {
                   <div className="bg-gray-100 rounded-xl h-48 mb-6 flex items-center justify-center">
                     <span className="text-gray-500">Triratna Symbol</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  <h3 className="text-2xl font-bold mb-4" style={{color: '#ff6700'}}>
                     The Triratna (The Three Jewels)
                   </h3>
                   <h4 className="text-lg font-semibold mb-4 text-indigo-600">
@@ -91,7 +91,7 @@ const WhoWeAre = () => {
                   <div className="bg-gray-100 rounded-xl h-48 mb-6 flex items-center justify-center">
                     <span className="text-gray-500">Dharmacakra Symbol</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  <h3 className="text-2xl font-bold mb-4" style={{color: '#ff6700'}}>
                     The Turning Wheel – Our AI & Data Services
                   </h3>
                   <h4 className="text-lg font-semibold mb-4 text-indigo-600">
@@ -109,7 +109,7 @@ const WhoWeAre = () => {
                   <div className="bg-gray-100 rounded-xl h-48 mb-6 flex items-center justify-center">
                     <span className="text-gray-500">Lion Symbol</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  <h3 className="text-2xl font-bold mb-4" style={{color: '#ff6700'}}>
                     The Fearless Lion – Our Empowerment & Coaching Services
                   </h3>
                   <h4 className="text-lg font-semibold mb-4 text-indigo-600">
