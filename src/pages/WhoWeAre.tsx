@@ -74,8 +74,12 @@ const WhoWeAre = () => {
               {/* Triratna Card */}
               <Card className="shadow-lg">
                 <CardContent className="p-8">
-                  <div className="bg-gray-100 rounded-xl h-48 mb-6 flex items-center justify-center">
-                    <span className="text-gray-500">Triratna Symbol</span>
+                  <div className="rounded-xl h-48 mb-6 overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/64ac51c0-721c-41b9-a421-cf651129f35a.png" 
+                      alt="Triratna Symbol - Three Jewels carved in stone" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-2xl font-bold mb-4" style={{color: '#ff6700'}}>
                     The Triratna (The Three Jewels)
@@ -92,8 +96,12 @@ const WhoWeAre = () => {
               {/* Turning Wheel Card */}
               <Card className="shadow-lg">
                 <CardContent className="p-8">
-                  <div className="bg-gray-100 rounded-xl h-48 mb-6 flex items-center justify-center">
-                    <span className="text-gray-500">Dharmacakra Symbol</span>
+                  <div className="rounded-xl h-48 mb-6 overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/eccf3b36-84b1-4b0e-bc2b-c84bd67a3faf.png" 
+                      alt="Dharmacakra Symbol - Wheel of Dharma on ancient coin" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-2xl font-bold mb-4" style={{color: '#ff6700'}}>
                     The Turning Wheel – Our AI & Data Services
@@ -110,8 +118,12 @@ const WhoWeAre = () => {
               {/* Fearless Lion Card */}
               <Card className="shadow-lg">
                 <CardContent className="p-8">
-                  <div className="bg-gray-100 rounded-xl h-48 mb-6 flex items-center justify-center">
-                    <span className="text-gray-500">Lion Symbol</span>
+                  <div className="rounded-xl h-48 mb-6 overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/6df45909-b84f-4d3b-89e1-8bb5a487f1fa.png" 
+                      alt="Lion Symbol - Fearless lion on ancient coin" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-2xl font-bold mb-4" style={{color: '#ff6700'}}>
                     The Fearless Lion – Our Empowerment & Coaching Services
