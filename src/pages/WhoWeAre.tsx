@@ -2,24 +2,31 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const WhoWeAre = () => {
+  const heroSection = useScrollAnimation(0.1, '-100px');
+  const missionSection = useScrollAnimation(0.1, '-100px');
+  const symbolismSection = useScrollAnimation(0.1, '-100px');
+  const symbolismIntro = useScrollAnimation(0.1, '-50px');
+  const symbolsGrid = useScrollAnimation(0.1, '-50px');
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section 
+        ref={heroSection.ref}
         className="pt-32 pb-20 px-6 bg-cover bg-center bg-no-repeat relative"
         style={{backgroundImage: 'url(/lovable-uploads/814091f1-5d72-4949-8c66-667523fcae63.png)'}}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-left">
-            <h1 className="text-4xl md:text-5xl font-roboto font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
+            <h1 className={`text-4xl md:text-5xl font-roboto font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap opacity-0 ${heroSection.isVisible ? 'animate-slide-up' : ''}`}>
               About Dharmaduta Services LLP
             </h1>
-            <p className="text-lg font-roboto text-white leading-relaxed">
+            <p className={`text-lg font-roboto text-white leading-relaxed opacity-0 ${heroSection.isVisible ? 'animate-slide-up-delay-1' : ''}`}>
               We are a team of technologists, archivists, and scholars dedicated to preserving and sharing cultural heritage through modern technology and open-source principles.
             </p>
           </div>
@@ -28,16 +35,17 @@ const WhoWeAre = () => {
 
       {/* Mission Section */}
       <section 
+        ref={missionSection.ref}
         className="py-20 px-6 bg-cover bg-center bg-no-repeat relative min-h-[600px]"
         style={{backgroundImage: 'url(/lovable-uploads/448e8863-0588-4193-97c9-bf62280503a9.png)'}}
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="container mx-auto relative z-10 h-full">
           <div className="flex flex-col justify-between h-full">
-            <h2 className="text-4xl font-bold mb-8 text-left text-white">
+            <h2 className={`text-4xl font-bold mb-8 text-left text-white opacity-0 ${missionSection.isVisible ? 'animate-slide-up' : ''}`}>
               Our Mission
             </h2>
-            <div className="max-w-[500px] ml-0 self-start mt-auto mb-16">
+            <div className={`max-w-[500px] ml-0 self-start mt-auto mb-16 opacity-0 ${missionSection.isVisible ? 'animate-slide-up-delay-1' : ''}`}>
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 pr-12 shadow-2xl relative">
                 <div className="absolute -top-2 -left-2 w-4 h-4 bg-white/80 rotate-45 rounded-sm"></div>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -50,26 +58,26 @@ const WhoWeAre = () => {
       </section>
 
       {/* Symbolism Section */}
-      <section className="py-20 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/lovable-uploads/e10f0ab5-bf16-4e27-bb26-fadb48bc0f04.png)'}}>
+      <section ref={symbolismSection.ref} className="py-20 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/lovable-uploads/e10f0ab5-bf16-4e27-bb26-fadb48bc0f04.png)'}}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center text-white">
+            <h2 className={`text-4xl font-bold mb-12 text-center text-white opacity-0 ${symbolismSection.isVisible ? 'animate-slide-up' : ''}`}>
               The Symbolism of Our Identity
             </h2>
             
             {/* Introduction */}
-            <div className="mb-16">
+            <div ref={symbolismIntro.ref} className="mb-16">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <p className="text-lg text-white leading-relaxed">
+                  <p className={`text-lg text-white leading-relaxed opacity-0 ${symbolismIntro.isVisible ? 'animate-slide-up-delay-1' : ''}`}>
                     At Dharmaduta, our identity is rooted in the deep history of the Dharma's journey. We draw our inspiration and our symbols from the Tillya Tepe coin, one of the earliest and most powerful representations of the Buddha's teachings, minted nearly two millennia ago.
                   </p>
-                  <p className="text-lg text-white leading-relaxed mt-6">
+                  <p className={`text-lg text-white leading-relaxed mt-6 opacity-0 ${symbolismIntro.isVisible ? 'animate-slide-up-delay-2' : ''}`}>
                     This remarkable artifact is not just a historical curiosity; it is a statement of the Dharma's power to adapt, communicate, and establish itself across cultures and eras. The coin's three central images form the core of our visual identity and represent the three pillars of our work.
                   </p>
                 </div>
-                <div className="bg-white/20 rounded-xl h-full flex items-center justify-center border-2 border-white/30 p-4">
+                <div className={`bg-white/20 rounded-xl h-full flex items-center justify-center border-2 border-white/30 p-4 opacity-0 ${symbolismIntro.isVisible ? 'animate-slide-up-delay-3' : ''}`}>
                   <img 
                     src="/lovable-uploads/9b516b25-0d4d-4523-a4ad-15332fddb0db.png" 
                     alt="Tillya Tepe Buddhist coin showing the three symbols" 
@@ -80,10 +88,10 @@ const WhoWeAre = () => {
             </div>
 
             {/* Three Symbols Grid */}
-            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+            <div ref={symbolsGrid.ref} className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
               
               {/* Triratna Card */}
-              <Card className="shadow-lg">
+              <Card className={`shadow-lg opacity-0 ${symbolsGrid.isVisible ? 'animate-slide-up' : ''}`}>
                 <CardContent className="p-8">
                   <div className="rounded-xl h-48 mb-6 overflow-hidden">
                     <img 
@@ -105,7 +113,7 @@ const WhoWeAre = () => {
               </Card>
 
               {/* Turning Wheel Card */}
-              <Card className="shadow-lg">
+              <Card className={`shadow-lg opacity-0 ${symbolsGrid.isVisible ? 'animate-slide-up-delay-1' : ''}`}>
                 <CardContent className="p-8">
                   <div className="rounded-xl h-48 mb-6 overflow-hidden">
                     <img 
@@ -127,7 +135,7 @@ const WhoWeAre = () => {
               </Card>
 
               {/* Fearless Lion Card */}
-              <Card className="shadow-lg">
+              <Card className={`shadow-lg opacity-0 ${symbolsGrid.isVisible ? 'animate-slide-up-delay-2' : ''}`}>
                 <CardContent className="p-8">
                   <div className="rounded-xl h-48 mb-6 overflow-hidden">
                     <img 
