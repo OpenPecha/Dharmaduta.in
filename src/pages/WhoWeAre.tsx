@@ -28,19 +28,22 @@ const WhoWeAre = () => {
 
       {/* Mission Section */}
       <section 
-        className="py-20 px-6 bg-cover bg-center bg-no-repeat relative"
+        className="py-20 px-6 bg-cover bg-center bg-no-repeat relative min-h-[600px]"
         style={{backgroundImage: 'url(/lovable-uploads/448e8863-0588-4193-97c9-bf62280503a9.png)'}}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center text-white">
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="container mx-auto relative z-10 h-full">
+          <div className="flex flex-col justify-between h-full">
+            <h2 className="text-4xl font-bold mb-8 text-left text-white">
               Our Mission
             </h2>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                We know that sharing the Dharma requires immense dedication. In today's world, it also requires the right tools. At Dharmaduta, our mission is to empower your organization to amplify its activities, connect with new generations, and ensure the timeless wisdom of the Buddha thrives in the digital age.
-              </p>
+            <div className="max-w-[500px] ml-0 self-start mt-auto mb-16">
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 pr-12 shadow-2xl relative">
+                <div className="absolute -top-2 -left-2 w-4 h-4 bg-white/80 rotate-45 rounded-sm"></div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  We know that sharing the Dharma requires immense dedication. In today's world, it also requires the right tools. At Dharmaduta, our mission is to empower your organization to amplify its activities, connect with new generations, and ensure the timeless wisdom of the Buddha thrives in the digital age.
+                </p>
+              </div>
             </div>
           </div>
         </div>
