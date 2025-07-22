@@ -9,13 +9,17 @@ const WhoWeAre = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto">
+      <section 
+        className="pt-32 pb-20 px-6 bg-cover bg-center bg-no-repeat relative"
+        style={{backgroundImage: 'url(/lovable-uploads/814091f1-5d72-4949-8c66-667523fcae63.png)'}}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-left">
-            <h1 className="text-4xl md:text-5xl font-roboto font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent whitespace-nowrap">
+            <h1 className="text-4xl md:text-5xl font-roboto font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
               About Dharmaduta Services LLP
             </h1>
-            <p className="text-lg font-roboto text-gray-600 leading-relaxed">
+            <p className="text-lg font-roboto text-white leading-relaxed">
               We are a team of technologists, archivists, and scholars dedicated to preserving and sharing cultural heritage through modern technology and open-source principles.
             </p>
           </div>
@@ -23,13 +27,17 @@ const WhoWeAre = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="container mx-auto">
+      <section 
+        className="py-20 px-6 bg-cover bg-center bg-no-repeat relative"
+        style={{backgroundImage: 'url(/lovable-uploads/448e8863-0588-4193-97c9-bf62280503a9.png)'}}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
+            <h2 className="text-4xl font-bold mb-12 text-center text-white">
               Our Mission
             </h2>
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg">
               <p className="text-lg text-gray-700 leading-relaxed">
                 We know that sharing the Dharma requires immense dedication. In today's world, it also requires the right tools. At Dharmaduta, our mission is to empower your organization to amplify its activities, connect with new generations, and ensure the timeless wisdom of the Buddha thrives in the digital age.
               </p>
