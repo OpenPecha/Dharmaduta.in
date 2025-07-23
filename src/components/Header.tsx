@@ -15,9 +15,10 @@ const Header = () => {
 
   const navItems = [
     { label: "Who we are", type: "link", path: "/who-we-are" },
-    { label: "Our Services", type: "scroll", id: "services" },
-    { label: "Our Model", type: "scroll", id: "model" },
-    { label: "Our Team", type: "scroll", id: "case-studies" },
+    { label: "Our Services", type: "link", path: "/our-services" },
+    { label: "Our Model", type: "link", path: "/our-model" },
+    { label: "Our Team", type: "link", path: "/our-team" },
+    { label: "Case Studies", type: "link", path: "/case-studies" },
   ];
 
   const headerBgClass = isMainPage 
@@ -52,23 +53,13 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-6">
             <nav className="flex items-center space-x-1">
               {navItems.map((item) => (
-                item.type === "link" ? (
-                  <Link
-                    key={item.label}
-                    to={item.path}
-                    className={`text-sm ${textColorClass} font-normal px-3 py-2 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out drop-shadow-md`}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button
-                    key={item.label}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`text-sm ${textColorClass} font-normal px-3 py-2 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out drop-shadow-md`}
-                  >
-                    {item.label}
-                  </button>
-                )
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className={`text-sm ${textColorClass} font-normal px-3 py-2 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out drop-shadow-md`}
+                >
+                  {item.label}
+                </Link>
               ))}
             </nav>
             <Button 
@@ -97,24 +88,14 @@ const Header = () => {
           <div className={`md:hidden py-4 border-t border-gray-300/30 ${mobileBgClass} backdrop-blur-md`}>
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                item.type === "link" ? (
-                  <Link
-                    key={item.label}
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-left ${textColorClass} font-normal py-2 px-4 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out`}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button
-                    key={item.label}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`text-left ${textColorClass} font-normal py-2 px-4 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out`}
-                  >
-                    {item.label}
-                  </button>
-                )
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-left ${textColorClass} font-normal py-2 px-4 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out`}
+                >
+                  {item.label}
+                </Link>
               ))}
               <div className="pt-4">
                 <Button 
