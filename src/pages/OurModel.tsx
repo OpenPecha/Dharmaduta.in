@@ -9,7 +9,7 @@ const OurModel = () => {
   const { ref: modelRef, isVisible: modelVisible } = useScrollAnimation();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-roboto">
       <Header />
       
       {/* Hero Section */}
@@ -25,8 +25,8 @@ const OurModel = () => {
       >
         <div className="absolute inset-0 bg-teal-600/70"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+          <div className="max-w-4xl text-left">
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
               Our Model
             </h1>
             <p className={`text-xl md:text-2xl text-white/90 leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>

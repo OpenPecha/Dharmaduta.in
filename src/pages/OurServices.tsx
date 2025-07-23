@@ -12,7 +12,7 @@ const OurServices = () => {
   const { ref: individualsRef, isVisible: individualsVisible } = useScrollAnimation();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-roboto">
       <Header />
       
       {/* Hero Section */}
@@ -21,8 +21,8 @@ const OurServices = () => {
         className="pt-24 pb-16 bg-gradient-to-br from-primary to-primary/80"
       >
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+          <div className="max-w-4xl text-left">
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
               Our Services
             </h1>
             <p className={`text-xl md:text-2xl text-white/90 leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
