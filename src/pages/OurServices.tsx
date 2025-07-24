@@ -18,9 +18,16 @@ const OurServices = () => {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="pt-24 pb-16 bg-gradient-to-br from-primary to-primary/80"
+        className="pt-24 pb-16 relative bg-gradient-to-br from-primary to-primary/80"
+        style={{
+          backgroundImage: `url('/lovable-uploads/27a8e5b5-00a9-4f6d-ac8a-3b5f44c55b71.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
       >
-        <div className="container mx-auto px-6">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary/60"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-left">
             <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
               Our Services
@@ -33,30 +40,96 @@ const OurServices = () => {
       </section>
 
       {/* Two-Column Service Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto px-6">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url('/lovable-uploads/27a8e5b5-00a9-4f6d-ac8a-3b5f44c55b71.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 to-blue-50/95"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8">
               
-              {/* Buddhist Institutions Column */}
+              {/* Buddhist Influencers Column - Left */}
               <div 
-                ref={institutionsRef}
-                className={`transition-all duration-700 ${institutionsVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}
+                ref={individualsRef}
+                className={`transition-all duration-700 ${individualsVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}
               >
                 {/* Image Container with Overlay Text */}
-                <div className="relative h-80 rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-blue-600 to-indigo-600 shadow-xl">
+                <div className="relative h-80 rounded-xl overflow-hidden mb-6 shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                    src="/lovable-uploads/ae08e3f0-73a6-4f56-8e6a-9608117ecf03.png" 
+                    alt="Buddhist Influencer Coaching" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/80 to-pink-600/80"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <div className={`transition-all duration-700 delay-200 ${individualsVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
+                      <h1 className="text-2xl font-roboto font-bold text-white mb-3">
+                        For Individuals – Buddhist Influencer Coaching
+                      </h1>
+                      <h3 className="text-xl font-roboto font-bold text-white mb-3">
+                        Grow Your Audience, Deepen Your Impact
+                      </h3>
+                      <p className="text-white/90 font-roboto leading-relaxed">
+                        You have a powerful message to share. We help you refine it, grow your following, and build a sustainable platform for your work. Our coaching combines modern marketing strategies with a deep understanding of the Dharma, training you to leverage specialized AI and Buddhist technology to amplify your voice.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Services Offered List */}
+                <div className={`transition-all duration-700 delay-400 ${individualsVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+                  <h4 className="text-xl font-roboto font-semibold text-foreground mb-4">Services Offered</h4>
+                  <ul className="space-y-4 mb-6">
+                    <li className="flex items-start space-x-3">
+                      <div className="bg-gradient-to-br from-orange-500 to-red-500 w-2 h-2 rounded-full mt-2 shrink-0"></div>
+                      <div>
+                        <p className="font-roboto font-medium text-foreground">Influencer Training</p>
+                        <p className="text-muted-foreground font-roboto text-sm">Learn how to create compelling content, engage your audience authentically, and navigate the digital landscape effectively.</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="bg-gradient-to-br from-teal-500 to-cyan-500 w-2 h-2 rounded-full mt-2 shrink-0"></div>
+                      <div>
+                        <p className="font-roboto font-medium text-foreground">Project Incubation</p>
+                        <p className="text-muted-foreground font-roboto text-sm">We provide the mentorship, strategic planning, and network access needed to take your Dharma project from idea to launch.</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <Button 
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-roboto"
+                    onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
+                  >
+                    Join Our Community
+                  </Button>
+                </div>
+              </div>
+
+              {/* Buddhist Institutions Column - Right */}
+              <div 
+                ref={institutionsRef}
+                className={`transition-all duration-700 delay-200 ${institutionsVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}
+              >
+                {/* Image Container with Overlay Text */}
+                <div className="relative h-80 rounded-xl overflow-hidden mb-6 shadow-xl">
+                  <img 
+                    src="/lovable-uploads/2864f909-b18b-4c62-a074-4bdb0ede62d7.png" 
                     alt="Buddhist Technology Services" 
-                    className="w-full h-full object-cover opacity-30"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-indigo-600/80"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className={`transition-all duration-700 delay-200 ${institutionsVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
-                      <div className="bg-white/20 backdrop-blur-sm w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <Brain className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-roboto font-bold text-white mb-3">
+                    <div className={`transition-all duration-700 delay-400 ${institutionsVisible ? 'animate-slide-up-delay-2' : 'opacity-0 translate-y-10'}`}>
+                      <h1 className="text-2xl font-roboto font-bold text-white mb-3">
+                        For Buddhist Institutions – Buddhist Tech Services
+                      </h1>
+                      <h3 className="text-xl font-roboto font-bold text-white mb-3">
                         Onboard AI to Amplify Your Mission
                       </h3>
                       <p className="text-white/90 font-roboto leading-relaxed">
@@ -67,7 +140,7 @@ const OurServices = () => {
                 </div>
 
                 {/* Services Offered List */}
-                <div className={`transition-all duration-700 delay-400 ${institutionsVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+                <div className={`transition-all duration-700 delay-600 ${institutionsVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
                   <h4 className="text-xl font-roboto font-semibold text-foreground mb-4">Services Offered</h4>
                   <ul className="space-y-4 mb-6">
                      <li className="flex items-start space-x-3">
@@ -91,63 +164,6 @@ const OurServices = () => {
                     onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
                   >
                     Partner With Us
-                  </Button>
-                </div>
-              </div>
-
-              {/* Buddhist Influencers Column */}
-              <div 
-                ref={individualsRef}
-                className={`transition-all duration-700 delay-200 ${individualsVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}
-              >
-                {/* Image Container with Overlay Text */}
-                <div className="relative h-80 rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-purple-600 to-pink-600 shadow-xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                    alt="Buddhist Influencer Coaching" 
-                    className="w-full h-full object-cover opacity-30"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/80 to-pink-600/80"></div>
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className={`transition-all duration-700 delay-400 ${individualsVisible ? 'animate-slide-up-delay-2' : 'opacity-0 translate-y-10'}`}>
-                      <div className="bg-white/20 backdrop-blur-sm w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <BookOpen className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-roboto font-bold text-white mb-3">
-                        Grow Your Audience, Deepen Your Impact
-                      </h3>
-                      <p className="text-white/90 font-roboto leading-relaxed">
-                        You have a powerful message to share. We help you refine it, grow your following, and build a sustainable platform for your work. Our coaching combines modern marketing strategies with a deep understanding of the Dharma, training you to leverage specialized AI and Buddhist technology to amplify your voice.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Services Offered List */}
-                <div className={`transition-all duration-700 delay-600 ${individualsVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-                  <h4 className="text-xl font-roboto font-semibold text-foreground mb-4">Services Offered</h4>
-                  <ul className="space-y-4 mb-6">
-                    <li className="flex items-start space-x-3">
-                      <div className="bg-gradient-to-br from-orange-500 to-red-500 w-2 h-2 rounded-full mt-2 shrink-0"></div>
-                      <div>
-                        <p className="font-roboto font-medium text-foreground">Influencer Training</p>
-                        <p className="text-muted-foreground font-roboto text-sm">Learn how to create compelling content, engage your audience authentically, and navigate the digital landscape effectively.</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="bg-gradient-to-br from-teal-500 to-cyan-500 w-2 h-2 rounded-full mt-2 shrink-0"></div>
-                      <div>
-                        <p className="font-roboto font-medium text-foreground">Project Incubation</p>
-                        <p className="text-muted-foreground font-roboto text-sm">We provide the mentorship, strategic planning, and network access needed to take your Dharma project from idea to launch.</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <Button 
-                    size="lg"
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-roboto"
-                    onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-                  >
-                    Start Growing
                   </Button>
                 </div>
               </div>
