@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye, Target, Cog, Layers } from "lucide-react";
+import AnimatedDotsBackground from "@/components/AnimatedDotsBackground";
 
 const WhyChooseSection = () => {
   const features = [
@@ -36,8 +37,9 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section id="why-choose" className="py-24 bg-white font-inter">
-      <div className="container mx-auto px-6">
+    <section id="why-choose" className="py-24 bg-gradient-to-br from-slate-50 to-white font-inter relative overflow-hidden">
+      <AnimatedDotsBackground />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
