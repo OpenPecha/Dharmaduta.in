@@ -49,7 +49,7 @@ const OurServices = () => {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 to-blue-50/95"></div>
+        
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8">
@@ -62,11 +62,10 @@ const OurServices = () => {
                 {/* Image Container with Overlay Text */}
                 <div className="relative h-80 rounded-xl overflow-hidden mb-6 shadow-xl">
                   <img 
-                    src="/lovable-uploads/ae08e3f0-73a6-4f56-8e6a-9608117ecf03.png" 
+                    src="/lovable-uploads/2864f909-b18b-4c62-a074-4bdb0ede62d7.png" 
                     alt="Buddhist Influencer Coaching" 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/80 to-pink-600/80"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <div className={`transition-all duration-700 delay-200 ${individualsVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
                       <h1 className="text-2xl font-roboto font-bold text-white mb-3">
@@ -119,11 +118,10 @@ const OurServices = () => {
                 {/* Image Container with Overlay Text */}
                 <div className="relative h-80 rounded-xl overflow-hidden mb-6 shadow-xl">
                   <img 
-                    src="/lovable-uploads/2864f909-b18b-4c62-a074-4bdb0ede62d7.png" 
+                    src="/lovable-uploads/ae08e3f0-73a6-4f56-8e6a-9608117ecf03.png" 
                     alt="Buddhist Technology Services" 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-indigo-600/80"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <div className={`transition-all duration-700 delay-400 ${institutionsVisible ? 'animate-slide-up-delay-2' : 'opacity-0 translate-y-10'}`}>
                       <h1 className="text-2xl font-roboto font-bold text-white mb-3">
