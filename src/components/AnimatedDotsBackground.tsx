@@ -6,6 +6,8 @@ interface Dot {
   vx: number;
   vy: number;
   size: number;
+  color: string;
+  opacity: number;
 }
 
 const AnimatedDotsBackground = () => {
@@ -30,16 +32,31 @@ const AnimatedDotsBackground = () => {
     };
 
     const createDots = () => {
-      const numDots = Math.min(50, Math.floor((canvas.width * canvas.height) / 20000));
+      const numDots = Math.min(60, Math.floor((canvas.width * canvas.height) / 15000));
       dotsRef.current = [];
+      
+      const colors = [
+        '#EC4899', // Pink
+        '#8B5CF6', // Purple
+        '#3B82F6', // Blue
+        '#10B981', // Emerald
+        '#F59E0B', // Amber
+        '#EF4444', // Red
+        '#06B6D4', // Cyan
+        '#8B5A2B', // Brown
+        '#6366F1', // Indigo
+        '#F97316', // Orange
+      ];
       
       for (let i = 0; i < numDots; i++) {
         dotsRef.current.push({
           x: Math.random() * canvas.width / window.devicePixelRatio,
           y: Math.random() * canvas.height / window.devicePixelRatio,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 3 + 2,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          size: Math.random() * 4 + 3,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          opacity: Math.random() * 0.4 + 0.4,
         });
       }
     };
@@ -48,11 +65,10 @@ const AnimatedDotsBackground = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       const dots = dotsRef.current;
-      const maxDistance = 120;
+      const maxDistance = 150;
       
-      // Draw connections
-      ctx.strokeStyle = 'rgba(99, 102, 241, 0.2)'; // Indigo with low opacity
-      ctx.lineWidth = 1;
+      // Draw connections with very subtle lines
+      ctx.lineWidth = 0.8;
       
       for (let i = 0; i < dots.length; i++) {
         for (let j = i + 1; j < dots.length; j++) {
@@ -61,8 +77,8 @@ const AnimatedDotsBackground = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
           
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * 0.3;
-            ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+            const opacity = (1 - distance / maxDistance) * 0.15;
+            ctx.strokeStyle = `rgba(156, 163, 175, ${opacity})`; // Subtle gray
             ctx.beginPath();
             ctx.moveTo(dots[i].x, dots[i].y);
             ctx.lineTo(dots[j].x, dots[j].y);
@@ -71,17 +87,23 @@ const AnimatedDotsBackground = () => {
         }
       }
       
-      // Draw dots
+      // Draw colorful dots
       dots.forEach((dot) => {
-        ctx.fillStyle = 'rgba(249, 115, 22, 0.6)'; // Orange with transparency
+        // Convert hex to RGB for opacity control
+        const hex = dot.color.replace('#', '');
+        const r = parseInt(hex.substr(0, 2), 16);
+        const g = parseInt(hex.substr(2, 2), 16);
+        const b = parseInt(hex.substr(4, 2), 16);
+        
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${dot.opacity})`;
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
         ctx.fill();
         
-        // Add a subtle glow
-        ctx.fillStyle = 'rgba(249, 115, 22, 0.2)';
+        // Add subtle lighter version for depth
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${dot.opacity * 0.3})`;
         ctx.beginPath();
-        ctx.arc(dot.x, dot.y, dot.size + 2, 0, Math.PI * 2);
+        ctx.arc(dot.x, dot.y, dot.size + 1, 0, Math.PI * 2);
         ctx.fill();
       });
     };
