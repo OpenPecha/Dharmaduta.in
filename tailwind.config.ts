@@ -99,6 +99,16 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'slide-down': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
@@ -107,7 +117,8 @@ export default {
 				'slide-up': 'slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
 				'slide-up-delay-1': 'slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both',
 				'slide-up-delay-2': 'slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both',
-				'slide-up-delay-3': 'slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both'
+				'slide-up-delay-3': 'slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both',
+				'slide-down': 'slide-down 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
 			}
 		}
 	},
