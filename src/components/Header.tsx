@@ -62,12 +62,13 @@ const Header = () => {
                 </Link>
               ))}
             </nav>
-            <Button 
-              onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
-            >
-              Contact Us
-            </Button>
+            <Link to="/contact-us">
+              <Button 
+                className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -98,12 +99,13 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4">
-                <Button 
-                  onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
-                >
-                  Contact Us
-                </Button>
+                <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
+                  <Button 
+                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
