@@ -60,7 +60,7 @@ const ContactUs = () => {
                 
                 {/* Red handwritten style text with arrow */}
                 <div className="relative mt-12">
-                  <div className="text-red-500 font-handwriting text-lg transform -rotate-2">
+                  <div className="text-red-500 font-handwriting text-3xl lg:text-4xl transform -rotate-2">
                     You're one step closer to your dream door
                   </div>
                   
