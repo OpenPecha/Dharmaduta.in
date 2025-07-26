@@ -22,6 +22,7 @@ export default {
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
 				'roboto': ['Roboto', 'sans-serif'],
+				'handwriting': ['Caveat', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
