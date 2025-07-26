@@ -28,10 +28,23 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <div 
+      className="min-h-screen bg-background relative"
+      style={{
+        backgroundImage: `url('/lovable-uploads/ee8972fd-2c56-442e-963d-7437a436d2a5.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-white/60 z-0"></div>
       
-      <main className="pt-20">
+      <div className="relative z-10">
+        <Header />
+        
+        <main className="pt-20">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
@@ -247,9 +260,10 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-      </main>
-      
-      <Footer />
+        </main>
+        
+        <Footer />
+      </div>
     </div>
   );
 };
