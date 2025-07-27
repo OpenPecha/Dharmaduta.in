@@ -49,7 +49,7 @@ const ContactUs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
             {/* Left Section - Text Content */}
-            <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
+            <div className="p-8 lg:p-12 flex flex-col justify-center">
               <div className="space-y-8">
                 <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                   We'd Love To{" "}
@@ -71,7 +71,7 @@ const ContactUs = () => {
                     fill="none"
                   >
                     <path 
-                      d="M10 30 Q 50 10, 90 30" 
+                      d="M10 30 Q 50 50, 90 30" 
                       stroke="currentColor" 
                       strokeWidth="2" 
                       fill="none"
