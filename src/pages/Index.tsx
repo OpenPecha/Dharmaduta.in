@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import HowWeHelpSection from "@/components/HowWeHelpSection";
 import InfographicSection from "@/components/InfographicSection";
 import CorePillarsSection from "@/components/CorePillarsSection";
-import GlobalCollaborationSection from "@/components/GlobalCollaborationSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,7 +14,6 @@ const Index = () => {
       <HowWeHelpSection />
       <InfographicSection />
       <CorePillarsSection />
-      <GlobalCollaborationSection />
       <Footer />
     </div>
   );
