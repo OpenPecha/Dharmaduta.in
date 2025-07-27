@@ -262,10 +262,18 @@ const ContactUs = () => {
         </div>
 
         {/* Connect with us section */}
-        <section className="py-16 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-gray-50/90"></div>
+        <section 
+          className="py-16 px-4 relative"
+          style={{
+            backgroundImage: `url('/lovable-uploads/6563a85b-5b69-490e-95ee-c03fe7f4d84f.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
           <div className="container mx-auto max-w-4xl relative z-10">
-            <h2 className="text-4xl lg:text-5xl font-bold text-center text-foreground mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-center text-white mb-12">
               Connect with us.
             </h2>
             
