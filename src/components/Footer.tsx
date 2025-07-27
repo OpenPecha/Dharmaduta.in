@@ -20,25 +20,25 @@ const Footer = () => {
                 Bridging ancient wisdom and modern technology to multiply your Buddhist impact in the digital age.
               </p>
               <div className="flex space-x-4 flex-wrap">
-                <a href="mailto:contact@dharmadutaservices.com" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="mailto:contact@dharmaduta.in" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.linkedin.com/company/dharmaduta-services-llp/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://x.com/Dharmadutatech" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Twitter className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.youtube.com/@DharmadutaServicesLLP" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Youtube className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.instagram.com/dharmadutaservicesllp.tech/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61578322432088" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
                   <Facebook className="w-6 h-6" />
                 </a>
               </div>
