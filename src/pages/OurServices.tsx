@@ -21,8 +21,18 @@ const OurServices = () => {
           {/* Buddhist Institutions Column - Left */}
           <div 
             ref={institutionsRef}
-            className="relative bg-gradient-to-br from-indigo-900 to-navy-800 flex flex-col"
+            className="relative bg-gradient-to-br from-slate-800 to-indigo-900 flex flex-col"
           >
+            {/* Background Image */}
+            <div 
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `url('/lovable-uploads/5154e367-c3d2-424d-909c-d6afcda98571.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            ></div>
+            
             <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-center h-full">
               <div className={`transition-all duration-700 ${institutionsVisible ? 'animate-fade-in animate-slide-up' : 'opacity-0 translate-y-10'}`}>
                 <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">
@@ -58,8 +68,7 @@ const OurServices = () => {
 
                 <Button 
                   size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg border-0"
                   onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
                 >
                   Partner With Us
@@ -73,6 +82,16 @@ const OurServices = () => {
             ref={individualsRef}
             className="relative bg-gradient-to-br from-slate-800 to-indigo-900 flex flex-col"
           >
+            {/* Background Image */}
+            <div 
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `url('/lovable-uploads/0954a425-c5d2-4353-987f-ad456378ead2.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            ></div>
+            
             <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-center h-full">
               <div className={`transition-all duration-700 delay-200 ${individualsVisible ? 'animate-fade-in animate-slide-up' : 'opacity-0 translate-y-10'}`}>
                 <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">
@@ -108,8 +127,7 @@ const OurServices = () => {
 
                 <Button 
                   size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg border-0"
                   onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
                 >
                   Join Our Community
