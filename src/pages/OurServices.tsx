@@ -7,7 +7,6 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Brain, Users, Code, BookOpen, TrendingUp, Lightbulb } from "lucide-react";
 
 const OurServices = () => {
-  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { ref: institutionsRef, isVisible: institutionsVisible } = useScrollAnimation();
   const { ref: individualsRef, isVisible: individualsVisible } = useScrollAnimation();
 
@@ -15,45 +14,18 @@ const OurServices = () => {
     <div className="min-h-screen bg-background font-roboto">
       <Header />
       
-      {/* Hero Section */}
-      <section 
-        ref={heroRef}
-        className="pt-24 pb-12 bg-white"
-      >
-        <div className="container mx-auto px-8">
-          <div className="max-w-4xl text-center mx-auto">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold mb-6 transition-all duration-700 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-              Our Services
-            </h1>
-            <p className={`text-xl md:text-2xl text-gray-700 leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
-              Bridging ancient wisdom with modern technology through specialized services for institutions and individuals
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Two-Column Service Section */}
-      <section className="min-h-screen">
+      <section className="min-h-screen pt-20">
         <div className="grid lg:grid-cols-2 min-h-screen">
           
           {/* Buddhist Institutions Column - Left */}
           <div 
             ref={institutionsRef}
-            className="relative bg-gradient-to-br from-orange-400/90 to-red-500/90 flex flex-col"
+            className="relative bg-gradient-to-br from-indigo-900 to-navy-800 flex flex-col"
           >
-            {/* Background Image */}
-            <div 
-              className="absolute inset-0 opacity-30"
-              style={{
-                backgroundImage: `url('/lovable-uploads/5154e367-c3d2-424d-909c-d6afcda98571.png')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            ></div>
-            
             <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-center h-full">
-              <div className={`transition-all duration-700 ${institutionsVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl lg:text-4xl font-roboto font-bold text-white mb-4">
+              <div className={`transition-all duration-700 ${institutionsVisible ? 'animate-fade-in animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+                <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">
                   FOR BUDDHIST INSTITUTIONS – BUDDHIST TECH SERVICES
                 </h2>
                 <h3 className="text-2xl lg:text-3xl font-roboto font-bold text-white mb-6">
@@ -86,7 +58,8 @@ const OurServices = () => {
 
                 <Button 
                   size="lg"
-                  className="bg-white text-orange-600 hover:bg-gray-100 font-roboto font-semibold px-8 py-4 text-lg border-2 border-white"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
                 >
                   Partner With Us
@@ -98,21 +71,11 @@ const OurServices = () => {
           {/* Buddhist Influencers Column - Right */}
           <div 
             ref={individualsRef}
-            className="relative bg-gradient-to-br from-purple-500/90 to-pink-600/90 flex flex-col"
+            className="relative bg-gradient-to-br from-slate-800 to-indigo-900 flex flex-col"
           >
-            {/* Background Image */}
-            <div 
-              className="absolute inset-0 opacity-30"
-              style={{
-                backgroundImage: `url('/lovable-uploads/0954a425-c5d2-4353-987f-ad456378ead2.png')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            ></div>
-            
             <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-center h-full">
-              <div className={`transition-all duration-700 delay-200 ${individualsVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl lg:text-4xl font-roboto font-bold text-white mb-4">
+              <div className={`transition-all duration-700 delay-200 ${individualsVisible ? 'animate-fade-in animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+                <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">
                   FOR INDIVIDUALS – BUDDHIST INFLUENCER COACHING
                 </h2>
                 <h3 className="text-2xl lg:text-3xl font-roboto font-bold text-white mb-6">
@@ -145,7 +108,8 @@ const OurServices = () => {
 
                 <Button 
                   size="lg"
-                  className="bg-white text-purple-600 hover:bg-gray-100 font-roboto font-semibold px-8 py-4 text-lg border-2 border-white"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
                 >
                   Join Our Community
