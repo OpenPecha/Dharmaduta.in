@@ -33,9 +33,9 @@ const OurServices = () => {
               }}
             ></div>
             
-            <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-center h-full">
+            <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-start h-full pt-16">
               <div className={`transition-all duration-700 ${institutionsVisible ? 'animate-fade-in animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">
+                <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent mb-4">
                   FOR BUDDHIST INSTITUTIONS – BUDDHIST TECH SERVICES
                 </h2>
                 <h3 className="text-2xl lg:text-3xl font-roboto font-bold text-white mb-6">
@@ -92,9 +92,9 @@ const OurServices = () => {
               }}
             ></div>
             
-            <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-center h-full">
+            <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-start h-full pt-16">
               <div className={`transition-all duration-700 delay-200 ${individualsVisible ? 'animate-fade-in animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">
+                <h2 className="text-3xl lg:text-4xl font-roboto font-bold bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent mb-4">
                   FOR INDIVIDUALS – BUDDHIST INFLUENCER COACHING
                 </h2>
                 <h3 className="text-2xl lg:text-3xl font-roboto font-bold text-white mb-6">
