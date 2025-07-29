@@ -69,7 +69,7 @@ const OurServices = () => {
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg border-0"
-                  onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
+                  onClick={() => window.location.href = '/contact-us'}
                 >
                   Partner With Us
                 </Button>
@@ -128,7 +128,7 @@ const OurServices = () => {
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-roboto font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg border-0"
-                  onClick={() => window.open('mailto:contact@dharmadutaservices.com', '_blank')}
+                  onClick={() => window.location.href = '/contact-us'}
                 >
                   Join Our Community
                 </Button>
