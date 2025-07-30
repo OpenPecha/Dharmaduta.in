@@ -12,61 +12,14 @@ const OurTeam = () => {
     <div className="min-h-screen bg-background font-roboto">
       <Header />
       
-      {/* Hero Section with Team Photos */}
+      {/* Hero Section with Dharamshala Background */}
       <section 
         ref={heroRef}
-        className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 relative overflow-hidden flex items-center justify-center"
+        className="min-h-screen relative overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/409a37dd-ace9-4849-870a-c694c88c507f.png')`
+        }}
       >
-        {/* Scattered Team Photos */}
-        <div className="absolute inset-0">
-          {/* Photo 1 - Top Left */}
-          <div className="absolute top-20 left-16 w-24 h-24 md:w-32 md:h-32 rounded-full bg-gray-300 border-4 border-white/20 overflow-hidden transform -rotate-12">
-            <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
-          </div>
-          
-          {/* Photo 2 - Top Right with Name */}
-          <div className="absolute top-32 right-20 flex flex-col items-center">
-            <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-gray-300 border-4 border-white/20 overflow-hidden transform rotate-6">
-              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
-            </div>
-            <span className="text-white/80 text-sm font-roboto mt-2">Emma</span>
-          </div>
-          
-          {/* Photo 3 - Center Left */}
-          <div className="absolute top-1/2 left-8 transform -translate-y-1/2 flex flex-col items-center">
-            <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gray-300 border-4 border-white/20 overflow-hidden transform -rotate-6">
-              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
-            </div>
-            <span className="text-white/80 text-sm font-roboto mt-2">Marcus</span>
-          </div>
-          
-          {/* Photo 4 - Center Right */}
-          <div className="absolute bottom-40 right-12 w-26 h-26 md:w-32 md:h-32 rounded-full bg-gray-300 border-4 border-white/20 overflow-hidden transform rotate-12">
-            <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
-          </div>
-          
-          {/* Photo 5 - Bottom Left with Name */}
-          <div className="absolute bottom-24 left-20 flex flex-col items-center">
-            <div className="w-22 h-22 md:w-30 md:h-30 rounded-full bg-gray-300 border-4 border-white/20 overflow-hidden transform rotate-3">
-              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
-            </div>
-            <span className="text-white/80 text-sm font-roboto mt-2">Sophia</span>
-          </div>
-          
-          {/* Photo 6 - Right Side with Name */}
-          <div className="absolute top-1/2 right-4 transform -translate-y-1/2 flex flex-col items-center">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gray-300 border-4 border-white/20 overflow-hidden transform -rotate-9">
-              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
-            </div>
-            <span className="text-white/80 text-sm font-roboto mt-2">Ethan</span>
-          </div>
-          
-          {/* Photo 7 - Bottom Center */}
-          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-20 h-20 md:w-28 md:h-28 rounded-full bg-gray-300 border-4 border-white/20 overflow-hidden transform rotate-8">
-            <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400"></div>
-          </div>
-        </div>
-        
         {/* Central Title */}
         <div className="relative z-10 text-center px-6">
           <h1 className={`text-5xl md:text-7xl lg:text-8xl font-roboto font-bold text-white transition-all duration-1000 ${heroVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
