@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Building2, Users, TrendingUp, Zap } from "lucide-react";
 
-const CaseStudies = () => {
+const Projects = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { ref: studiesRef, isVisible: studiesVisible } = useScrollAnimation();
 
@@ -35,24 +35,62 @@ const CaseStudies = () => {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="pt-24 pb-16 bg-gradient-to-br from-emerald-600 to-teal-600 relative overflow-hidden"
-        style={{
-          backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay'
-        }}
+        className="min-h-screen bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 relative overflow-hidden flex items-center justify-center"
       >
-        <div className="absolute inset-0 bg-emerald-600/70"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl text-left">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-              Case Studies
-            </h1>
-            <p className={`text-xl md:text-2xl text-white/90 leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
-              See How We're Making an Impact
-            </p>
+        <div className="absolute inset-0">
+          {/* Laptop mockup */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 scale-75 md:scale-100">
+            <div className="relative">
+              {/* Laptop screen */}
+              <div className="bg-gray-800 rounded-lg p-2 shadow-2xl">
+                <div className="bg-white rounded aspect-[16/10] w-80 md:w-96 overflow-hidden">
+                  <div className="bg-gradient-to-br from-purple-100 to-indigo-100 h-full flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full mx-auto mb-4"></div>
+                      <div className="h-3 bg-gray-200 rounded mb-2 w-32 mx-auto"></div>
+                      <div className="h-2 bg-gray-100 rounded w-24 mx-auto"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Laptop base */}
+              <div className="bg-gray-700 h-4 rounded-b-lg"></div>
+            </div>
           </div>
+
+          {/* Floating project cards */}
+          <div className="absolute top-20 left-10 md:left-20 bg-white rounded-lg shadow-lg p-4 w-32 md:w-40 transform rotate-6 opacity-80">
+            <div className="h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded mb-2"></div>
+            <div className="h-2 bg-gray-200 rounded mb-1"></div>
+            <div className="h-2 bg-gray-100 rounded w-3/4"></div>
+          </div>
+
+          <div className="absolute bottom-32 right-10 md:right-20 bg-white rounded-lg shadow-lg p-4 w-32 md:w-40 transform -rotate-12 opacity-80">
+            <div className="h-20 bg-gradient-to-br from-green-100 to-green-200 rounded mb-2"></div>
+            <div className="h-2 bg-gray-200 rounded mb-1"></div>
+            <div className="h-2 bg-gray-100 rounded w-2/3"></div>
+          </div>
+
+          <div className="absolute top-1/3 right-4 md:right-12 bg-white rounded-lg shadow-lg p-3 w-28 md:w-36 transform rotate-3 opacity-70">
+            <div className="h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded mb-2"></div>
+            <div className="h-2 bg-gray-200 rounded mb-1"></div>
+            <div className="h-2 bg-gray-100 rounded w-1/2"></div>
+          </div>
+
+          <div className="absolute bottom-20 left-4 md:left-16 bg-white rounded-lg shadow-lg p-3 w-28 md:w-36 transform -rotate-6 opacity-70">
+            <div className="h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded mb-2"></div>
+            <div className="h-2 bg-gray-200 rounded mb-1"></div>
+            <div className="h-2 bg-gray-100 rounded w-3/5"></div>
+          </div>
+        </div>
+
+        {/* Title */}
+        <div className="relative z-10 text-center">
+          <h1 className={`text-5xl md:text-7xl lg:text-8xl font-roboto font-bold text-white mb-4 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+            <span className="text-orange-900">WEB DESIGN</span>
+            <br />
+            <span className="text-white">Projects</span>
+          </h1>
         </div>
       </section>
 
@@ -119,4 +157,4 @@ const CaseStudies = () => {
   );
 };
 
-export default CaseStudies;
+export default Projects;
