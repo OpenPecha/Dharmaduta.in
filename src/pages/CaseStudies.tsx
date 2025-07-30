@@ -32,11 +32,34 @@ const Projects = () => {
     <div className="min-h-screen bg-background font-roboto">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section with Video Background */}
       <section 
         ref={heroRef}
-        className="min-h-screen bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 relative overflow-hidden flex items-center justify-center"
+        className="min-h-screen relative overflow-hidden flex items-center justify-center"
       >
+        {/* Video Background */}
+        <video 
+          className="hero-video-bg absolute inset-0 w-full h-full object-cover"
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+        >
+          {/* Add your video source here - for now using the uploaded image as poster */}
+          <source src="/videos/particle-plexus-bg.mp4" type="video/mp4" />
+          {/* Fallback for when video doesn't load */}
+        </video>
+        
+        {/* Fallback background using uploaded image */}
+        <div 
+          className="hero-video-bg absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/lovable-uploads/96880052-8c25-4dd6-9a07-b40207f8bdbe.png)' }}
+        />
+        
+        {/* Dark overlay for contrast */}
+        <div className="hero-overlay absolute inset-0 bg-black/50" />
+
+        {/* Content */}
         <div className="absolute inset-0">
           {/* Laptop mockup */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 scale-75 md:scale-100">
