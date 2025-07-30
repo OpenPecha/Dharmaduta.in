@@ -1,91 +1,71 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { RefreshCw, Users } from "lucide-react";
 
 const OurModel = () => {
-  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
-  const { ref: modelRef, isVisible: modelVisible } = useScrollAnimation();
+  const { ref: mainRef, isVisible: mainVisible } = useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-background font-roboto">
       <Header />
       
-      {/* Hero Section */}
+      {/* Main Section - Mac Desktop Mockup Style */}
       <section 
-        ref={heroRef}
-        className="pt-24 pb-16 bg-gradient-to-br from-teal-600 to-cyan-600 relative overflow-hidden"
-        style={{
-          backgroundImage: `url('/lovable-uploads/e10f0ab5-bf16-4e27-bb26-fadb48bc0f04.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay'
-        }}
-      >
-        <div className="absolute inset-0 bg-teal-600/70"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl text-left">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-              Our Model
-            </h1>
-            <p className={`text-xl md:text-2xl text-white/90 leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
-              A Bridge Between Commerce and Community
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How We Work Section */}
-      <section 
-        ref={modelRef}
-        className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
+        ref={mainRef}
+        className="min-h-screen bg-gradient-to-br from-gray-50 to-amber-50 flex items-center justify-center relative overflow-hidden pt-20"
       >
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className={`text-center mb-12 transition-all duration-700 ${modelVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">How We Work</h2>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                We operate at the intersection of a non-profit mission and a sustainable business. Inspired by leaders in open source and social enterprise, our model is built on two core principles:
-              </p>
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Side - Title */}
+            <div className="text-left lg:pr-8">
+              <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-foreground leading-tight transition-all duration-1000 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+                Digital Dharma Platform That{' '}
+                <span className="text-red-500">Solves</span>{' '}
+                Your Problems
+              </h1>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* The Virtuous Cycle */}
-              <Card className={`bg-white/70 backdrop-blur-sm border-0 shadow-xl transition-all duration-700 delay-200 ${modelVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
-                <CardHeader className="text-center pb-4">
-                  <div className="bg-gradient-to-br from-green-600 to-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <RefreshCw className="w-8 h-8 text-white" />
+            {/* Right Side - Mac Desktop Mockup */}
+            <div className={`relative transition-all duration-1000 delay-300 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+              {/* Mac Monitor Base */}
+              <div className="relative">
+                {/* Monitor Stand */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gradient-to-b from-gray-300 to-gray-400 rounded-b-lg"></div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-48 h-4 bg-gradient-to-b from-gray-400 to-gray-500 rounded-full"></div>
+                
+                {/* Monitor Screen */}
+                <div className="relative bg-gray-900 rounded-2xl p-3 shadow-2xl">
+                  <div className="bg-white rounded-lg overflow-hidden relative aspect-[16/10]">
+                    {/* Main Screen Content */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-indigo-100 p-8 flex flex-col justify-center">
+                      <div className="bg-white rounded-lg shadow-lg p-6 mb-4 transform rotate-1">
+                        <div className="h-4 bg-gray-200 rounded mb-2"></div>
+                        <div className="h-3 bg-gray-100 rounded mb-1"></div>
+                        <div className="h-3 bg-gray-100 rounded w-3/4"></div>
+                      </div>
+                      
+                      <div className="bg-white rounded-lg shadow-lg p-6 transform -rotate-1">
+                        <div className="h-4 bg-gray-200 rounded mb-2"></div>
+                        <div className="h-3 bg-gray-100 rounded mb-1"></div>
+                        <div className="h-3 bg-gray-100 rounded w-2/3"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Floating Elements */}
+                    <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-3 transform rotate-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-500 rounded"></div>
+                    </div>
+                    
+                    <div className="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-3 transform -rotate-2">
+                      <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-teal-500 rounded-full"></div>
+                    </div>
                   </div>
-                  <CardTitle className="text-2xl text-foreground">The Virtuous Cycle</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center leading-relaxed">
-                    Our commercial projects directly fund and contribute to the open-source Buddhist technology that benefits everyone.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Sangha Sourcing */}
-              <Card className={`bg-white/70 backdrop-blur-sm border-0 shadow-xl transition-all duration-700 delay-400 ${modelVisible ? 'animate-slide-up-delay-2' : 'opacity-0 translate-y-10'}`}>
-                <CardHeader className="text-center pb-4">
-                  <div className="bg-gradient-to-br from-purple-600 to-violet-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl text-foreground">Sangha Sourcing</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center leading-relaxed">
-                    Our data services create opportunities for dedicated Buddhist practitioners to earn a livelihood through their specialized knowledge.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className={`text-center mt-12 transition-all duration-700 delay-600 ${modelVisible ? 'animate-slide-up-delay-3' : 'opacity-0 translate-y-10'}`}>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                This ensures that every project we undertake not only serves our client's mission but also strengthens the entire Dharma community.
-              </p>
+                  
+                  {/* Screen Reflection */}
+                  <div className="absolute inset-3 bg-gradient-to-br from-white/20 to-transparent rounded-lg pointer-events-none"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
