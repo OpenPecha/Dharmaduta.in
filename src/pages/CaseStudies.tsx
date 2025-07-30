@@ -87,9 +87,7 @@ const Projects = () => {
         {/* Title */}
         <div className="relative z-10 text-center">
           <h1 className={`text-5xl md:text-7xl lg:text-8xl font-roboto font-bold text-white mb-4 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-            <span className="text-orange-900">WEB DESIGN</span>
-            <br />
-            <span className="text-white">Projects</span>
+            Projects
           </h1>
         </div>
       </section>
