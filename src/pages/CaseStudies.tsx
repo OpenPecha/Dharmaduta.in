@@ -42,8 +42,8 @@ const CaseStudies = () => {
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
-          <div className="w-full flex justify-center items-center">
-            <div className="max-w-4xl text-center">
+          <div className="w-full flex justify-end pr-8 md:pr-16">
+            <div className="max-w-2xl text-right">
               <h1 className={`text-6xl md:text-7xl lg:text-8xl font-bold mb-8 transition-all duration-700 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
                 Case Studies
               </h1>
