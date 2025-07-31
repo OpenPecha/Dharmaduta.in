@@ -59,7 +59,7 @@ const HeroSection = () => {
         <div className="max-w-4xl">
           <h1 
             ref={titleRef}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent opacity-0 translate-y-10 font-roboto"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight bg-gradient-to-r from-pink-600 via-orange-500 to-yellow-400 bg-clip-text text-transparent opacity-0 translate-y-10 font-roboto"
           >
             Multiply Your Buddhist Activity
             <br />
