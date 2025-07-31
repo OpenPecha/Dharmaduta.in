@@ -35,23 +35,22 @@ const CaseStudies = () => {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="pt-24 pb-16 bg-gradient-to-br from-emerald-600 to-teal-600 relative overflow-hidden"
+        className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden flex items-center"
         style={{
-          backgroundImage: `url('/lovable-uploads/b64271e6-c63c-4747-b600-13b6e388cbad.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay'
+          backgroundImage: `url('/lovable-uploads/4052930d-e006-45b0-9f84-aed3425c6616.png')`
         }}
       >
-        <div className="absolute inset-0 bg-emerald-600/70"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl text-left">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-white mb-6 transition-all duration-700 ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
-              Case Studies
-            </h1>
-            <p className={`text-xl md:text-2xl text-white/90 leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
-              See How We're Making an Impact
-            </p>
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
+          <div className="w-full flex justify-end">
+            <div className="max-w-md text-right">
+              <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-all duration-700 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+                Case Studies
+              </h1>
+              <p className={`text-xl md:text-2xl text-white leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
+                See How We're Making an Impact
+              </p>
+            </div>
           </div>
         </div>
       </section>
