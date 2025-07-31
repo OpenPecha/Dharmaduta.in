@@ -13,45 +13,31 @@ const WhoWeAre = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section */}
-      <section 
-        ref={heroSection.ref}
-        className="pt-32 pb-20 px-6 bg-cover bg-center bg-no-repeat relative"
-        style={{backgroundImage: 'url(/lovable-uploads/814091f1-5d72-4949-8c66-667523fcae63.png)'}}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-left">
-            <h1 className={`text-4xl md:text-5xl font-roboto font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap opacity-0 ${heroSection.isVisible ? 'animate-slide-up' : ''}`}>
-              About Dharmaduta Services LLP
-            </h1>
-            <p className={`text-lg font-roboto text-white leading-relaxed opacity-0 ${heroSection.isVisible ? 'animate-slide-up-delay-1' : ''}`}>
-              We are a team of technologists, archivists, and scholars dedicated to preserving and sharing cultural heritage through modern technology and open-source principles.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Mission Section */}
+      {/* Mission Section - Expanded to full-width */}
       <section 
         ref={missionSection.ref}
-        className="py-20 px-6 bg-cover bg-center bg-no-repeat relative min-h-[600px]"
+        className="pt-32 pb-20 px-6 bg-cover bg-center bg-no-repeat relative min-h-screen"
         style={{backgroundImage: 'url(/lovable-uploads/448e8863-0588-4193-97c9-bf62280503a9.png)'}}
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="container mx-auto relative z-10 h-full">
-          <div className="flex flex-col justify-between h-full">
-            <h2 className={`text-4xl font-bold mb-8 text-left text-white opacity-0 ${missionSection.isVisible ? 'animate-slide-up' : ''}`}>
+          <div className="flex flex-col justify-center h-full">
+            <h2 className={`text-4xl md:text-5xl font-bold mb-8 text-center text-white opacity-0 ${missionSection.isVisible ? 'animate-slide-up' : ''}`}>
               Our Mission
             </h2>
-            <div className={`max-w-[500px] ml-0 self-start mt-auto mb-16 opacity-0 ${missionSection.isVisible ? 'animate-slide-up-delay-1' : ''}`}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 pr-12 shadow-2xl relative">
+            <div className={`max-w-4xl mx-auto text-center mb-16 opacity-0 ${missionSection.isVisible ? 'animate-slide-up-delay-1' : ''}`}>
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl relative">
                 <div className="absolute -top-2 -left-2 w-4 h-4 bg-white/80 rotate-45 rounded-sm"></div>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   We know that sharing the Dharma requires immense dedication. In today's world, it also requires the right tools. At Dharmaduta, our mission is to empower your organization to amplify its activities, connect with new generations, and ensure the timeless wisdom of the Buddha thrives in the digital age.
                 </p>
               </div>
+            </div>
+            <div className={`max-w-4xl mx-auto text-center opacity-0 ${missionSection.isVisible ? 'animate-slide-up-delay-2' : ''}`}>
+              <p className="text-lg font-roboto text-white leading-relaxed">
+                We are a team of technologists, archivists, and scholars dedicated to preserving and sharing cultural heritage through modern technology and open-source principles.
+              </p>
             </div>
           </div>
         </div>
