@@ -42,12 +42,12 @@ const CaseStudies = () => {
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
-          <div className="w-full flex justify-end">
-            <div className="max-w-md text-right">
-              <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-all duration-700 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
+          <div className="w-full flex justify-center items-center">
+            <div className="max-w-4xl text-center">
+              <h1 className={`text-6xl md:text-7xl lg:text-8xl font-bold mb-8 transition-all duration-700 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent ${heroVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'}`}>
                 Case Studies
               </h1>
-              <p className={`text-xl md:text-2xl text-white leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
+              <p className={`text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed font-medium transition-all duration-700 delay-200 ${heroVisible ? 'animate-slide-up-delay-1' : 'opacity-0 translate-y-10'}`}>
                 See How We're Making an Impact
               </p>
             </div>
