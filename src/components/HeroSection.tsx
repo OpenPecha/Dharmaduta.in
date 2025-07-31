@@ -27,8 +27,8 @@ const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const scrollToServices = () => {
-    document.getElementById('why-choose')?.scrollIntoView({ behavior: 'smooth' });
+  const navigateToServices = () => {
+    window.location.href = '/our-services';
   };
 
   return (
@@ -78,7 +78,7 @@ const HeroSection = () => {
             className="opacity-0 translate-y-10"
           >
             <Button 
-              onClick={scrollToServices}
+              onClick={navigateToServices}
               size="lg" 
               className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg font-roboto"
             >
