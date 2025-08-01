@@ -79,11 +79,11 @@ const HeroSection = () => {
           >
             <Button 
               onClick={navigateToServices}
-              size="lg" 
-              className="bg-gradient-to-r from-indigo-600/80 to-purple-600/80 hover:from-indigo-700/80 hover:to-purple-700/80 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-lg font-roboto"
+              size="default" 
+              className="bg-transparent text-primary border border-primary hover:bg-primary/10 px-6 py-3 text-base font-medium rounded-sm font-roboto transition-colors duration-200"
             >
               What we can offer
-              <ArrowDown className="ml-3 h-6 w-6" />
+              <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
