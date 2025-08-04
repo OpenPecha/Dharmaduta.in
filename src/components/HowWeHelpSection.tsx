@@ -2,46 +2,48 @@
 import { useEffect, useRef } from "react";
 
 const HowWeHelpSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-slide-up');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (titleRef.current) observer.observe(titleRef.current);
-    if (textRef.current) observer.observe(textRef.current);
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section ref={sectionRef} className="py-16 bg-gradient-to-br from-teal-500 to-teal-600 font-inter" id="why-choose">
+    <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 
-            ref={titleRef}
-            className="text-sm font-semibold bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent mb-6 tracking-wide uppercase opacity-0 translate-y-10"
-          >
-            HOW WE HELP
-          </h3>
-          <p 
-            ref={textRef}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-relaxed opacity-0 translate-y-10"
-          >
-            We bridge ancient wisdom and modern technology by uniting our Buddhist tech 
-            specialists, extensive scholarly network, and expert marketing coaches to help you multiply 
-            your impact.
-          </p>
+        <div className="max-w-4xl mx-auto">
+          {/* Buddhist Institution Services */}
+          <div className="mb-24">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Buddhist Tech Services
+            </h2>
+            <h3 className="text-xl lg:text-2xl text-[#bf9c2e] font-semibold mb-8">
+              Onboard AI to Amplify Your Mission
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-3xl">
+              Your institution excels at sharing Buddhist wisdom. To multiply that impact, we build a dedicated team around your vision, uniting your people with our specialists and open-source contributors. When you partner with us, you're not just building a tool for your institution; you are investing in the entire Buddhist open-source ecosystem.
+            </p>
+          </div>
+
+          {/* Individual Services */}
+          <div className="mb-24">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Individual Development
+            </h2>
+            <h3 className="text-xl lg:text-2xl text-[#bf9c2e] font-semibold mb-8">
+              Personal Buddhist Tech Guidance
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-3xl">
+              Whether you're a practitioner seeking to leverage technology for Dharma study or an entrepreneur with a vision for Buddhist innovation, we provide personalized guidance and development support to help you navigate the intersection of ancient wisdom and modern technology.
+            </p>
+          </div>
+
+          {/* OpenPecha Integration */}
+          <div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              OpenPecha Platform
+            </h2>
+            <h3 className="text-xl lg:text-2xl text-[#bf9c2e] font-semibold mb-8">
+              Open-source Buddhist Text Platform
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
+              We are major contributors to the OpenPecha project, ensuring the future of digital Buddhism is built on transparent, collaborative technology. Our work dramatically increases the footprint of Buddhist data online, helping AI systems learn from and share Buddhist wisdom accurately.
+            </p>
+          </div>
         </div>
       </div>
     </section>

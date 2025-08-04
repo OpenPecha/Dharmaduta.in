@@ -6,12 +6,6 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const isMainPage = location.pathname === '/';
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
 
   const navItems = [
     { label: "Who we are", type: "link", path: "/who-we-are" },
@@ -21,42 +15,32 @@ const Header = () => {
     { label: "Case Studies", type: "link", path: "/case-studies" },
   ];
 
-  const headerBgClass = isMainPage 
-    ? "bg-white/20 backdrop-blur-md border-b border-white/30" 
-    : "bg-slate-200/90 backdrop-blur-md border-b border-slate-300/40";
-
-  const textColorClass = isMainPage ? "text-white" : "text-gray-900";
-  const logoTextClass = isMainPage ? "text-white" : "text-gray-900";
-  const hoverBgClass = isMainPage ? "hover:bg-white/20" : "hover:bg-slate-300/30";
-  const mobileBgClass = isMainPage ? "bg-white/10" : "bg-slate-200/95";
-
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass} font-roboto`}>
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="w-10 h-10 mr-3">
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-8 h-8">
               <img 
-                src="/lovable-uploads/63a77b70-642c-4283-bdbd-2941fbcc2727.png" 
+                src="/logo.png" 
                 alt="Dharmaduta Services Logo" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className={`text-lg font-bold ${logoTextClass} leading-tight drop-shadow-lg`}>
-              <div>Dharmaduta</div>
-              <div>Services LLP</div>
+            <div className="text-2xl font-bold text-gray-900">
+              Dharmaduta
             </div>
           </Link>
 
-          {/* Desktop Navigation and CTA Button */}
-          <div className="hidden md:flex items-center space-x-6">
-            <nav className="flex items-center space-x-1">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex items-center space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   to={item.path}
-                  className={`text-sm ${textColorClass} font-normal px-3 py-2 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out drop-shadow-md`}
+                  className="text-gray-700 hover:text-[#bf9c2e] font-medium transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
@@ -64,7 +48,7 @@ const Header = () => {
             </nav>
             <Link to="/contact-us">
               <Button 
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
+                className="bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium px-6"
               >
                 Contact Us
               </Button>
@@ -73,27 +57,27 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 rounded-lg ${hoverBgClass} transition-colors`}
+            className="md:hidden p-2 text-gray-700 hover:text-[#bf9c2e] transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className={`w-6 h-6 ${textColorClass}`} />
+              <X className="w-6 h-6" />
             ) : (
-              <Menu className={`w-6 h-6 ${textColorClass}`} />
+              <Menu className="w-6 h-6" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className={`md:hidden py-4 border-t border-gray-300/30 ${mobileBgClass} backdrop-blur-md`}>
+          <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`text-left ${textColorClass} font-normal py-2 px-4 rounded-lg bg-transparent ${hoverBgClass} transition-all duration-300 ease-in-out`}
+                  className="text-gray-700 hover:text-[#bf9c2e] font-medium py-2 transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
@@ -101,7 +85,7 @@ const Header = () => {
               <div className="pt-4">
                 <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
                   <Button 
-                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
+                    className="w-full bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium"
                   >
                     Contact Us
                   </Button>

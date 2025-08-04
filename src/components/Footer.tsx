@@ -3,87 +3,91 @@ import { Mail, Linkedin, Github, Twitter, Youtube, Instagram, Facebook } from "l
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <footer className="bg-gray-900 text-white py-20 font-inter">
+    <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12 mb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div className="md:col-span-2">
-              <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent tracking-tight">
+              <h3 className="text-2xl font-bold mb-4 text-white">
                 Dharmaduta Services
               </h3>
-              <p className="text-gray-300 leading-relaxed mb-8 text-lg font-normal">
+              <p className="text-gray-300 leading-relaxed mb-8 text-lg">
                 Bridging ancient wisdom and modern technology to multiply your Buddhist impact in the digital age.
               </p>
               <div className="flex space-x-4 flex-wrap">
-                <a href="mailto:contact@dharmaduta.in" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="mailto:contact@dharmaduta.in" className="text-gray-400 hover:text-[#bf9c2e] transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href="https://www.linkedin.com/company/dharmaduta-services-llp/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.linkedin.com/company/dharmaduta-services-llp/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#bf9c2e] transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="#" className="text-gray-400 hover:text-[#bf9c2e] transition-colors">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="https://x.com/Dharmadutatech" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://x.com/Dharmadutatech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#bf9c2e] transition-colors">
                   <Twitter className="w-6 h-6" />
                 </a>
-                <a href="https://www.youtube.com/@DharmadutaServicesLLP" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.youtube.com/@DharmadutaServicesLLP" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#bf9c2e] transition-colors">
                   <Youtube className="w-6 h-6" />
                 </a>
-                <a href="https://www.instagram.com/dharmadutaservicesllp.tech/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.instagram.com/dharmadutaservicesllp.tech/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#bf9c2e] transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61578322432088" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61578322432088" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#bf9c2e] transition-colors">
                   <Facebook className="w-6 h-6" />
                 </a>
               </div>
             </div>
             
             <div>
-              <ul className="space-y-3 mt-6">
+              <ul className="space-y-4">
                 <li>
                   <Link 
                     to="/who-we-are"
-                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Who we are
                   </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('services')}
-                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  <Link 
+                    to="/our-services"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Our Services
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('model')}
-                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  <Link 
+                    to="/our-model"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Our Model
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('case-studies')}
-                    className="text-gray-300 hover:text-white transition-colors text-lg font-normal"
+                  <Link 
+                    to="/our-team"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Our Team
-                  </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/case-studies"
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    Case Studies
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-gray-800 pt-10 text-center">
-            <p className="text-gray-400 text-lg font-normal">
+          <div className="border-t border-gray-800 pt-8 text-center">
+            <p className="text-gray-400">
               © 2024 Dharmaduta Services. Bridging ancient wisdom with modern technology.
             </p>
           </div>

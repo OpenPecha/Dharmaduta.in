@@ -22,60 +22,40 @@ const CorePillarsSection = () => {
   ];
 
   return (
-    <section 
-      className="py-24 font-inter relative"
-      style={{
-        backgroundImage: `url('/lovable-uploads/712a882a-63ac-490d-856d-098b109b133d.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-black/60"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
+            <h3 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-gray-900">
               Our Three Core Pillars
             </h3>
-            <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We focus on three core areas to serve the Buddhist knowledge supply chain.
             </p>
           </div>
           
-          <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 mb-12">
-            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-              {pillars.map((pillar, index) => (
-                <div key={pillar.title} className="relative">
-                  <Card className="border-0 shadow-lg bg-white text-center h-full">
-                    <CardHeader className="pb-6 pt-8">
-                      <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center">
-                        <pillar.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <CardTitle className="text-xl font-bold mb-4 tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 bg-clip-text text-transparent">
-                        {pillar.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="px-6 pb-8">
-                      <p className="text-gray-700 leading-relaxed font-normal text-sm">
-                        {pillar.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  {/* Separator lines between cards (visible on desktop) */}
-                  {index < pillars.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-teal-400 transform -translate-y-1/2 z-10"></div>
-                  )}
-                </div>
-              ))}
-            </div>
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {pillars.map((pillar, index) => (
+              <Card key={pillar.title} className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
+                <CardHeader className="pb-6 pt-8 text-center">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-[#bf9c2e] rounded-xl flex items-center justify-center">
+                    <pillar.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl font-bold mb-4 tracking-tight text-gray-900">
+                    {pillar.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="px-6 pb-8">
+                  <p className="text-gray-700 leading-relaxed font-normal">
+                    {pillar.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           <div className="text-center">
-            <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Join us in building powerful AI and open data solutions that honor tradition while embracing the future. 
               Let's work together to ensure the Dharma continues to flourish for generations to come.
             </p>
