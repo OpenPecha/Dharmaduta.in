@@ -8,19 +8,22 @@ const OurModel = () => {
   const { ref: mainRef, isVisible: mainVisible } = useScrollAnimation();
 
   return (
-    <div className="min-h-screen bg-background font-roboto">
+    <div 
+      className="min-h-screen font-roboto"
+      style={{
+        backgroundImage: `url(/lovable-uploads/b580aa51-b376-41e3-804b-862ca04894c1.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Header />
       
       {/* Main Section - Mac Desktop Mockup Style */}
       <section 
         ref={mainRef}
         className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
-        style={{
-          backgroundImage: `url(/lovable-uploads/b580aa51-b376-41e3-804b-862ca04894c1.png)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
       >
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -82,18 +85,12 @@ const OurModel = () => {
       {/* Three Card Sections with Wave Background */}
       <section 
         className="py-24 relative overflow-hidden"
-        style={{
-          backgroundImage: `url(/lovable-uploads/b580aa51-b376-41e3-804b-862ca04894c1.png)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
       >
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               {/* Pecha Apps */}
-              <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-95 animate-slide-up opacity-100">
+              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
                     Pecha Apps
@@ -109,7 +106,7 @@ const OurModel = () => {
               </Card>
 
               {/* Pecha Data */}
-              <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-95 animate-slide-up opacity-100" style={{ animationDelay: '200ms' }}>
+              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '200ms' }}>
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
                     Pecha Data
@@ -125,7 +122,7 @@ const OurModel = () => {
               </Card>
 
               {/* Pecha Tool */}
-              <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-95 animate-slide-up opacity-100" style={{ animationDelay: '400ms' }}>
+              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '400ms' }}>
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
                     Pecha Tool
