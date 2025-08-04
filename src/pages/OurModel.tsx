@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 
 const OurModel = () => {
   const { ref: mainRef, isVisible: mainVisible } = useScrollAnimation();
@@ -9,63 +11,73 @@ const OurModel = () => {
     <div className="min-h-screen bg-background font-roboto">
       <Header />
       
-      {/* Main Section - Mac Desktop Mockup Style */}
+      {/* Main Section - Our Model */}
       <section 
         ref={mainRef}
-        className="min-h-screen bg-gradient-to-br from-gray-50 to-amber-50 flex items-center justify-center relative overflow-hidden pt-20"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+        style={{
+          backgroundImage: `url(/lovable-uploads/7e541528-117e-49bb-865c-5faa21266735.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Left Side - Title */}
-            <div className="text-left lg:pr-8">
-              <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-foreground leading-tight transition-all duration-1000 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-                Digital Dharma Platform That{' '}
-                <span className="text-red-500">Solves</span>{' '}
-                Your Problems
-              </h1>
-            </div>
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Title */}
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-foreground leading-tight mb-16 transition-all duration-1000 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+              Our Model
+            </h1>
 
-            {/* Right Side - Mac Desktop Mockup */}
-            <div className={`relative transition-all duration-1000 delay-300 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-              {/* Mac Monitor Base */}
-              <div className="relative">
-                {/* Monitor Stand */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gradient-to-b from-gray-300 to-gray-400 rounded-b-lg"></div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-48 h-4 bg-gradient-to-b from-gray-400 to-gray-500 rounded-full"></div>
-                
-                {/* Monitor Screen */}
-                <div className="relative bg-gray-900 rounded-2xl p-3 shadow-2xl">
-                  <div className="bg-white rounded-lg overflow-hidden relative aspect-[16/10]">
-                    {/* Main Screen Content */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-indigo-100 p-8 flex flex-col justify-center">
-                      <div className="bg-white rounded-lg shadow-lg p-6 mb-4 transform rotate-1">
-                        <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                        <div className="h-3 bg-gray-100 rounded mb-1"></div>
-                        <div className="h-3 bg-gray-100 rounded w-3/4"></div>
-                      </div>
-                      
-                      <div className="bg-white rounded-lg shadow-lg p-6 transform -rotate-1">
-                        <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                        <div className="h-3 bg-gray-100 rounded mb-1"></div>
-                        <div className="h-3 bg-gray-100 rounded w-2/3"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Floating Elements */}
-                    <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-3 transform rotate-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-500 rounded"></div>
-                    </div>
-                    
-                    <div className="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-3 transform -rotate-2">
-                      <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-teal-500 rounded-full"></div>
+            {/* Three Card Sections */}
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Pecha Apps */}
+              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-95 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
+                    Pecha Apps
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="h-32 flex items-center justify-center">
+                    <div className="text-gray-600 font-roboto text-lg">
+                      Digital Applications
                     </div>
                   </div>
-                  
-                  {/* Screen Reflection */}
-                  <div className="absolute inset-3 bg-gradient-to-br from-white/20 to-transparent rounded-lg pointer-events-none"></div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
+
+              {/* Pecha Data */}
+              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-95 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '200ms' }}>
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
+                    Pecha Data
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="h-32 flex items-center justify-center">
+                    <div className="text-gray-600 font-roboto text-lg">
+                      Data Management
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Pecha Tool */}
+              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-95 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '400ms' }}>
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
+                    Pecha Tool
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="h-32 flex items-center justify-center">
+                    <div className="text-gray-600 font-roboto text-lg">
+                      Development Tools
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
