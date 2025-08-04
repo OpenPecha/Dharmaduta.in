@@ -1,24 +1,30 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Code, GraduationCap, TrendingUp } from "lucide-react";
+import { Linkedin, Github, Mail } from "lucide-react";
 
 const OurTeam = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { ref: teamRef, isVisible: teamVisible } = useScrollAnimation();
 
   return (
-    <div className="min-h-screen bg-background font-roboto">
+    <div 
+      className="min-h-screen font-roboto"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/409a37dd-ace9-4849-870a-c694c88c507f.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Header />
       
-      {/* Hero Section with Dharamshala Background */}
+      {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="min-h-screen relative overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/409a37dd-ace9-4849-870a-c694c88c507f.png')`
-        }}
+        className="min-h-screen relative overflow-hidden flex items-center justify-center"
       >
         {/* Central Title */}
         <div className="relative z-10 text-center px-6">
@@ -31,132 +37,83 @@ const OurTeam = () => {
         </div>
       </section>
 
-      {/* Our Leadership Section */}
+      {/* Team Members Section */}
       <section 
         ref={teamRef}
-        className="py-16 bg-gray-50"
+        className="py-20"
       >
         <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className={`text-center mb-16 transition-all duration-1000 ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-              <h2 className="text-4xl md:text-5xl font-roboto font-bold text-gray-900 mb-8">
-                Our Leadership
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Leadership Team Members */}
-              <Card className={`bg-white border-0 shadow-lg transition-all duration-1000 delay-200 hover:shadow-2xl transform hover:scale-105 ${teamVisible ? 'animate-slide-up opacity-100 scale-100' : 'opacity-0 translate-y-20 scale-95'}`}>
-                <CardContent className="p-6 text-center">
-                  <div className="w-32 h-32 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden filter grayscale">
-                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
-                  </div>
-                  <h3 className="text-xl font-roboto font-bold text-gray-900 mb-2">Md Shahjahan</h3>
-                  <p className="text-sm font-roboto text-gray-600 mb-3 italic">Founder & Managing Director</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    A passionate technology enthusiast, spent the last decade shaping business ideas to life.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className={`bg-white border-0 shadow-lg transition-all duration-1000 delay-400 hover:shadow-2xl transform hover:scale-105 ${teamVisible ? 'animate-slide-up opacity-100 scale-100' : 'opacity-0 translate-y-20 scale-95'}`}>
-                <CardContent className="p-6 text-center">
-                  <div className="w-32 h-32 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden filter grayscale">
-                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
-                  </div>
-                  <h3 className="text-xl font-roboto font-bold text-gray-900 mb-2">Sheikh Heera</h3>
-                  <p className="text-sm font-roboto text-gray-600 mb-3 italic">CTO & Platform Architect</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    Being in the top 0.09% overall in StackOverflow, you can trust this programmer.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className={`bg-white border-0 shadow-lg transition-all duration-1000 delay-600 hover:shadow-2xl transform hover:scale-105 ${teamVisible ? 'animate-slide-up opacity-100 scale-100' : 'opacity-0 translate-y-20 scale-95'}`}>
-                <CardContent className="p-6 text-center">
-                  <div className="w-32 h-32 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden filter grayscale">
-                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
-                  </div>
-                  <h3 className="text-xl font-roboto font-bold text-gray-900 mb-2">Faizus Saleheen</h3>
-                  <p className="text-sm font-roboto text-gray-600 mb-3 italic">Chief Marketing Officer</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    Add value to the users' lives, they'll do the marketing for you—he lives by this code wholeheartedly.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className={`bg-white border-0 shadow-lg transition-all duration-1000 delay-800 hover:shadow-2xl transform hover:scale-105 ${teamVisible ? 'animate-slide-up opacity-100 scale-100' : 'opacity-0 translate-y-20 scale-95'}`}>
-                <CardContent className="p-6 text-center">
-                  <div className="w-32 h-32 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden filter grayscale">
-                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
-                  </div>
-                  <h3 className="text-xl font-roboto font-bold text-gray-900 mb-2">Mahmudul Hasan</h3>
-                  <p className="text-sm font-roboto text-gray-600 mb-3 italic">Vice President of Engineering</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    Every problem can be solved—the mindset that makes him the go-to-guy for the engineering team.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Sections */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className={`text-center mb-12 transition-all duration-1000 delay-300 ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8 font-roboto">
-                Dharmaduta Services was founded on our "Virtuous Cycle" principle—that technology and media should sustainably serve the Dharma. We are a unique blend of practitioners, technologists, and storytellers committed to this vision.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Buddhist Tech Specialists */}
-              <Card className={`bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-1000 delay-500 transform ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-                <CardHeader className="text-center pb-4">
-                  <div className="bg-gradient-to-br from-blue-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Code className="w-8 h-8 text-white" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              
+              {/* Team Member 1 */}
+              <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-700 ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
                   </div>
-                  <CardTitle className="text-xl text-foreground font-roboto">Buddhist Tech Specialists</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center leading-relaxed font-roboto">
-                    A dynamic team of experienced Buddhist tech specialists who are core contributors to the OpenPecha open-source and open data community.
-                  </p>
+                  <h3 className="text-lg font-roboto font-bold text-gray-900 mb-1">Md Shahjahan</h3>
+                  <p className="text-sm font-roboto text-gray-600 mb-4">Founder & Managing Director</p>
+                  <div className="border-t border-gray-200 mb-4"></div>
+                  <div className="flex justify-center space-x-4">
+                    <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-600 cursor-pointer transition-colors" />
+                    <Github className="w-5 h-5 text-gray-600 hover:text-gray-900 cursor-pointer transition-colors" />
+                    <Mail className="w-5 h-5 text-gray-600 hover:text-red-600 cursor-pointer transition-colors" />
+                  </div>
                 </CardContent>
               </Card>
 
-              {/* Network of Scholars */}
-              <Card className={`bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-1000 delay-700 transform ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-                <CardHeader className="text-center pb-4">
-                  <div className="bg-gradient-to-br from-green-600 to-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap className="w-8 h-8 text-white" />
+              {/* Team Member 2 */}
+              <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-700 delay-200 ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
                   </div>
-                  <CardTitle className="text-xl text-foreground font-roboto">Network of Scholars</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center leading-relaxed font-roboto">
-                    Native Buddhist specialists who have graduated from various monasteries, nunneries, and colleges, and who have direct experience preparing data for AI.
-                  </p>
+                  <h3 className="text-lg font-roboto font-bold text-gray-900 mb-1">Sheikh Heera</h3>
+                  <p className="text-sm font-roboto text-gray-600 mb-4">CTO & Platform Architect</p>
+                  <div className="border-t border-gray-200 mb-4"></div>
+                  <div className="flex justify-center space-x-4">
+                    <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-600 cursor-pointer transition-colors" />
+                    <Github className="w-5 h-5 text-gray-600 hover:text-gray-900 cursor-pointer transition-colors" />
+                    <Mail className="w-5 h-5 text-gray-600 hover:text-red-600 cursor-pointer transition-colors" />
+                  </div>
                 </CardContent>
               </Card>
 
-              {/* Marketing & Influencer Coaches */}
-              <Card className={`bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-1000 delay-900 transform ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-                <CardHeader className="text-center pb-4">
-                  <div className="bg-gradient-to-br from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-8 h-8 text-white" />
+              {/* Team Member 3 */}
+              <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-700 delay-400 ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
                   </div>
-                  <CardTitle className="text-xl text-foreground font-roboto">Marketing & Influencer Coaches</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center leading-relaxed font-roboto">
-                    A blend of project managers and influencers from the Buddhist world, working in collaboration with professional market coaches to bring you the best of both worlds.
-                  </p>
+                  <h3 className="text-lg font-roboto font-bold text-gray-900 mb-1">Faizus Saleheen</h3>
+                  <p className="text-sm font-roboto text-gray-600 mb-4">Chief Marketing Officer</p>
+                  <div className="border-t border-gray-200 mb-4"></div>
+                  <div className="flex justify-center space-x-4">
+                    <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-600 cursor-pointer transition-colors" />
+                    <Github className="w-5 h-5 text-gray-600 hover:text-gray-900 cursor-pointer transition-colors" />
+                    <Mail className="w-5 h-5 text-gray-600 hover:text-red-600 cursor-pointer transition-colors" />
+                  </div>
                 </CardContent>
               </Card>
+
+              {/* Team Member 4 */}
+              <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-700 delay-600 ${teamVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500"></div>
+                  </div>
+                  <h3 className="text-lg font-roboto font-bold text-gray-900 mb-1">Mahmudul Hasan</h3>
+                  <p className="text-sm font-roboto text-gray-600 mb-4">VP of Engineering</p>
+                  <div className="border-t border-gray-200 mb-4"></div>
+                  <div className="flex justify-center space-x-4">
+                    <Linkedin className="w-5 h-5 text-gray-600 hover:text-blue-600 cursor-pointer transition-colors" />
+                    <Github className="w-5 h-5 text-gray-600 hover:text-gray-900 cursor-pointer transition-colors" />
+                    <Mail className="w-5 h-5 text-gray-600 hover:text-red-600 cursor-pointer transition-colors" />
+                  </div>
+                </CardContent>
+              </Card>
+
             </div>
           </div>
         </div>
