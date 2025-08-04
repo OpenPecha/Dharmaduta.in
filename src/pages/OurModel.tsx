@@ -14,7 +14,13 @@ const OurModel = () => {
       {/* Main Section - Mac Desktop Mockup Style */}
       <section 
         ref={mainRef}
-        className="min-h-screen bg-gradient-to-br from-gray-50 to-amber-50 flex items-center justify-center relative overflow-hidden pt-20"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+        style={{
+          backgroundImage: `url(/lovable-uploads/b580aa51-b376-41e3-804b-862ca04894c1.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -77,7 +83,7 @@ const OurModel = () => {
       <section 
         className="py-24 relative overflow-hidden"
         style={{
-          backgroundImage: `url(/lovable-uploads/7e541528-117e-49bb-865c-5faa21266735.png)`,
+          backgroundImage: `url(/lovable-uploads/b580aa51-b376-41e3-804b-862ca04894c1.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
