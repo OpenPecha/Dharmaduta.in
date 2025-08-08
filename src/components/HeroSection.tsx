@@ -12,8 +12,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-          Multiply Your Buddhist Activity 
-          in the Age of AI.
+          Open Buddhist Knowledge Community
           </h1>
           
           <h2 className="text-xl lg:text-2xl text-gray-600 mb-12 font-normal leading-relaxed max-w-3xl mx-auto">

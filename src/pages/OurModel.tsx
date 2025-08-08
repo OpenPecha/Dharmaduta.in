@@ -1,141 +1,86 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
+import { Smartphone, Database, Wrench } from "lucide-react";
 
 const OurModel = () => {
-  const { ref: mainRef, isVisible: mainVisible } = useScrollAnimation();
-
   return (
-    <div 
-      className="min-h-screen font-roboto"
-      style={{
-        backgroundImage: `url(/lovable-uploads/b580aa51-b376-41e3-804b-862ca04894c1.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+    <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Main Section - Mac Desktop Mockup Style */}
-      <section 
-        ref={mainRef}
-        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
-      >
-        <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Left Side - Title */}
-            <div className="text-left lg:pr-8">
-              <h1 className={`text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-foreground leading-tight transition-all duration-1000 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-                Digital Dharma Platform That{' '}
-                <span className="text-red-500">Solves</span>{' '}
-                Your Problems
-              </h1>
-            </div>
-
-            {/* Right Side - Mac Desktop Mockup */}
-            <div className={`relative transition-all duration-1000 delay-300 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-              {/* Mac Monitor Base */}
-              <div className="relative">
-                {/* Monitor Stand */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gradient-to-b from-gray-300 to-gray-400 rounded-b-lg"></div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-48 h-4 bg-gradient-to-b from-gray-400 to-gray-500 rounded-full"></div>
-                
-                {/* Monitor Screen */}
-                <div className="relative bg-gray-900 rounded-2xl p-3 shadow-2xl">
-                  <div className="bg-white rounded-lg overflow-hidden relative aspect-[16/10]">
-                    {/* Main Screen Content */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-indigo-100 p-8 flex flex-col justify-center">
-                      <div className="bg-white rounded-lg shadow-lg p-6 mb-4 transform rotate-1">
-                        <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                        <div className="h-3 bg-gray-100 rounded mb-1"></div>
-                        <div className="h-3 bg-gray-100 rounded w-3/4"></div>
-                      </div>
-                      
-                      <div className="bg-white rounded-lg shadow-lg p-6 transform -rotate-1">
-                        <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                        <div className="h-3 bg-gray-100 rounded mb-1"></div>
-                        <div className="h-3 bg-gray-100 rounded w-2/3"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Floating Elements */}
-                    <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-3 transform rotate-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-500 rounded"></div>
-                    </div>
-                    
-                    <div className="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-3 transform -rotate-2">
-                      <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-teal-500 rounded-full"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Screen Reflection */}
-                  <div className="absolute inset-3 bg-gradient-to-br from-white/20 to-transparent rounded-lg pointer-events-none"></div>
-                </div>
-              </div>
-            </div>
+      {/* Hero Section */}
+      <section className="pt-32 py-24 px-6 bg-white">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-8 text-gray-900 leading-tight">
+              Digital Dharma Platform That{' '}
+              <span className="text-[#bf9c2e]">Solves</span>{' '}
+              Your Problems
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              Our comprehensive model integrates three core components to deliver complete Buddhist technology solutions.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Three Card Sections with Wave Background */}
-      <section 
-        className="py-24 relative overflow-hidden"
-      >
-        <div className="container mx-auto px-6">
+      {/* Three Components Section */}
+      <section className="py-24 px-6 bg-gray-50">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
+              
               {/* Pecha Apps */}
-              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`}>
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
+              <Card className="shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <CardHeader className="text-center pb-6 pt-8">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-[#bf9c2e] rounded-xl flex items-center justify-center">
+                    <Smartphone className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 tracking-tight">
                     Pecha Apps
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="h-32 flex items-center justify-center">
-                    <div className="text-gray-600 font-roboto text-lg">
-                      Digital Applications
-                    </div>
-                  </div>
+                <CardContent className="px-6 pb-8 text-center">
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Digital Applications for Buddhist study, practice, and community engagement.
+                  </p>
                 </CardContent>
               </Card>
 
               {/* Pecha Data */}
-              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '200ms' }}>
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
+              <Card className="shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <CardHeader className="text-center pb-6 pt-8">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-[#bf9c2e] rounded-xl flex items-center justify-center">
+                    <Database className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 tracking-tight">
                     Pecha Data
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="h-32 flex items-center justify-center">
-                    <div className="text-gray-600 font-roboto text-lg">
-                      Data Management
-                    </div>
-                  </div>
+                <CardContent className="px-6 pb-8 text-center">
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Structured data management and open-source Buddhist text repositories.
+                  </p>
                 </CardContent>
               </Card>
 
               {/* Pecha Tool */}
-              <Card className={`bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${mainVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '400ms' }}>
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-2xl font-roboto font-bold text-gray-900 tracking-tight">
+              <Card className="shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <CardHeader className="text-center pb-6 pt-8">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-[#bf9c2e] rounded-xl flex items-center justify-center">
+                    <Wrench className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 tracking-tight">
                     Pecha Tool
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="h-32 flex items-center justify-center">
-                    <div className="text-gray-600 font-roboto text-lg">
-                      Development Tools
-                    </div>
-                  </div>
+                <CardContent className="px-6 pb-8 text-center">
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Development tools and frameworks for building Buddhist technology solutions.
+                  </p>
                 </CardContent>
               </Card>
+              
             </div>
           </div>
         </div>
