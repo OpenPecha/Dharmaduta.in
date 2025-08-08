@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
-  const navigateToServices = () => {
-    window.location.href = '/our-services';
+  const scrollToServices = () => {
+    const el = document.querySelector("#services");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -20,7 +21,7 @@ const HeroSection = () => {
           </h2>
           
           <Button 
-            onClick={navigateToServices}
+            onClick={scrollToServices}
             size="lg" 
             className="bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium px-8 py-4 text-lg"
           >

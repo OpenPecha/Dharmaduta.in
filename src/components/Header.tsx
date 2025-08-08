@@ -1,26 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
   const navItems = [
-    { label: "Who we are", type: "link", path: "/who-we-are" },
-    { label: "Our Services", type: "link", path: "/our-services" },
-    { label: "Our Model", type: "link", path: "/our-model" },
-    { label: "Our Team", type: "link", path: "/our-team" },
-    { label: "Case Studies", type: "link", path: "/case-studies" },
+    { label: "Who we are", href: "#about" },
+    { label: "Our Services", href: "#services" },
+    { label: "Our Model", href: "#model" },
+    { label: "Case Studies", href: "#case-studies" },
   ];
+
+  const onContactClick = () => {
+    setIsMenuOpen(false);
+    const el = document.querySelector("#contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <a href="#" className="flex items-center space-x-3">
             <div className="w-8 h-8">
               <img 
                 src="/logo.png" 
@@ -31,28 +34,27 @@ const Header = () => {
             <div className="text-2xl font-bold text-gray-900">
               Dharmaduta
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex items-center space-x-8">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.label}
-                  to={item.path}
+                  href={item.href}
                   className="text-gray-700 hover:text-[#bf9c2e] font-medium transition-colors duration-200"
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
             </nav>
-            <Link to="/contact-us">
-              <Button 
-                className="bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium px-6"
-              >
-                Contact Us
-              </Button>
-            </Link>
+            <Button 
+              onClick={onContactClick}
+              className="bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium px-6"
+            >
+              Contact Us
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,23 +75,22 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.label}
-                  to={item.path}
+                  href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="text-gray-700 hover:text-[#bf9c2e] font-medium py-2 transition-colors duration-200"
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
               <div className="pt-4">
-                <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
-                  <Button 
-                    className="w-full bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium"
-                  >
-                    Contact Us
-                  </Button>
-                </Link>
+                <Button 
+                  onClick={onContactClick}
+                  className="w-full bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium"
+                >
+                  Contact Us
+                </Button>
               </div>
             </nav>
           </div>
