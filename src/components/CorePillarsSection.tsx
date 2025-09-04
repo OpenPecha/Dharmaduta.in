@@ -22,31 +22,31 @@ const CorePillarsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-gray-900">
+            <h3 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-foreground">
               Our Three Core Pillars
             </h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We focus on three core areas to serve the Buddhist knowledge supply chain.
             </p>
           </div>
           
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {pillars.map((pillar, index) => (
-              <Card key={pillar.title} className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
+              <Card key={pillar.title} className="border border-border shadow-sm hover:shadow-md transition-shadow h-full">
                 <CardHeader className="pb-6 pt-8 text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-[#bf9c2e] rounded-xl flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-xl flex items-center justify-center">
                     <pillar.icon className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl font-bold mb-4 tracking-tight text-gray-900">
+                  <CardTitle className="text-xl font-bold mb-4 tracking-tight text-foreground">
                     {pillar.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="px-6 pb-8">
-                  <p className="text-gray-700 leading-relaxed font-normal">
+                  <p className="text-muted-foreground leading-relaxed font-normal">
                     {pillar.description}
                   </p>
                 </CardContent>
@@ -55,7 +55,7 @@ const CorePillarsSection = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Join us in building powerful AI and open data solutions that honor tradition while embracing the future. 
               Let's work together to ensure the Dharma continues to flourish for generations to come.
             </p>

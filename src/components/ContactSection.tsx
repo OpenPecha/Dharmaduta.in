@@ -21,18 +21,18 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-gray-50">
+    <section id="contact" className="py-24 px-6 bg-background">
       <div className="container mx-auto">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-900">We'd Love To <span className="text-[#bf9c2e]">Hear From You</span></h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-foreground">We'd Love To <span className="text-primary">Hear From You</span></h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Ready to start your Buddhist technology journey? Get in touch with our team to discuss how we can help amplify your mission.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-            <h3 className="text-2xl font-bold mb-8 text-gray-900">Contact Information</h3>
+          <div className="bg-card rounded-xl shadow-sm border border-border p-8">
+            <h3 className="text-2xl font-bold mb-8 text-foreground">Contact Information</h3>
 
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -41,11 +41,11 @@ const ContactSection = () => {
                   name="fullName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-900">Full name</FormLabel>
+                      <FormLabel className="text-foreground">Full name</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
-                          className="h-12 border-gray-200 focus:border-[#bf9c2e] focus:ring-[#bf9c2e]"
+                          className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
                           placeholder="Enter your full name"
                         />
                       </FormControl>
@@ -58,12 +58,12 @@ const ContactSection = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-900">Email</FormLabel>
+                      <FormLabel className="text-foreground">Email</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
                           type="email"
-                          className="h-12 border-gray-200 focus:border-[#bf9c2e] focus:ring-[#bf9c2e]"
+                          className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
                           placeholder="Enter your email address"
                         />
                       </FormControl>
@@ -76,12 +76,12 @@ const ContactSection = () => {
                   name="phoneNumber"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-900">Phone number</FormLabel>
+                      <FormLabel className="text-foreground">Phone number</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
                           type="tel"
-                          className="h-12 border-gray-200 focus:border-[#bf9c2e] focus:ring-[#bf9c2e]"
+                          className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
                           placeholder="Enter your phone number"
                         />
                       </FormControl>
@@ -94,10 +94,10 @@ const ContactSection = () => {
                   name="iAmA"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-900">I am a</FormLabel>
+                      <FormLabel className="text-foreground">I am a</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="h-12 border-gray-200 focus:border-[#bf9c2e] focus:ring-[#bf9c2e]">
+                          <SelectTrigger className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary">
                             <SelectValue placeholder="Select your role" />
                           </SelectTrigger>
                         </FormControl>
@@ -119,11 +119,11 @@ const ContactSection = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-900">Message (Optional)</FormLabel>
+                      <FormLabel className="text-foreground">Message (Optional)</FormLabel>
                       <FormControl>
                         <Textarea 
                           {...field}
-                          className="border-gray-200 focus:border-[#bf9c2e] focus:ring-[#bf9c2e] min-h-[120px]"
+                          className="border-border focus-visible:ring-2 focus-visible:ring-primary min-h-[120px]"
                           placeholder="Tell us about your project or how we can help..."
                         />
                       </FormControl>
@@ -133,7 +133,7 @@ const ContactSection = () => {
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-[#bf9c2e] hover:bg-[#a6872a] text-white h-12 text-lg font-medium"
+                  className="w-full bg-primary hover:opacity-90 text-primary-foreground h-12 text-lg font-medium"
                 >
                   Send Message
                 </Button>

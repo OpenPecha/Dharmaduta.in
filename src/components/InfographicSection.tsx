@@ -28,11 +28,11 @@ const InfographicSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-gray-900">
+            <h3 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-foreground">
               Why choose Dharmaduta Services?
             </h3>
           </div>
@@ -41,18 +41,18 @@ const InfographicSection = () => {
             {steps.map((step, index) => (
               <Card 
                 key={step.title} 
-                className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow bg-white text-center h-full"
+                className="border border-border shadow-sm hover:shadow-md transition-shadow bg-card text-center h-full"
               >
                 <CardHeader className="pb-4 pt-8">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-[#bf9c2e] rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-primary rounded-xl flex items-center justify-center">
                     <step.icon className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-lg font-bold text-gray-900 mb-3 tracking-tight">
+                  <CardTitle className="text-lg font-bold text-foreground mb-3 tracking-tight">
                     {step.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="px-6 pb-8">
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </CardContent>
@@ -63,7 +63,7 @@ const InfographicSection = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-[#bf9c2e] hover:bg-[#a6872a] text-white px-10 py-4 text-lg font-medium"
+              className="bg-primary hover:opacity-90 text-primary-foreground px-10 py-4 text-lg font-medium"
             >
               Learn more about us
             </Button>

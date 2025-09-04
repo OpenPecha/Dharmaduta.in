@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -31,7 +31,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-2xl font-bold text-gray-900">
+            <div className="text-2xl font-bold text-foreground">
               Dharmaduta
             </div>
           </a>
@@ -43,7 +43,7 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-gray-700 hover:text-[#bf9c2e] font-medium transition-colors duration-200"
+                  className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
                 >
                   {item.label}
                 </a>
@@ -51,7 +51,7 @@ const Header = () => {
             </nav>
             <Button 
               onClick={onContactClick}
-              className="bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium px-6"
+              className="bg-primary hover:opacity-90 text-primary-foreground font-medium px-6"
             >
               Contact Us
             </Button>
@@ -59,7 +59,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-700 hover:text-[#bf9c2e] transition-colors"
+            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -72,14 +72,14 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
+          <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-700 hover:text-[#bf9c2e] font-medium py-2 transition-colors duration-200"
+                  className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200"
                 >
                   {item.label}
                 </a>
@@ -87,7 +87,7 @@ const Header = () => {
               <div className="pt-4">
                 <Button 
                   onClick={onContactClick}
-                  className="w-full bg-[#bf9c2e] hover:bg-[#a6872a] text-white font-medium"
+                  className="w-full bg-primary hover:opacity-90 text-primary-foreground font-medium"
                 >
                   Contact Us
                 </Button>
