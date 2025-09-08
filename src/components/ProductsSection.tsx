@@ -50,7 +50,7 @@ const ProductsSection = () => {
       image: "/api/placeholder/400/300"
     },
     {
-      name: "PECHA TOOLS",
+      name: "PECHA AI STUDIO",
       title: "Buddhist Resource Creation Suite",
       subtitle: "Professional tools for Buddhist content creators",
       description: "Comprehensive suite of digital tools designed specifically for creating, editing, and managing Buddhist resources and texts with precision and authenticity.",

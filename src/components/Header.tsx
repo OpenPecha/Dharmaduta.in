@@ -1,4 +1,4 @@
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
@@ -94,9 +94,6 @@ const Header = () => {
                   </button>
                 )
               ))}
-              <button className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Globe className="w-5 h-5" />
-              </button>
             </nav>
           </div>
 
@@ -137,13 +134,6 @@ const Header = () => {
                   </button>
                 )
               ))}
-              <button 
-                className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200 flex items-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Globe className="w-5 h-5 mr-2" />
-                Language
-              </button>
             </nav>
           </div>
         )}

@@ -1,5 +1,5 @@
 
-import { Mail, Linkedin, Twitter, Youtube, Instagram, Facebook } from "lucide-react";
+import { Mail, Linkedin, X, Youtube, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -46,7 +46,7 @@ const Footer = () => {
                 className="w-10 h-10 bg-muted hover:bg-secondary rounded-lg flex items-center justify-center transition-colors group"
                 aria-label="Twitter/X"
               >
-                <Twitter className="w-5 h-5 text-muted-foreground group-hover:text-secondary-foreground transition-colors" />
+                <X className="w-5 h-5 text-muted-foreground group-hover:text-secondary-foreground transition-colors" />
               </a>
               <a 
                 href="https://www.youtube.com/@DharmadutaServicesLLP" 
