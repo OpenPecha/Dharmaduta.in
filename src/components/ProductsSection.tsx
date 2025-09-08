@@ -20,13 +20,8 @@ const ProductsSection = () => {
     {
       name: "WEBUDDHIST",
       title: "Comprehensive Buddhist Study Platform",
-      subtitle: "World's leading digital platform for Buddhist learning",
+      subtitle: "Where we learn, live, and share Buddhist wisdom every day",
       description: "Whether you're seeking authentic Buddhist teachings, conducting research, or deepening your practice, WeBuddhist is at your disposal 24 hrs a day / 7 days a week.",
-      stats: [
-        { label: "Active Users", value: "10,000+" },
-        { label: "Buddhist Texts", value: "5,000+" },
-        { label: "Languages", value: "15+" }
-      ],
       link: "https://webuddhist.com/",
       buttonText: "Try Now",
       image: "/api/placeholder/400/300"
@@ -34,22 +29,16 @@ const ProductsSection = () => {
     {
       name: "WEBUDDHIST APP",
       title: "Buddhist Practice Mobile Application",
-      subtitle: "Your pocket companion for daily Buddhist practice",
+      subtitle: "Where we learn, live, and share Buddhist wisdom every day",
       description: "Mobile application for Buddhist practice, meditation guidance, and daily spiritual activities. Available on both iOS and Android platforms for practitioners worldwide.",
-      stats: [
-        { label: "Downloads", value: "50,000+" },
-        { label: "Meditation Sessions", value: "1M+" },
-        { label: "User Rating", value: "4.8/5" }
-      ],
       link: "#",
-      buttonText: "Download App",
-      stores: ["Google Play", "App Store"],
+      buttonText: "Coming soon",
       image: "/api/placeholder/400/300"
     },
     {
       name: "SHERAB",
       title: "Buddhist E-Learning Platform",
-      subtitle: "Advanced structured learning for Buddhist studies",
+      subtitle: "Learn Buddhism and Tibetan language online",
       description: "Advanced e-learning platform offering structured Buddhist courses, teachings, and educational resources for practitioners at all levels with expert guidance.",
       stats: [
         { label: "Courses", value: "200+" },
@@ -58,7 +47,6 @@ const ProductsSection = () => {
       ],
       link: "https://sherab.org/",
       buttonText: "Learn More",
-      stores: ["Google Play", "App Store"],
       image: "/api/placeholder/400/300"
     },
     {
@@ -100,16 +88,6 @@ const ProductsSection = () => {
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {product.description}
                 </p>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-6">
-                  {product.stats.map((stat) => (
-                    <div key={stat.label} className="text-center">
-                      <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                      <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
 
                 {/* Action Button */}
                 <div className="flex items-center justify-between">
@@ -167,23 +145,6 @@ const ProductsSection = () => {
                         <div className="text-sm text-muted-foreground px-8">
                           Interactive Buddhist platform preview
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Floating testimonial card */}
-                  <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-lg max-w-xs">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-sm">🙏</span>
-                      </div>
-                      <div className="text-sm">
-                        <p className="text-muted-foreground leading-relaxed">
-                          "This platform has transformed my Buddhist practice and study."
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-2 font-medium">
-                          - Buddhist Practitioner
-                        </p>
                       </div>
                     </div>
                   </div>

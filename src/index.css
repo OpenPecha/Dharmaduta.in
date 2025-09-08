@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 64 50% 90%; /* Soft Green #daf2d8 */
+    --background: 210 75% 98%; /* Light Blue #f8fbfe */
     --foreground: 0 0% 10%; /* Neutral dark for body text */
 
     --card: 36 68% 95%; /* Light Warm Ivory tint */
@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 36 68% 95%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 42 100% 46%; /* Saffron Orange #E9A200 */
+    --primary: 142 79% 34%; /* Green #129b4b */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 100% 25%; /* Sacred Maroon #7F0000 */
+    --secondary: 43 63% 57%; /* Gold #d4b151 */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 36 68% 92%; /* Lighter Warm Ivory */
+    --muted: 39 71% 88%; /* Light Gold #f5e9cd */
     --muted-foreground: 0 0% 40%; /* Neutral muted text */
 
-    --accent: 42 100% 46%; /* Use Saffron as accent */
+    --accent: 43 63% 57%; /* Gold #d4b151 */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;

@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t border-border py-12">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
             {/* Brand */}
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8">
@@ -17,7 +17,7 @@ const Footer = () => {
                 />
               </div>
               <div className="text-xl font-bold text-foreground">
-                Dharmaduta Services
+                Dharmaduta
               </div>
             </div>
             
@@ -78,8 +78,8 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="border-t border-border pt-8 mt-8 text-center">
-            <p className="text-muted-foreground text-sm">
+          <div className="border-t border-border pt-8 mt-8">
+            <p className="text-muted-foreground text-sm text-center">
               © 2024 Dharmaduta Services. We build Buddhist Technologies.
             </p>
           </div>

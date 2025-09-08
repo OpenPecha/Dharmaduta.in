@@ -67,7 +67,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-2xl font-bold text-foreground">
+            <div className="text-2xl font-bold text-primary">
               Dharmaduta
             </div>
           </button>
