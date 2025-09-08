@@ -9,7 +9,7 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-secondary">
-              Your Dedicated Team of Specialists
+              We are a Dedicated Team of Specialists
             </h3>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto font-normal">
               Dharmaduta Services was founded on our "Virtuous Cycle" principle—that technology and media 

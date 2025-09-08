@@ -1,33 +1,14 @@
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-
 const HeroSection = () => {
-  const scrollToServices = () => {
-    const el = document.querySelector("#services");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
-    <section className="bg-background py-24 lg:py-32">
-      <div className="container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
-          Open Buddhist Knowledge Community
+    <section className="bg-background min-h-screen flex items-center justify-center py-24 lg:py-32">
+      <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-6xl md:text-8xl lg:text-[120px] font-bold text-foreground leading-tight tracking-tight">
+            We're building<br />
+            Buddhist Technology.
           </h1>
-          
-          <h2 className="text-xl lg:text-2xl text-muted-foreground mb-12 font-normal leading-relaxed max-w-3xl mx-auto">
-            Bridging ancient wisdom and modern technology to multiply your Buddhist impact in the digital age.
-          </h2>
-          
-          <Button 
-            onClick={scrollToServices}
-            size="lg" 
-            className="bg-primary hover:opacity-90 text-primary-foreground font-medium px-8 py-4 text-lg"
-          >
-            What we can offer
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
       </div>
     </section>

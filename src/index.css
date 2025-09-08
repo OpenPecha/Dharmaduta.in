@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 36 68% 87%; /* Warm Ivory #F4E2C6 */
+    --background: 64 50% 90%; /* Soft Green #daf2d8 */
     --foreground: 0 0% 10%; /* Neutral dark for body text */
 
     --card: 36 68% 95%; /* Light Warm Ivory tint */

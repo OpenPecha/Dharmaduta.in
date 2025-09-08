@@ -1,29 +1,22 @@
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Who we are", href: "#about" },
-    { label: "Our Services", href: "#services" },
-    { label: "Our Model", href: "#model" },
-    { label: "Case Studies", href: "#case-studies" },
+    { label: "Products", href: "/#products" },
+    { label: "About us", href: "/about" },
+    { label: "Contact", href: "/#contact" },
   ];
-
-  const onContactClick = () => {
-    setIsMenuOpen(false);
-    const el = document.querySelector("#contact");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <div className="w-8 h-8">
               <img 
                 src="/logo.png" 
@@ -34,27 +27,34 @@ const Header = () => {
             <div className="text-2xl font-bold text-foreground">
               Dharmaduta
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
-                >
-                  {item.label}
-                </a>
+                item.href.startsWith("/") && !item.href.includes("#") ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
+              <button className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                <Globe className="w-5 h-5" />
+              </button>
             </nav>
-            <Button 
-              onClick={onContactClick}
-              className="bg-primary hover:opacity-90 text-primary-foreground font-medium px-6"
-            >
-              Contact Us
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,23 +75,33 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200"
-                >
-                  {item.label}
-                </a>
+                item.href.startsWith("/") && !item.href.includes("#") ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200"
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
-              <div className="pt-4">
-                <Button 
-                  onClick={onContactClick}
-                  className="w-full bg-primary hover:opacity-90 text-primary-foreground font-medium"
-                >
-                  Contact Us
-                </Button>
-              </div>
+              <button 
+                className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200 flex items-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Globe className="w-5 h-5 mr-2" />
+                Language
+              </button>
             </nav>
           </div>
         )}
