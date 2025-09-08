@@ -7,7 +7,7 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto">
           <h1 className="text-6xl md:text-8xl lg:text-[120px] font-bold text-foreground leading-tight tracking-tight">
             We're building<br />
-            Buddhist Technology.
+            Buddhist Technologies.
           </h1>
         </div>
       </div>

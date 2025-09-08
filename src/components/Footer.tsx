@@ -1,5 +1,5 @@
 
-import { Mail, Linkedin, Github, Twitter, Youtube, Instagram, Facebook } from "lucide-react";
+import { Mail, Linkedin, Twitter, Youtube, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -38,13 +38,6 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-secondary-foreground transition-colors" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-muted hover:bg-secondary rounded-lg flex items-center justify-center transition-colors group"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5 text-muted-foreground group-hover:text-secondary-foreground transition-colors" />
               </a>
               <a 
                 href="https://x.com/Dharmadutatech" 
@@ -87,7 +80,7 @@ const Footer = () => {
           
           <div className="border-t border-border pt-8 mt-8 text-center">
             <p className="text-muted-foreground text-sm">
-              © 2024 Dharmaduta Services. Bridging ancient wisdom with modern technology.
+              © 2024 Dharmaduta Services. We build Buddhist Technologies.
             </p>
           </div>
         </div>

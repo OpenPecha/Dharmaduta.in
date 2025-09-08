@@ -1,124 +1,246 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
-interface ContactFormData {
-  fullName: string;
-  email: string;
-  phoneNumber: string;
-  iAmA: string;
-  message?: string;
-}
+// Custom X (Twitter) icon component
+const XIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const formSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().min(1, "Subject is required"),
+  company: z.string().min(1, "Company/Organization is required"),
+  message: z.string().min(1, "Message is required"),
+  privacyPolicy: z.boolean().refine((val) => val === true, {
+    message: "You must accept the privacy policy",
+  }),
+});
+
+type ContactFormData = z.infer<typeof formSchema>;
 
 const ContactSection = () => {
-  const form = useForm<ContactFormData>();
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      company: "",
+      message: "",
+      privacyPolicy: false,
+    },
+  });
 
   const onSubmit = (data: ContactFormData) => {
     console.log("Contact form submitted:", data);
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-background">
-      <div className="container mx-auto">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-foreground">We'd Love To <span className="text-primary">Hear From You</span></h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Ready to start your Buddhist technology journey? Get in touch with our team to discuss how we can help amplify your mission.
-            </p>
+    <section id="contact" className="py-24 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+          {/* Contact Info */}
+          <div className="space-y-12">
+            <div>
+              <h2 className="text-3xl font-bold mb-2">Contact</h2>
+              <div className="h-1 w-16 bg-primary"></div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <Phone className="w-6 h-6 text-primary" />
+                <a href="tel:+97798########" className="text-lg text-foreground hover:text-primary transition-colors">
+                  +977 98########
+                </a>
+              </div>
+              <div className="flex items-center space-x-4">
+                <Mail className="w-6 h-6 text-primary" />
+                <a href="mailto:info@dharmaduta.com" className="text-lg text-foreground hover:text-primary transition-colors">
+                  info@dharmaduta.com
+                </a>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex items-center space-x-4 pt-6">
+                <a 
+                  href=" https://www.facebook.com/profile.php?id=61578322432088 " 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://x.com/Dharmadutatech " 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <XIcon className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/dharmadutaservicesllp.tech/ " 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/dharmaduta-services-llp/?viewAsMember=true" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.youtube.com/@DharmadutaServicesLLP " 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Youtube className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
           </div>
 
-          <div className="bg-card rounded-xl shadow-sm border border-border p-8">
-            <h3 className="text-2xl font-bold mb-8 text-foreground">Contact Information</h3>
-
+          {/* Contact Form */}
+          <div>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="fullName"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">Full name</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
-                          placeholder="Enter your full name"
-                        />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">Email</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          type="email"
-                          className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
-                          placeholder="Enter your email address"
-                        />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-
-
-                <FormField
-                  control={form.control}
-                  name="iAmA"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">I am a</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormControl>
-                          <SelectTrigger className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary">
-                            <SelectValue placeholder="Select your role" />
-                          </SelectTrigger>
+                          <Input 
+                            {...field}
+                            placeholder="Name *"
+                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                          />
                         </FormControl>
-                        <SelectContent>
-                          <SelectItem value="individual">Individual Practitioner</SelectItem>
-                          <SelectItem value="teacher">Buddhist Teacher</SelectItem>
-                          <SelectItem value="institution">Institution Representative</SelectItem>
-                          <SelectItem value="developer">Developer/Technologist</SelectItem>
-                          <SelectItem value="student">Student/Researcher</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </FormItem>
-                  )}
-                />
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input 
+                            {...field}
+                            type="email"
+                            placeholder="Email *"
+                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input 
+                            {...field}
+                            placeholder="Subject *"
+                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input 
+                            {...field}
+                            placeholder="Company / Organization *"
+                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
                 <FormField
                   control={form.control}
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-foreground">Message (Optional)</FormLabel>
                       <FormControl>
                         <Textarea 
                           {...field}
-                          className="border-border focus-visible:ring-2 focus-visible:ring-primary min-h-[120px]"
-                          placeholder="Tell us about your project or how we can help..."
+                          placeholder="Message *"
+                          className="min-h-[150px] border-border focus-visible:ring-2 focus-visible:ring-primary"
                         />
                       </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="privacyPolicy"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>
+                          I consent to the terms of the{" "}
+                          <a href="/privacy-policy" className="text-primary hover:underline">
+                            Privacy Policy
+                          </a>
+                        </FormLabel>
+                        <FormMessage />
+                      </div>
                     </FormItem>
                   )}
                 />
 
                 <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:opacity-90 text-primary-foreground h-12 text-lg font-medium"
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-foreground hover:bg-foreground/90 text-background"
                 >
-                  Send Message
+                  Submit
                 </Button>
               </form>
             </Form>

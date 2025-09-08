@@ -1,13 +1,13 @@
-import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
-const About = () => {
+const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
-      <AboutSection />
+      <ContactSection />
       <Footer />
     </div>
   );
 };
 
-export default About;
+export default Contact;
