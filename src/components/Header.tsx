@@ -1,16 +1,40 @@
 import { Menu, X, Globe } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Handle scroll to section after navigation
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const scrollToSection = (href: string) => {
     setIsMenuOpen(false);
+    const isHomeLink = href.startsWith('/#');
     const id = href.replace(/\/#/, '');
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+    if (location.pathname !== '/' && isHomeLink) {
+      // If we're not on home page and trying to scroll to a section,
+      // navigate to home first, then scroll
+      navigate('/', { state: { scrollTo: id } });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -25,7 +49,16 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <button 
+            onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/');
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }} 
+            className="flex items-center space-x-3"
+          >
             <div className="w-8 h-8">
               <img 
                 src="/logo.png" 
@@ -36,7 +69,7 @@ const Header = () => {
             <div className="text-2xl font-bold text-foreground">
               Dharmaduta
             </div>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

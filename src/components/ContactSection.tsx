@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
@@ -21,9 +20,6 @@ const formSchema = z.object({
   subject: z.string().min(1, "Subject is required"),
   company: z.string().min(1, "Company/Organization is required"),
   message: z.string().min(1, "Message is required"),
-  privacyPolicy: z.boolean().refine((val) => val === true, {
-    message: "You must accept the privacy policy",
-  }),
 });
 
 type ContactFormData = z.infer<typeof formSchema>;
@@ -37,7 +33,6 @@ const ContactSection = () => {
       subject: "",
       company: "",
       message: "",
-      privacyPolicy: false,
     },
   });
 
@@ -207,30 +202,6 @@ const ContactSection = () => {
                         />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="privacyPolicy"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>
-                          I consent to the terms of the{" "}
-                          <a href="/privacy-policy" className="text-primary hover:underline">
-                            Privacy Policy
-                          </a>
-                        </FormLabel>
-                        <FormMessage />
-                      </div>
                     </FormItem>
                   )}
                 />
