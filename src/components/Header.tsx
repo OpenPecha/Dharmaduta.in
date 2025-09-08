@@ -5,6 +5,15 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (href: string) => {
+    setIsMenuOpen(false);
+    const id = href.replace(/\/#/, '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
     { label: "Products", href: "/#products" },
     { label: "About us", href: "/about" },
@@ -42,13 +51,13 @@ const Header = () => {
                     {item.label}
                   </Link>
                 ) : (
-                  <a
+                  <button
                     key={item.label}
-                    href={item.href}
+                    onClick={() => scrollToSection(item.href)}
                     className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200"
                   >
                     {item.label}
-                  </a>
+                  </button>
                 )
               ))}
               <button className="text-muted-foreground hover:text-primary transition-colors duration-200">
@@ -85,14 +94,13 @@ const Header = () => {
                     {item.label}
                   </Link>
                 ) : (
-                  <a
+                  <button
                     key={item.label}
-                    href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200"
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-muted-foreground hover:text-primary font-medium py-2 transition-colors duration-200 text-left w-full"
                   >
                     {item.label}
-                  </a>
+                  </button>
                 )
               ))}
               <button 

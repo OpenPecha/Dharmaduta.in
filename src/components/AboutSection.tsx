@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, GraduationCap, TrendingUp } from "lucide-react";
+import { Brain, GraduationCap } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -18,7 +18,7 @@ const AboutSection = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-primary/10 to-card">
               <CardHeader className="text-center pb-8">
                 <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center">
@@ -49,23 +49,6 @@ const AboutSection = () => {
                 <p className="text-muted-foreground leading-relaxed text-lg font-normal">
                   Native Buddhist specialists who have graduated from various monasteries, nunneries, 
                   and colleges, with direct experience preparing data for AI.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-primary/10 to-card">
-              <CardHeader className="text-center pb-8">
-                <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center">
-                  <TrendingUp className="w-10 h-10 text-primary" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-foreground tracking-tight">
-                  Marketing & Influencer Coaches
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed text-lg font-normal">
-                  A blend of project managers and influencers from the Buddhist world, working with 
-                  professional market coaches to bring you the best of both worlds.
                 </p>
               </CardContent>
             </Card>

@@ -71,23 +71,6 @@ const ContactSection = () => {
                   )}
                 />
 
-                <FormField
-                  control={form.control}
-                  name="phoneNumber"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-foreground">Phone number</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          type="tel"
-                          className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
-                          placeholder="Enter your phone number"
-                        />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
 
                 <FormField
                   control={form.control}
