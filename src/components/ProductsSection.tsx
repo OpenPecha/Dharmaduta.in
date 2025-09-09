@@ -59,7 +59,8 @@ const products: Product[] = [
       ],
       link: "https://sherab.org/",
       buttonText: "Learn More",
-      image: "/sherab.png"
+      image: "/sherab.png",
+      stores: ["App Store", "Google Play"]
     },
     {
       name: "PECHA AI STUDIO",
@@ -124,7 +125,16 @@ const products: Product[] = [
                 {product.stores && (
                   <div className="flex flex-wrap gap-4 items-center">
                     {product.stores.map((store) => (
-                      <div key={store} className="flex items-center space-x-3 bg-muted/50 hover:bg-muted transition-colors rounded-lg px-4 py-2 cursor-pointer">
+                      <a
+                        key={store}
+                        href={store === "Google Play" 
+                          ? "https://play.google.com/store/apps/details?id=org.sherab.app"
+                          : "https://apps.apple.com/us/app/sherab/id6747565399"
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 bg-muted/50 hover:bg-muted transition-colors rounded-lg px-4 py-2"
+                      >
                         <div className="w-6 h-6 text-foreground">
                           {store === "Google Play" ? (
                             <GooglePlayIcon className="w-full h-full" />
@@ -136,7 +146,7 @@ const products: Product[] = [
                           <div className="text-xs text-muted-foreground">Available on</div>
                           <div className="font-medium text-foreground">{store}</div>
                         </div>
-                      </div>
+                      </a>
                     ))}
                   </div>
                 )}
