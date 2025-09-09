@@ -1,12 +1,10 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 
 interface TeamMember {
   name: string;
   role: string;
   image: string;
-  bio: string;
   email?: string;
-  linkedin?: string;
 }
 
 const teamMembers: TeamMember[] = [
@@ -14,15 +12,12 @@ const teamMembers: TeamMember[] = [
     name: "Tenzin Kalden",
     role: "Buddhist Technology Specialist",
     image: "/team/placeholder.jpg",
-    bio: "Expert in Buddhist text digitization and AI technologies with over 10 years of experience.",
-    email: "tenzin@dharmaduta.com",
-    linkedin: "https://linkedin.com/in/tenzin"
+    email: "tenzin@dharmaduta.com"
   },
   {
     name: "Karma Dorje",
     role: "Buddhist Scholar",
     image: "/team/placeholder.jpg",
-    bio: "Former monastic scholar with expertise in Buddhist philosophy and digital preservation.",
     email: "karma@dharmaduta.com"
   },
   // Adding more team members with diverse roles
@@ -41,13 +36,6 @@ const teamMembers: TeamMember[] = [
       "Community Engagement Specialist"
     ][i % 10],
     image: "/team/placeholder.jpg",
-    bio: [
-      "Passionate about bridging ancient wisdom with modern technology.",
-      "Dedicated to preserving and making Buddhist texts accessible through technology.",
-      "Focused on developing innovative solutions for Buddhist text preservation.",
-      "Committed to enhancing digital tools for Buddhist practice and study.",
-      "Experienced in applying AI technologies to Buddhist textual analysis."
-    ][i % 5],
     email: `member${i + 3}@dharmaduta.com`
   }))
 ].sort(() => Math.random() - 0.5); // Shuffle the array
@@ -90,9 +78,6 @@ const TeamSection = () => {
                     <p className="text-primary font-medium mb-2">
                       {member.role}
                     </p>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      {member.bio}
-                    </p>
                     <div className="flex space-x-3">
                       {member.email && (
                         <a
@@ -101,17 +86,6 @@ const TeamSection = () => {
                           aria-label={`Email ${member.name}`}
                         >
                           <Mail className="w-4 h-4" />
-                        </a>
-                      )}
-                      {member.linkedin && (
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                          aria-label={`${member.name}'s LinkedIn profile`}
-                        >
-                          <Linkedin className="w-4 h-4" />
                         </a>
                       )}
                     </div>

@@ -16,7 +16,19 @@ const AppStoreIcon = ({ className }: { className?: string }) => (
 );
 
 const ProductsSection = () => {
-  const products = [
+  interface Product {
+  name: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  link: string;
+  buttonText: string;
+  image: string;
+  stats?: { label: string; value: string }[];
+  stores?: string[];
+}
+
+const products: Product[] = [
     {
       name: "WEBUDDHIST",
       title: "Comprehensive Buddhist Study Platform",
@@ -24,7 +36,7 @@ const ProductsSection = () => {
       description: "Whether you're seeking authentic Buddhist teachings, conducting research, or deepening your practice, WeBuddhist is at your disposal 24 hrs a day / 7 days a week.",
       link: "https://webuddhist.com/",
       buttonText: "Try Now",
-      image: "/api/placeholder/400/300"
+      image: "/webuddhist_web.png"
     },
     {
       name: "WEBUDDHIST APP",
@@ -33,7 +45,7 @@ const ProductsSection = () => {
       description: "Mobile application for Buddhist practice, meditation guidance, and daily spiritual activities. Available on both iOS and Android platforms for practitioners worldwide.",
       link: "#",
       buttonText: "Coming soon",
-      image: "/api/placeholder/400/300"
+      image: "/webuddhist_app.png",
     },
     {
       name: "SHERAB",
@@ -47,7 +59,7 @@ const ProductsSection = () => {
       ],
       link: "https://sherab.org/",
       buttonText: "Learn More",
-      image: "/api/placeholder/400/300"
+      image: "/sherab.png"
     },
     {
       name: "PECHA AI STUDIO",
@@ -61,7 +73,7 @@ const ProductsSection = () => {
       ],
       link: "https://workspace.pecha.tools/",
       buttonText: "Try Tools",
-      image: "/api/placeholder/400/300"
+      image: "/pecha_ai.png"
     }
   ];
 
@@ -133,20 +145,12 @@ const ProductsSection = () => {
               {/* Image Side */}
               <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 <div className="relative">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl overflow-hidden shadow-2xl">
-                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/10 flex items-center justify-center">
-                      <div className="text-center space-y-4">
-                        <div className="w-24 h-24 mx-auto bg-primary/20 rounded-full flex items-center justify-center">
-                          <span className="text-4xl">🧘</span>
-                        </div>
-                        <div className="text-lg font-semibold text-foreground">
-                          {product.name}
-                        </div>
-                        <div className="text-sm text-muted-foreground px-8">
-                          Interactive Buddhist platform preview
-                        </div>
-                      </div>
-                    </div>
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                    <img
+                      src={product.image}
+                      alt={`${product.name} preview`}
+                      className="w-full h-full object-contain bg-white/5"
+                    />
                   </div>
                 </div>
               </div>
