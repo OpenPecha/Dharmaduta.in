@@ -9,35 +9,143 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Tenzin Kalden",
-    role: "Buddhist Technology Specialist",
-    image: "/team/placeholder.jpg",
-    email: "tenzin@dharmaduta.com"
+    "name": "KALZANG FURBU",
+    "role": "Co Founder",
+    "image": "/team/furbu.png",
+    "email": "kalsang@dharmaduta.in"
   },
   {
-    name: "Karma Dorje",
-    role: "Buddhist Scholar",
-    image: "/team/placeholder.jpg",
-    email: "karma@dharmaduta.com"
+    "name": "YONTEN WANGCHUK",
+    "role": "Co Founder",
+    "image": "/team/wangchuk.png",
+    "email": "yonten@dharmaduta.in"
   },
-  // Adding more team members with diverse roles
-  ...[...Array(28)].map((_, i) => ({
-    name: `Team Member ${i + 3}`,
-    role: [
-      "Buddhist Technology Specialist",
-      "Buddhist Scholar",
-      "Project Coordinator",
-      "Research Associate",
-      "Data Specialist",
-      "Content Creator",
-      "Digital Preservation Expert",
-      "Translation Technology Specialist",
-      "Buddhist Text Analyst",
-      "Community Engagement Specialist"
-    ][i % 10],
-    image: "/team/placeholder.jpg",
-    email: `member${i + 3}@dharmaduta.com`
-  }))
+  {
+    "name": "NGAWANG THRINLEY",
+    "role": "CEO",
+    "image": "/team/thrinley.png",
+    "email": "nt@dharmaduta.in"
+  },
+  {
+    "name": "GANGA GYATSO",
+    "role": "Software Developer I",
+    "image": "/team/gyatso.png",
+    "email": "ganga@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN LUNGSANG",
+    "role": "Software Developer I",
+    "image": "/team/lungsang.png",
+    "email": "lungsang@dharmaduta.in"
+  },
+  {
+    "name": "LOBZANG SANDUP",
+    "role": "Software Developer I",
+    "image": "/team/sandup.png",
+    "email": "sandup@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN NORYANG",
+    "role": "Senior Operations Coordinator",
+    "image": "/team/noryang.png",
+    "email": "noryang@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN GAYCHE",
+    "role": "Senior Software Developer I",
+    "image": "/team/gayche.png",
+    "email": "gayche@dharmaduta.in"
+  },
+  {
+    "name": "TASHI TSERING",
+    "role": "Senior Software Developer II",
+    "image": "/team/tsering.png",
+    "email": "tashitsering@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN DELEK",
+    "role": "Software Developer II",
+    "image": "/team/delek.png",
+    "email": "tenzdelek@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN TAMDIN",
+    "role": "Software Developer II",
+    "image": "/team/tamdin.jpg",
+    "email": "tamdin@dharmaduta.in"
+  },
+  {
+    "name": "MENLA TSOMO",
+    "role": "Project Coordinator",
+    "image": "/team/tsomo.png",
+    "email": "menla@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN KUNSANG",
+    "role": "Senior Software Developer I",
+    "image": "/team/kunsang.png",
+    "email": "tenkus@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN TSERING",
+    "role": "Software Developer I",
+    "image": "/team/tsering.png",
+    "email": "tentse@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN KALDAN",
+    "role": "Senior Software Developer II",
+    "image": "/team/kaldan.jpg",
+    "email": "kaldan@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN YOUDON",
+    "role": "Software Developer I",
+    "image": "/team/youdon.png",
+    "email": "youdon@dharmaduta.in"
+  },
+  {
+    "name": "KARMA TSERING",
+    "role": "Software Developer I",
+    "image": "/team/tsering.png",
+    "email": "kartse@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN DHAKAR",
+    "role": "Software Developer I",
+    "image": "/team/dhakar.png",
+    "email": "dhakar@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN KALDEN",
+    "role": "Software Developer I",
+    "image": "/team/kalden.png",
+    "email": "tenzinkalden@dharmaduta.in"
+  },
+  {
+    "name": "NORBU TSERING",
+    "role": "Social Media & Communication Officer",
+    "image": "/team/tsering.png",
+    "email": "nortse@dharmaduta.in"
+  },
+  {
+    "name": "GADE",
+    "role": "Tibetan Language Expert",
+    "image": "/team/gade.png",
+    "email": "gade@dharmaduta.in"
+  },
+  {
+    "name": "PASSANG TSERING",
+    "role": "Tibetan Language Expert",
+    "image": "/team/tsering.png",
+    "email": "passang@dharmaduta.in"
+  },
+  {
+    "name": "TENZIN TSEWANG",
+    "role": "Tibetan Language Expert",
+    "image": "/team/tsewang.png",
+    "email": "tsewang@dharmaduta.in"
+  }
 ].sort(() => Math.random() - 0.5); // Shuffle the array
 
 const TeamSection = () => {
