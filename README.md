@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# Dharmaduta.in
 
-## Project info
+A modern platform dedicated to preserving and sharing Buddhist wisdom through innovative technology.
 
-**URL**: https://lovable.dev/projects/aed07fbc-7d39-466d-82c6-f61a883f496f
+## About
 
-## How can I edit this code?
+Dharmaduta.in is a comprehensive digital platform that bridges ancient Buddhist wisdom with modern technology. Our platform hosts various tools and services designed to make Buddhist teachings more accessible and engaging for practitioners worldwide.
 
-There are several ways of editing your application.
+## Key Products
 
-**Use Lovable**
+- **WEBUDDHIST** - Comprehensive Buddhist Study Platform
+- **WEBUDDHIST APP** - Buddhist Practice Mobile Application
+- **SHERAB** - Buddhist E-Learning Platform
+- **PECHA AI STUDIO** - Buddhist Resource Creation Suite
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/aed07fbc-7d39-466d-82c6-f61a883f496f) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is built with modern web technologies:
 
-**Use your preferred IDE**
+- **Frontend Framework**: React with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Type Safety**: TypeScript
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (LTS version recommended)
+- npm or yarn package manager
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone the repository
+git clone https://github.com/your-org/dharmaduta.in.git
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Navigate to project directory
+cd dharmaduta.in
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:5173` (or another port if 5173 is busy).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+dharmaduta.in/
+├── public/          # Static assets
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── pages/       # Page components
+│   ├── styles/      # Global styles
+│   └── App.tsx      # Root component
+├── index.html
+└── vite.config.ts   # Vite configuration
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Development
 
-## What technologies are used for this project?
+### Commands
 
-This project is built with:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Code Style
 
-## How can I deploy this project?
+This project uses:
+- ESLint for code linting
+- Prettier for code formatting
+- TypeScript for type safety
 
-Simply open [Lovable](https://lovable.dev/projects/aed07fbc-7d39-466d-82c6-f61a883f496f) and click on Share -> Publish.
+## Contributing
 
-## Can I connect a custom domain to my Lovable project?
+We welcome contributions! Please follow these steps:
 
-Yes, you can!
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries, please reach out to us at contact@dharmaduta.in
+
+---
+
+Built with ❤️ by the Dharmaduta team for the benefit of all beings.
