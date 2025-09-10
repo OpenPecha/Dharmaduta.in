@@ -48,7 +48,7 @@ const AboutSection = () => {
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed text-lg font-normal">
                   Native Buddhist specialists who have graduated from various monasteries, nunneries, 
-                  and colleges, with direct experience preparing data for AI.
+                  and colleges, with direct experience preparing data for end user products as well as AI training purposes.
                 </p>
               </CardContent>
             </Card>
