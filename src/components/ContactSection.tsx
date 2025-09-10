@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, Linkedin, Youtube, Upload } from "lucide-react";
 
 // Custom X (Twitter) icon component
 const XIcon = ({ className }: { className?: string }) => (
@@ -14,7 +15,7 @@ const XIcon = ({ className }: { className?: string }) => (
 );
 import { zodResolver } from "@hookform/resolvers/zod";
 
-const formSchema = z.object({
+const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
   subject: z.string().min(1, "Subject is required"),
@@ -22,11 +23,21 @@ const formSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 
-type ContactFormData = z.infer<typeof formSchema>;
+const collaborateFormSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  portfolio: z.string().min(1, "Portfolio link is required"),
+  resume: z.string().min(1, "Resume is required"),
+  subject: z.string().min(1, "Subject is required"),
+  message: z.string().min(1, "Message is required"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
+type CollaborateFormData = z.infer<typeof collaborateFormSchema>;
 
 const ContactSection = () => {
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(formSchema),
+  const contactForm = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -36,8 +47,24 @@ const ContactSection = () => {
     },
   });
 
-  const onSubmit = (data: ContactFormData) => {
+  const collaborateForm = useForm<CollaborateFormData>({
+    resolver: zodResolver(collaborateFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      portfolio: "",
+      resume: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const onContactSubmit = (data: ContactFormData) => {
     console.log("Contact form submitted:", data);
+  };
+
+  const onCollaborateSubmit = (data: CollaborateFormData) => {
+    console.log("Collaborate form submitted:", data);
   };
 
   return (
@@ -47,7 +74,7 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="space-y-12">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Contact</h2>
+              <h2 className="text-3xl font-bold mb-2">Contact Info</h2>
               <div className="h-1 w-16 bg-primary"></div>
             </div>
 
@@ -112,109 +139,244 @@ const ContactSection = () => {
 
           </div>
 
-          {/* Contact Form */}
+          {/* Forms */}
           <div>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input 
-                            {...field}
-                            placeholder="Name *"
-                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+            <Tabs defaultValue="contact" className="space-y-6">
+              <TabsList className="grid grid-cols-2 w-[400px]">
+                <TabsTrigger value="contact">Contact Form</TabsTrigger>
+                <TabsTrigger value="collaborate">Collaborate Form</TabsTrigger>
+              </TabsList>
 
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input 
-                            {...field}
-                            type="email"
-                            placeholder="Email *"
-                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+              {/* Contact Form */}
+              <TabsContent value="contact">
+                <Form {...contactForm}>
+                  <form onSubmit={contactForm.handleSubmit(onContactSubmit)} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <FormField
+                        control={contactForm.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                placeholder="Name *"
+                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input 
-                            {...field}
-                            placeholder="Subject *"
-                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                      <FormField
+                        control={contactForm.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                type="email"
+                                placeholder="Email *"
+                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
 
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input 
-                            {...field}
-                            placeholder="Company / Organization *"
-                            className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <FormField
+                        control={contactForm.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                placeholder="Subject *"
+                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Textarea 
-                          {...field}
-                          placeholder="Message *"
-                          className="min-h-[150px] border-border focus-visible:ring-2 focus-visible:ring-primary"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                      <FormField
+                        control={contactForm.control}
+                        name="company"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                placeholder="Company / Organization *"
+                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
 
-                <Button 
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-foreground hover:bg-foreground/90 text-background"
-                >
-                  Submit
-                </Button>
-              </form>
-            </Form>
+                    <FormField
+                      control={contactForm.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormControl>
+                            <Textarea 
+                              {...field}
+                              placeholder="Message *"
+                              className="min-h-[150px] border-border focus-visible:ring-2 focus-visible:ring-primary"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button 
+                      type="submit"
+                      size="lg"
+                      className="w-full bg-foreground hover:bg-foreground/90 text-background"
+                    >
+                      Submit
+                    </Button>
+                  </form>
+                </Form>
+              </TabsContent>
+
+              {/* Collaborate Form */}
+              <TabsContent value="collaborate">
+                <Form {...collaborateForm}>
+                  <form onSubmit={collaborateForm.handleSubmit(onCollaborateSubmit)} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <FormField
+                        control={collaborateForm.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                placeholder="Name *"
+                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={collaborateForm.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                type="email"
+                                placeholder="Email *"
+                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <FormField
+                        control={collaborateForm.control}
+                        name="portfolio"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                placeholder="Portfolio Link *"
+                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={collaborateForm.control}
+                        name="resume"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <div className="relative">
+                                <Input 
+                                  {...field}
+                                  placeholder="Resume *"
+                                  className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary pl-10"
+                                />
+                                <Upload className="w-4 h-4 absolute left-3 top-4 text-muted-foreground" />
+                              </div>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <FormField
+                      control={collaborateForm.control}
+                      name="subject"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormControl>
+                            <Input 
+                              {...field}
+                              placeholder="Subject *"
+                              className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={collaborateForm.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormControl>
+                            <Textarea 
+                              {...field}
+                              placeholder="Message *"
+                              className="min-h-[150px] border-border focus-visible:ring-2 focus-visible:ring-primary"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button 
+                      type="submit"
+                      size="lg"
+                      className="w-full bg-foreground hover:bg-foreground/90 text-background"
+                    >
+                      Submit
+                    </Button>
+                  </form>
+                </Form>
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </div>
