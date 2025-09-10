@@ -86,7 +86,7 @@ const products: Product[] = [
         { label: "Projects Created", value: "10,000+" },
         { label: "Organizations", value: "100+" }
       ],
-      link: "https://workspace.pecha.tools/",
+      link: "https://studio.pecha.ai/",
       buttonText: "Try Tools",
       image: "/pecha_ai.png"
     }
