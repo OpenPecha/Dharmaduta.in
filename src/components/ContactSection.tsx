@@ -150,7 +150,16 @@ const ContactSection = () => {
               {/* Contact Form */}
               <TabsContent value="contact">
                 <Form {...contactForm}>
-                  <form onSubmit={contactForm.handleSubmit(onContactSubmit)} className="space-y-6">
+                  <form 
+                    action="https://formsubmit.co/contact@dharmaduta.in" 
+                    method="POST"
+                    className="space-y-6"
+                  >
+                    {/* FormSubmit.co configuration */}
+                    <input type="hidden" name="_subject" value="New Contact Form Submission" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_next" value="https://dharmaduta.in/thank-you" />
+                    <input type="hidden" name="_autoresponse" value="Thank you for contacting Dharmaduta. We have received your message and will get back to you soon." />
                     <div className="grid sm:grid-cols-2 gap-6">
                       <FormField
                         control={contactForm.control}
@@ -255,7 +264,16 @@ const ContactSection = () => {
               {/* Collaborate Form */}
               <TabsContent value="collaborate">
                 <Form {...collaborateForm}>
-                  <form onSubmit={collaborateForm.handleSubmit(onCollaborateSubmit)} className="space-y-6">
+                  <form 
+                    action="https://formsubmit.co/contact@dharmaduta.in" 
+                    method="POST"
+                    className="space-y-6"
+                  >
+                    {/* FormSubmit.co configuration */}
+                    <input type="hidden" name="_subject" value="New Collaboration Request" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_next" value="https://dharmaduta.in/thank-you" />
+                    <input type="hidden" name="_autoresponse" value="Thank you for your interest in collaborating with Dharmaduta. We have received your application and will review it shortly." />
                     <div className="grid sm:grid-cols-2 gap-6">
                       <FormField
                         control={collaborateForm.control}

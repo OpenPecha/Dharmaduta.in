@@ -31,37 +31,37 @@ const teamMembers: TeamMember[] = [
   {
     "name": "TENZIN KALDAN",
     "role": "Product manager",
-    "image": "/team/kaldan.png",
+    "image": "/team/kaldan.jpg",
     "working_group": "Webuddhist"
   },
   {
     "name": "TENZIN TAMDIN",
     "role": "Software Developer II",
-    "image": "/team/tamdin.png",
+    "image": "/team/tamdin.jpg",
     "working_group": "Webuddhist"
   },
   {
     "name": "TENZIN DELEK",
     "role": "Software Developer II",
-    "image": "/team/delek.png",
+    "image": "/team/delek.jpg",
     "working_group": "Webuddhist"
   },
   {
     "name": "TENZIN YOUDON",
     "role": "Software Developer I",
-    "image": "/team/youdon.png",
+    "image": "/team/youdon.jpg",
     "working_group": "Webuddhist"
   },
   {
     "name": "TENZIN LUNGSANG",
     "role": "Software Developer I",
-    "image": "/team/lungsang.png",
+    "image": "/team/lungsang.jpg",
     "working_group": "Webuddhist"
   },
   {
     "name": "LOBZANG SANDUP",
     "role": "Software Developer I",
-    "image": "/team/sandup.png",
+    "image": "/team/sandup.jpg",
     "working_group": "Webuddhist"
   },
   {
@@ -133,19 +133,19 @@ const teamMembers: TeamMember[] = [
   {
     "name": "TASHI TSERING",
     "role": "Senior Software Developer II",
-    "image": "/team/tsering.png",
+    "image": "/team/tatse.jpg",
     "working_group": "Pecha Server & API"
   },
   {
     "name": "TENZIN TSERING",
     "role": "Software Developer I",
-    "image": "/team/tsering.png",
+    "image": "/team/tentse.png",
     "working_group": "Pecha Server & API"
   },
   {
     "name": "TENZIN DHAKAR",
     "role": "Software Developer I",
-    "image": "/team/dhakar.png",
+    "image": "/team/dhakar.jpg",
     "working_group": "Pecha Server & API"
   },
   {
@@ -211,25 +211,25 @@ const teamMembers: TeamMember[] = [
   {
     "name": "TENZIN KUNSANG",
     "role": "Senior Software Developer I",
-    "image": "/team/kunsang.png",
+    "image": "/team/tenkus.jpg",
     "working_group": "Pecha AI Studio"
   },
   {
     "name": "TENZIN GAYCHE",
     "role": "Senior Software Developer I",
-    "image": "/team/gayche.png",
+    "image": "/team/gayche.jpg",
     "working_group": "Pecha AI Studio"
   },
   {
     "name": "GANGA GYATSO",
     "role": "Software Developer I",
-    "image": "/team/gyatso.png",
+    "image": "/team/ganga.jpg",
     "working_group": "Pecha AI Studio"
   },
   {
     "name": "KARMA TSERING",
     "role": "Software Developer I",
-    "image": "/team/tsering.png",
+    "image": "/team/kartse.jpg",
     "working_group": "Pecha AI Studio"
   },
   {
@@ -271,7 +271,7 @@ const teamMembers: TeamMember[] = [
   {
     "name": "TENZIN KALDEN",
     "role": "Software Developer I",
-    "image": "/team/kalden.png",
+    "image": "/team/tenkal.jpg",
     "working_group": "Sherab"
   },
   {
