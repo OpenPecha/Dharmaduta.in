@@ -30,8 +30,8 @@ const AboutSection = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed text-lg font-normal">
-                  A dynamic team of experienced Buddhist tech Engineers who are core contributors 
-                  to the OpenPecha open-source and open data community.
+                A dedicated team of Buddhist tech engineers specializing in the development 
+                of end-user products. Our expertise lies in creating intuitive technology for the Buddhist community and training advanced AI models on Buddhist languages and scriptures.
                 </p>
               </CardContent>
             </Card>

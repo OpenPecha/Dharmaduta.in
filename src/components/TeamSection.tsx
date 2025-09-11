@@ -16,15 +16,15 @@ const teamMembers: TeamMember[] = [
     "working_group": "Operation"
   },
   {
-    "name": "YONTEN WANGCHUK",
-    "role": "Co Founder",
-    "image": "/team/operation/yonten.jpg",
-    "working_group": "Operation"
-  },
-  {
     "name": "NGAWANG THRINLEY",
     "role": "CEO(Co Founder)",
     "image": "/team/operation/nt.jpg",
+    "working_group": "Operation"
+  },
+  {
+    "name": "YONTEN WANGCHUK",
+    "role": "Co Founder",
+    "image": "/team/operation/yonten.jpg",
     "working_group": "Operation"
   },
   {
