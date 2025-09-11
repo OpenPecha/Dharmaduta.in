@@ -29,20 +29,7 @@ const ProductsSection = () => {
 }
 
 const products: Product[] = [
-    {
-      name: "PECHA SERVER & API",
-      title: "Buddhist Text API Platform",
-      subtitle: "Buddhist knowledge in one call",
-      description: "Access and integrate Buddhist texts and resources programmatically through our comprehensive API platform. Perfect for developers, researchers, and organizations building Buddhist applications and services.",
-      stats: [
-        { label: "API Endpoints", value: "50+" },
-        { label: "Daily Requests", value: "100,000+" },
-        { label: "Text Coverage", value: "1M+ pages" }
-      ],
-      link: "https://pecha-backend.web.app/swagger/#/",
-      buttonText: "Explore API",
-      image: "/pecha_server.jpeg"
-    },
+    
     {
       name: "WEBUDDHIST",
       title: "Comprehensive Buddhist Study Platform",
@@ -89,6 +76,20 @@ const products: Product[] = [
       link: "https://studio.pecha.ai/",
       buttonText: "Try Tools",
       image: "/pecha_ai.png"
+    },
+    {
+      name: "PECHA DATA & API",
+      title: "Buddhist Text API Platform",
+      subtitle: "Buddhist knowledge in one call",
+      description: "Access and integrate Buddhist texts and resources programmatically through our comprehensive API platform. Perfect for developers, researchers, and organizations building Buddhist applications and services.",
+      stats: [
+        { label: "API Endpoints", value: "50+" },
+        { label: "Daily Requests", value: "100,000+" },
+        { label: "Text Coverage", value: "1M+ pages" }
+      ],
+      link: "https://pecha-backend.web.app/swagger/#/",
+      buttonText: "Explore API",
+      image: "/pecha_server.jpeg"
     }
   ];
 

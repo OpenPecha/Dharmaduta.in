@@ -1,5 +1,4 @@
-import { Mail, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { Mail } from "lucide-react";
 
 interface TeamMember {
   name: string;
@@ -13,285 +12,292 @@ const teamMembers: TeamMember[] = [
   {
     "name": "KALZANG FURBU",
     "role": "Co Founder",
-    "image": "/team/furbu.png",
-    "working_group": "Council"
+    "image": "/team/operation/kalsang.jpg",
+    "working_group": "Operation"
   },
   {
     "name": "YONTEN WANGCHUK",
     "role": "Co Founder",
-    "image": "/team/wangchuk.png",
-    "working_group": "Council"
+    "image": "/team/operation/yonten.jpg",
+    "working_group": "Operation"
   },
   {
     "name": "NGAWANG THRINLEY",
     "role": "CEO(Co Founder)",
-    "image": "/team/thrinley.png",
-    "working_group": "Council"
-  },
-  {
-    "name": "TENZIN KALDAN",
-    "role": "Product manager",
-    "image": "/team/kaldan.jpg",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TENZIN TAMDIN",
-    "role": "Software Developer II",
-    "image": "/team/tamdin.jpg",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TENZIN DELEK",
-    "role": "Software Developer II",
-    "image": "/team/delek.jpg",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TENZIN YOUDON",
-    "role": "Software Developer I",
-    "image": "/team/youdon.jpg",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TENZIN LUNGSANG",
-    "role": "Software Developer I",
-    "image": "/team/lungsang.jpg",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "LOBZANG SANDUP",
-    "role": "Software Developer I",
-    "image": "/team/sandup.jpg",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "GADE",
-    "role": "Tibetan Language Expert",
-    "image": "/team/gade.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TENZIN TSEWANG",
-    "role": "Tibetan Language Expert",
-    "image": "/team/tsewang.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "GYALTSEN DHARGYAL",
-    "role": "Tibetan Language Expert",
-    "image": "/team/dhargyal.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "CHOEDUP",
-    "role": "Tibetan Language Expert",
-    "image": "/team/choedup.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "PEMA NAMGYAL",
-    "role": "Tibetan Language Expert",
-    "image": "/team/namgyal.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "JAMPA GONPO",
-    "role": "Tibetan Language Expert",
-    "image": "/team/gonpo.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "SANGDU KYI",
-    "role": "Tibetan Language Expert",
-    "image": "/team/kyi.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "JAMPA THUPTEN",
-    "role": "Tibetan Language Expert",
-    "image": "/team/thupten.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "GELEK GYATSO (A)",
-    "role": "Tibetan Language Expert",
-    "image": "/team/(a).png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TSETHAR DOLMA",
-    "role": "Tibetan Language Expert",
-    "image": "/team/dolma.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TSERING",
-    "role": "Tibetan Language Expert",
-    "image": "/team/tsering.png",
-    "working_group": "Webuddhist"
-  },
-  {
-    "name": "TASHI TSERING",
-    "role": "Senior Software Developer II",
-    "image": "/team/tatse.jpg",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "TENZIN TSERING",
-    "role": "Software Developer I",
-    "image": "/team/tentse.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "TENZIN DHAKAR",
-    "role": "Software Developer I",
-    "image": "/team/dhakar.jpg",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "TENPA DARCHUK",
-    "role": "Tibetan Language Expert",
-    "image": "/team/darchuk.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "KUNSANG",
-    "role": "Tibetan Language Expert",
-    "image": "/team/kunsang.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "TENZIN THUTOP",
-    "role": "Tibetan Language Expert",
-    "image": "/team/thutop.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "TENZIN RABTEN",
-    "role": "Tibetan Language Expert",
-    "image": "/team/rabten.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "SONAM GYAL",
-    "role": "Tibetan Language Expert",
-    "image": "/team/gyal.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "SANGYAL KHER",
-    "role": "Tibetan Language Expert",
-    "image": "/team/kher.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "JANGCHUP DORJEE",
-    "role": "Tibetan Language Expert",
-    "image": "/team/dorjee.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "LHUJAM GYAL",
-    "role": "Tibetan Language Expert",
-    "image": "/team/gyal.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "GELEK GYATSO (B)",
-    "role": "Tibetan Language Expert",
-    "image": "/team/(b).png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "TSEYANG",
-    "role": "Tibetan Language Expert",
-    "image": "/team/tseyang.png",
-    "working_group": "Pecha Server & API"
-  },
-  {
-    "name": "TENZIN KUNSANG",
-    "role": "Senior Software Developer I",
-    "image": "/team/tenkus.jpg",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "TENZIN GAYCHE",
-    "role": "Senior Software Developer I",
-    "image": "/team/gayche.jpg",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "GANGA GYATSO",
-    "role": "Software Developer I",
-    "image": "/team/ganga.jpg",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "KARMA TSERING",
-    "role": "Software Developer I",
-    "image": "/team/kartse.jpg",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "PASSANG TSERING",
-    "role": "Tibetan Language Expert",
-    "image": "/team/tsering.png",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "KARMA TSEPAK",
-    "role": "Tibetan Language Expert",
-    "image": "/team/tsepak.png",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "KUNCHOK GAWA",
-    "role": "Tibetan Language Expert",
-    "image": "/team/gawa.png",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "JAMPA LOBSANG",
-    "role": "Tibetan Language Expert",
-    "image": "/team/lobsang.png",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "KALSANG THARDOE",
-    "role": "Tibetan Language Expert",
-    "image": "/team/thardoe.png",
-    "working_group": "Pecha AI Studio"
-  },
-  {
-    "name": "MENLA TSOMO",
-    "role": "Project Coordinator",
-    "image": "/team/tsomo.png",
-    "working_group": "Sherab"
-  },
-  {
-    "name": "TENZIN KALDEN",
-    "role": "Software Developer I",
-    "image": "/team/tenkal.jpg",
-    "working_group": "Sherab"
+    "image": "/team/operation/nt.jpg",
+    "working_group": "Operation"
   },
   {
     "name": "TENZIN NORYANG",
-    "role": "Agile Coach",
-    "image": "/team/noryang.png",
+    "role": "Admin, Agile Coach",
+    "image": "/team/operation/noryang.jpg",
     "working_group": "Operation"
   },
   {
     "name": "TENZIN JORDHEN",
     "role": "Accountant",
-    "image": "/team/jordhen.png",
+    "image": "/team/operation/jorden.jpg",
     "working_group": "Operation"
   },
   {
     "name": "NORBU TSERING",
     "role": "Social Media & Communication Officer",
-    "image": "/team/tsering.png",
+    "image": "/team/operation/nortse.jpg",
     "working_group": "Operation"
-  }
+  },
+  {
+    "name": "Jennifer Yo",
+    "role": "Product Manager",
+    "image": "/team/webuddhist/jennifer.png",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TENZIN KALDAN",
+    "role": "Senior Software Developer II",
+    "image": "/team/webuddhist/kaldan.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TENZIN TAMDIN",
+    "role": "Software Developer II",
+    "image": "/team/webuddhist/tamdin.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TENZIN DELEK",
+    "role": "Software Developer II",
+    "image": "/team/webuddhist/delek.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TENZIN YOUDON",
+    "role": "Software Developer I",
+    "image": "/team/webuddhist/youdon.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TENZIN LUNGSANG",
+    "role": "Software Developer I",
+    "image": "/team/webuddhist/lungsang.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "LOBZANG SANDUP",
+    "role": "Software Developer I",
+    "image": "/team/webuddhist/sandup.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "GADE",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/gade.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TENZIN TSEWANG",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/tsewang.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "GYALTSEN DHARGYAL",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/dhagyal.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "CHOEDUP",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/choedup.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "PEMA NAMGYAL",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/namgyal.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "JAMPA GONPO",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/gonpo.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "SANGDU KYI",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/kyi.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "JAMPA THUPTEN",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/thupten.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "GELEK GYATSO (A)",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/gyatso.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TSETHAR DOLMA",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/dolma.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "TSERING",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/webuddhist/tsering.jpg",
+    "working_group": "WeBuddhist Team"
+  },
+  {
+    "name": "MENLA TSOMO",
+    "role": "Project Coordinator",
+    "image": "/team/sherab/menla.jpg",
+    "working_group": "Sherab Team"
+  },
+  {
+    "name": "TENZIN KALDEN",
+    "role": "Software Developer I",
+    "image": "/team/sherab/tenkal.jpg",
+    "working_group": "Sherab Team"
+  },
+  {
+    "name": "TENZIN KUNSANG",
+    "role": "Senior Software Developer I",
+    "image": "/team/pecha_studio/tenkus.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "TENZIN GAYCHE",
+    "role": "Senior Software Developer I",
+    "image": "/team/pecha_studio/gayche.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "GANGA GYATSO",
+    "role": "Software Developer I",
+    "image": "/team/pecha_studio/ganga.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "KARMA TSERING",
+    "role": "Software Developer I",
+    "image": "/team/pecha_studio/kartse.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "PASSANG TSERING",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_studio/passang.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "KARMA TSEPAK",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_studio/tsepak.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "KUNCHOK GAWA",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_studio/gawa.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "JAMPA LOBSANG",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_studio/lobsang.png",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "KALSANG THARDOE",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_studio/thardoe.jpg",
+    "working_group": "Pecha AI Studio Team"
+  },
+  {
+    "name": "TASHI TSERING",
+    "role": "Senior Software Developer II",
+    "image": "/team/pecha_server/tatse.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "TENZIN TSERING",
+    "role": "Software Developer I",
+    "image": "/team/pecha_server/tentse.png",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "TENZIN DHAKAR",
+    "role": "Software Developer I",
+    "image": "/team/pecha_server/dhakar.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "TENPA DARCHUK",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/darchuk.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "KUNSANG",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/kunsang.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "TENZIN THUTOP",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/thutop.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "TENZIN RABTEN",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/rabten.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "SONAM GYAL",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/sonam.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "SANGYAL KHER",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/kher.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "JANGCHUP DORJEE",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/dorjee.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "LHUJAM GYAL",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/gyal.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "GELEK GYATSO",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/gyatso.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  {
+    "name": "TSEYANG",
+    "role": "Buddhist Text Specialist",
+    "image": "/team/pecha_server/tseyang.jpg",
+    "working_group": "Pecha Data & API Team"
+  },
+  
 ]
 
 const TeamSection = () => {
@@ -301,17 +307,6 @@ const TeamSection = () => {
     group.push(member);
     return { ...groups, [member.working_group]: group };
   }, {} as Record<string, TeamMember[]>);
-
-  // State to track which groups are expanded
-  const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
-
-  // Toggle group expansion
-  const toggleGroup = (groupName: string) => {
-    setExpandedGroups(prev => ({
-      ...prev,
-      [groupName]: !prev[groupName]
-    }));
-  };
 
   return (
     <section className="py-24 bg-background">
@@ -328,29 +323,14 @@ const TeamSection = () => {
             </p>
           </div>
 
-          {/* Working Groups Accordion */}
-          <div className="space-y-4">
+          {/* Working Groups */}
+          <div className="space-y-16">
             {Object.entries(groupedMembers).map(([groupName, members]) => (
-              <div key={groupName} className="border border-border rounded-lg overflow-hidden">
-                {/* Accordion Header */}
-                <button
-                  onClick={() => toggleGroup(groupName)}
-                  className="w-full px-6 py-4 flex items-center justify-between bg-card hover:bg-accent/50 transition-colors"
-                >
-                  <h2 className="text-xl font-semibold text-foreground">{groupName}</h2>
-                  <ChevronDown
-                    className={`w-5 h-5 text-muted-foreground transition-transform ${
-                      expandedGroups[groupName] ? 'transform rotate-180' : ''
-                    }`}
-                  />
-                </button>
-
-                {/* Accordion Content */}
-                <div
-                  className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 transition-all duration-200 ease-in-out ${
-                    expandedGroups[groupName] ? 'block' : 'hidden'
-                  }`}
-                >
+              <div key={groupName} className="p-8">
+                <h2 className="text-2xl font-semibold text-foreground mb-8 border-b border-border pb-4">
+                  {groupName}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {members.map((member) => (
                     <div 
                       key={member.name}

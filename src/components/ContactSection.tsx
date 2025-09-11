@@ -79,12 +79,7 @@ const ContactSection = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-primary" />
-                <a href="tel:+97798########" className="text-lg text-foreground hover:text-primary transition-colors">
-                  +977 98########
-                </a>
-              </div>
+              
               <div className="flex items-center space-x-4">
                 <Mail className="w-6 h-6 text-primary" />
                 <a href="mailto:info@dharmaduta.com" className="text-lg text-foreground hover:text-primary transition-colors">

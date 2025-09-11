@@ -25,12 +25,12 @@ const AboutSection = () => {
                   <Brain className="w-10 h-10 text-primary" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-foreground tracking-tight">
-                  Buddhist Tech Specialists
+                  Buddhist Tech Engineers
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed text-lg font-normal">
-                  A dynamic team of experienced Buddhist tech specialists who are core contributors 
+                  A dynamic team of experienced Buddhist tech Engineers who are core contributors 
                   to the OpenPecha open-source and open data community.
                 </p>
               </CardContent>
