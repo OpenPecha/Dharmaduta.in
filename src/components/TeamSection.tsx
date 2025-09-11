@@ -210,7 +210,7 @@ const teamMembers: TeamMember[] = [
   {
     "name": "JAMPA LOBSANG",
     "role": "Buddhist Text Specialist",
-    "image": "/team/pecha_studio/lobsang.png",
+    "image": "/team/pecha_studio/lobsang.jpg",
     "working_group": "Pecha AI Studio Team"
   },
   {
