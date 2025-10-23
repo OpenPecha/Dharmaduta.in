@@ -16,12 +16,6 @@ const teamMembers: TeamMember[] = [
     "working_group": "Operation"
   },
   {
-    "name": "NGAWANG THRINLEY",
-    "role": "CEO(Co Founder)",
-    "image": "/team/operation/nt.jpg",
-    "working_group": "Operation"
-  },
-  {
     "name": "YONTEN WANGCHUK",
     "role": "Co Founder",
     "image": "/team/operation/yonten.jpg",
@@ -44,12 +38,6 @@ const teamMembers: TeamMember[] = [
     "role": "Social Media & Communication Officer",
     "image": "/team/operation/nortse.jpg",
     "working_group": "Operation"
-  },
-  {
-    "name": "Jennifer Yo",
-    "role": "Product Manager",
-    "image": "/team/webuddhist/jennifer.png",
-    "working_group": "WeBuddhist Team"
   },
   {
     "name": "TENZIN KALDAN",
