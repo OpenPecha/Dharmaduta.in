@@ -64,7 +64,7 @@ const products: Product[] = [
       stores: ["App Store", "Google Play"]
     },
     {
-      name: "PECHA AI STUDIO",
+      name: "Buddhist AI Tools",
       title: "Buddhist Resource Creation Suite",
       subtitle: "Professional tools for Buddhist content creators",
       description: "Comprehensive suite of digital tools designed specifically for creating, editing, and managing Buddhist resources and texts with precision and authenticity.",
@@ -73,7 +73,7 @@ const products: Product[] = [
         { label: "Projects Created", value: "10,000+" },
         { label: "Organizations", value: "100+" }
       ],
-      link: "https://studio.pecha.ai/",
+      link: "https://buddhistai.tools/",
       buttonText: "Try Tools",
       image: "/pecha_ai.png"
     },
