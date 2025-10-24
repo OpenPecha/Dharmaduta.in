@@ -39,7 +39,9 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Products", href: "/#products" },
+    { label: "Home", href: "/" },
+    { label: "Projects", href: "/projects" },
+    { label: "Events & Community", href: "/events-community" },
     { label: "About us", href: "/about" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },

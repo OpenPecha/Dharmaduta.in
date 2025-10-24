@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
-import ProductsSection from "@/components/ProductsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -25,7 +24,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <ProductsSection />
       <Footer />
     </div>
   );
