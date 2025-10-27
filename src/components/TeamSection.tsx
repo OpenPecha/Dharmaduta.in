@@ -23,14 +23,14 @@ const teamMembers: TeamMember[] = [
   },
   {
     "name": "TENZIN NORYANG",
-    "role": "Admin, Agile Coach",
+    "role": "Executive Manager",
     "image": "/team/operation/noryang.jpg",
     "working_group": "Operation"
   },
   {
-    "name": "TENZIN JORDHEN",
-    "role": "Accountant",
-    "image": "/team/operation/jorden.jpg",
+    "name": "TENZIN PALKYI",
+    "role": "Community Growth Engineer",
+    "image": "/team/operation/palkyi.jpg",
     "working_group": "Operation"
   },
   {
