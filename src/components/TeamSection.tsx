@@ -11,13 +11,13 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     "name": "KALZANG FURBU",
-    "role": "Co Founder",
+    "role": "Co-Founder",
     "image": "/team/operation/kalsang.jpg",
     "working_group": "Operation"
   },
   {
     "name": "YONTEN WANGCHUK",
-    "role": "Co Founder",
+    "role": "Co-Founder",
     "image": "/team/operation/yonten.jpg",
     "working_group": "Operation"
   },
