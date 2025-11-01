@@ -64,7 +64,7 @@ const teamMembers: TeamMember[] = [
     "working_group": "WeBuddhist Team"
   },
   {
-    "name": "TENZIN LUNGSANG",
+    "name": "LUNGSANG",
     "role": "Software Developer I",
     "image": "/team/webuddhist/lungsang.jpg",
     "working_group": "WeBuddhist Team"
