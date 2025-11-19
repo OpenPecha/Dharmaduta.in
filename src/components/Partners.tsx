@@ -1,7 +1,7 @@
 const partners = [
   { name: 'OpenPecha Charitable Trust', a: 'https://www.openpecha.org/' },
   { name: 'BDRC', a: 'https://www.bdrc.io/' },
-  { name: 'EPHC', a: 'https://www.ephc.org/' },
+  { name: 'Pagan Tibet', a: 'https://www.crcao.fr/recherche/pagantibet-documenter-la-premiere-reconstruction-de-pratiques-prebouddhiques-au-tibet/?lang=en#:~:text=PaganTibet:%20Documenting%20the%20first%20reconstruction,sources%20that%20are%20already%20known.' },
 ];
 
 const Partners = () => {
