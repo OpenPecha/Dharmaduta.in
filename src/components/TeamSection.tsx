@@ -297,53 +297,53 @@ const TeamSection = () => {
   }, {} as Record<string, TeamMember[]>);
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-16 sm:py-20 lg:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <div className="text-center mb-12 sm:mb-16 px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground">
               Meet Our Team
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               A collaborative community of practitioners, scholars, and technologists working 
               together to bridge ancient wisdom with modern technology.
             </p>
           </div>
 
           {/* Working Groups */}
-          <div className="space-y-16">
+          <div className="space-y-12 sm:space-y-16">
             {Object.entries(groupedMembers).map(([groupName, members]) => (
-              <div key={groupName} className="p-8">
-                <h2 className="text-2xl font-semibold text-foreground mb-8 border-b border-border pb-4">
+              <div key={groupName} className="p-4 sm:p-6 lg:p-8">
+                <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8 border-b border-border pb-3 sm:pb-4 px-4">
                   {groupName}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
                   {members.map((member) => (
                     <div 
                       key={member.name}
                       className="bg-card border border-border rounded-xl p-4 hover:shadow-lg transition-shadow"
                     >
-                      <div className="flex items-start space-x-4">
-                        <div className="w-20 h-20 rounded-full overflow-hidden bg-muted flex-shrink-0">
+                      <div className="flex items-start space-x-3 sm:space-x-4">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-muted flex-shrink-0">
                           <img 
                             src={member.image} 
                             alt={member.name}
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-foreground mb-1">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-base sm:text-lg font-semibold text-foreground mb-1 break-words">
                             {member.name}
                           </h3>
-                          <p className="text-primary font-medium mb-2">
+                          <p className="text-sm sm:text-base text-primary font-medium mb-2 break-words">
                             {member.role}
                           </p>
                           <div className="flex space-x-3">
                             {member.email && (
                               <a
                                 href={`mailto:${member.email}`}
-                                className="text-muted-foreground hover:text-primary transition-colors"
+                                className="text-muted-foreground hover:text-primary transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                                 aria-label={`Email ${member.name}`}
                               >
                                 <Mail className="w-4 h-4" />

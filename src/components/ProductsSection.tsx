@@ -34,7 +34,7 @@ const products: Product[] = [
       name: "WEBUDDHIST",
       title: "Comprehensive Buddhist Study Platform",
       subtitle: "Where we learn, live, and share Buddhist wisdom every day",
-      description: "Whether you're seeking authentic Buddhist teachings, conducting research, or deepening your practice, WeBuddhist is at your disposal 24 hrs a day / 7 days a week.",
+      description: "Whether you're seeking authentic Buddhist teachings, conducting research, or deepening your practice, WeBuddhist is at your disposal 24 hours a day, 7 days a week.",
       link: "https://webuddhist.com/",
       buttonText: "Try Now",
       image: "/webuddhist_web.png"
@@ -94,35 +94,35 @@ const products: Product[] = [
   ];
 
   return (
-    <section id="products" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto space-y-32">
+    <section id="products" className="py-16 sm:py-20 lg:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto space-y-16 sm:space-y-24 lg:space-y-32">
           {products.map((product, index) => (
-            <div key={product.name} className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+            <div key={product.name} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               {/* Content Side */}
-              <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold text-foreground tracking-tight">
+              <div className={`space-y-6 sm:space-y-8 px-4 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <div className="space-y-3 sm:space-y-4">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
                     {product.name}
                   </h3>
-                  <h4 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
+                  <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground leading-tight">
                     {product.title}
                   </h4>
-                  <p className="text-lg text-muted-foreground font-medium">
+                  <p className="text-base sm:text-lg text-muted-foreground font-medium">
                     {product.subtitle}
                   </p>
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
                   {product.description}
                 </p>
 
                 {/* Action Button */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-start">
                   <Button 
                     asChild
                     size="lg"
-                    className="bg-foreground hover:bg-foreground/90 text-background font-medium px-8"
+                    className="bg-foreground hover:bg-foreground/90 text-background font-medium px-6 sm:px-8 text-sm sm:text-base min-h-[44px]"
                   >
                     <a 
                       href={product.link} 
@@ -138,7 +138,7 @@ const products: Product[] = [
 
                 {/* App Store Badges */}
                 {product.stores && (
-                  <div className="flex flex-wrap gap-4 items-center">
+                  <div className="flex flex-wrap gap-3 sm:gap-4 items-center">
                     {product.stores.map((store) => (
                       <a
                         key={store}
@@ -168,9 +168,9 @@ const products: Product[] = [
               </div>
 
               {/* Image Side */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+              <div className={`px-4 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 <div className="relative">
-                  <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl">
                     <img
                       src={product.image}
                       alt={`${product.name} preview`}

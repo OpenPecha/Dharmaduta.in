@@ -68,48 +68,51 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 max-w-7xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Contact Info</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2">Contact Info</h2>
               <div className="h-1 w-16 bg-primary"></div>
             </div>
 
             <div className="space-y-6">
               
               <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6 text-primary" />
-                <a href="mailto:info@dharmaduta.com" className="text-lg text-foreground hover:text-primary transition-colors">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                <a href="mailto:info@dharmaduta.com" className="text-base sm:text-lg text-foreground hover:text-primary transition-colors break-all">
                   info@dharmaduta.com
                 </a>
               </div>
 
               {/* Social Media Icons */}
-              <div className="flex items-center space-x-4 pt-6">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-6">
                 <a 
-                  href=" https://www.facebook.com/profile.php?id=61578322432088 " 
+                  href="https://www.facebook.com/profile.php?id=61578322432088" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors min-w-[44px] min-h-[44px]"
+                  aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://x.com/Dharmadutatech " 
+                  href="https://x.com/Dharmadutatech" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors min-w-[44px] min-h-[44px]"
+                  aria-label="X (Twitter)"
                 >
                   <XIcon className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://www.instagram.com/dharmadutaservicesllp.tech/ " 
+                  href="https://www.instagram.com/dharmadutaservicesllp.tech/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors min-w-[44px] min-h-[44px]"
+                  aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
@@ -117,15 +120,17 @@ const ContactSection = () => {
                   href="https://www.linkedin.com/company/dharmaduta-services-llp/?viewAsMember=true" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors min-w-[44px] min-h-[44px]"
+                  aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://www.youtube.com/@DharmadutaServicesLLP " 
+                  href="https://www.youtube.com/@DharmadutaServicesLLP" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+                  className="w-10 h-10 bg-muted/50 hover:bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary transition-colors min-w-[44px] min-h-[44px]"
+                  aria-label="YouTube"
                 >
                   <Youtube className="w-5 h-5" />
                 </a>
@@ -137,9 +142,9 @@ const ContactSection = () => {
           {/* Forms */}
           <div>
             <Tabs defaultValue="contact" className="space-y-6">
-              <TabsList className="grid grid-cols-2 w-[400px]">
-                <TabsTrigger value="contact">Contact Form</TabsTrigger>
-                <TabsTrigger value="collaborate">Collaborate Form</TabsTrigger>
+              <TabsList className="grid grid-cols-2 w-full max-w-[400px]">
+                <TabsTrigger value="contact" className="text-sm sm:text-base">Contact Form</TabsTrigger>
+                <TabsTrigger value="collaborate" className="text-sm sm:text-base">Collaborate Form</TabsTrigger>
               </TabsList>
 
               {/* Contact Form */}
@@ -155,7 +160,7 @@ const ContactSection = () => {
                     <input type="hidden" name="_template" value="table" />
                     <input type="hidden" name="_next" value="https://dharmaduta.in/thank-you" />
                     <input type="hidden" name="_autoresponse" value="Thank you for contacting Dharmaduta. We have received your message and will get back to you soon." />
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <FormField
                         control={contactForm.control}
                         name="name"
@@ -165,7 +170,7 @@ const ContactSection = () => {
                               <Input 
                                 {...field}
                                 placeholder="Name *"
-                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                                className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                               />
                             </FormControl>
                             <FormMessage />
@@ -183,7 +188,7 @@ const ContactSection = () => {
                                 {...field}
                                 type="email"
                                 placeholder="Email *"
-                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                                className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                               />
                             </FormControl>
                             <FormMessage />
@@ -192,7 +197,7 @@ const ContactSection = () => {
                       />
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <FormField
                         control={contactForm.control}
                         name="subject"
@@ -202,7 +207,7 @@ const ContactSection = () => {
                               <Input 
                                 {...field}
                                 placeholder="Subject *"
-                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                                className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                               />
                             </FormControl>
                             <FormMessage />
@@ -219,7 +224,7 @@ const ContactSection = () => {
                               <Input 
                                 {...field}
                                 placeholder="Company / Organization *"
-                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                                className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                               />
                             </FormControl>
                             <FormMessage />
@@ -269,7 +274,7 @@ const ContactSection = () => {
                     <input type="hidden" name="_template" value="table" />
                     <input type="hidden" name="_next" value="https://dharmaduta.in/thank-you" />
                     <input type="hidden" name="_autoresponse" value="Thank you for your interest in collaborating with Dharmaduta. We have received your application and will review it shortly." />
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <FormField
                         control={collaborateForm.control}
                         name="name"
@@ -279,7 +284,7 @@ const ContactSection = () => {
                               <Input 
                                 {...field}
                                 placeholder="Name *"
-                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                                className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                               />
                             </FormControl>
                             <FormMessage />
@@ -297,7 +302,7 @@ const ContactSection = () => {
                                 {...field}
                                 type="email"
                                 placeholder="Email *"
-                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                                className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                               />
                             </FormControl>
                             <FormMessage />
@@ -306,7 +311,7 @@ const ContactSection = () => {
                       />
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <FormField
                         control={collaborateForm.control}
                         name="portfolio"
@@ -316,7 +321,7 @@ const ContactSection = () => {
                               <Input 
                                 {...field}
                                 placeholder="Portfolio Link *"
-                                className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                                className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                               />
                             </FormControl>
                             <FormMessage />
@@ -334,7 +339,7 @@ const ContactSection = () => {
                                 <Input 
                                   {...field}
                                   placeholder="Resume *"
-                                  className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary pl-10"
+                                  className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary pl-10 text-base"
                                 />
                                 <Upload className="w-4 h-4 absolute left-3 top-4 text-muted-foreground" />
                               </div>
@@ -354,7 +359,7 @@ const ContactSection = () => {
                             <Input 
                               {...field}
                               placeholder="Subject *"
-                              className="h-12 border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              className="h-12 min-h-[44px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                             />
                           </FormControl>
                           <FormMessage />
@@ -371,7 +376,7 @@ const ContactSection = () => {
                             <Textarea 
                               {...field}
                               placeholder="Message *"
-                              className="min-h-[150px] border-border focus-visible:ring-2 focus-visible:ring-primary"
+                              className="min-h-[150px] border-border focus-visible:ring-2 focus-visible:ring-primary text-base"
                             />
                           </FormControl>
                           <FormMessage />
@@ -382,7 +387,7 @@ const ContactSection = () => {
                     <Button 
                       type="submit"
                       size="lg"
-                      className="w-full bg-foreground hover:bg-foreground/90 text-background"
+                      className="w-full bg-foreground hover:bg-foreground/90 text-background min-h-[44px] text-base"
                     >
                       Submit
                     </Button>
