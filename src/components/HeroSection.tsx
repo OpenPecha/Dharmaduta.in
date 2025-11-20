@@ -14,7 +14,7 @@ const HeroSection = () => {
       {/* Hero Text */}
       <div className="container mx-auto px-4 sm:px-6 pt-12 sm:pt-16 lg:pt-20">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight px-4" style={{ color: '#233666' }}>
+          <h1 className="text-3xl sm:text-5xl md:text-[5rem] font-bold leading-tight tracking-tight px-4" style={{ color: '#233666' }}>
             <span className="block">Code, Content & Coaching.</span>
             <span className="block">By Buddhists, for Buddhists.</span>
           </h1>
