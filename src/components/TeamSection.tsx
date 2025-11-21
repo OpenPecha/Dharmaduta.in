@@ -272,14 +272,7 @@ const teamMembers: TeamMember[] = [
     "role": "Buddhist Text Specialist",
     "image": "/team/pecha_server/gyatso.jpg",
     "working_group": "Pecha Data & API Team"
-  },
-  {
-    "name": "TSEYANG",
-    "role": "Buddhist Text Specialist",
-    "image": "/team/pecha_server/tseyang.jpg",
-    "working_group": "Pecha Data & API Team"
-  },
-
+  }
 ]
 
 const TeamSection = () => {

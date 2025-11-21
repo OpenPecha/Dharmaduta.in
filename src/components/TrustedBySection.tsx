@@ -7,7 +7,7 @@ interface Collaborator {
 const collaborators: Collaborator[] = [
   {
     name: "OpenPecha",
-    logo: "/collaborators_logo/openpecha.svg",
+    logo: "/collaborators_logo/openpecha_logo.svg",
     url: "https://www.openpecha.org/"
   },
   {
