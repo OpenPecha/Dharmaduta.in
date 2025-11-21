@@ -10,40 +10,40 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="bg-background min-h-screen flex flex-col">
+    <section className="bg-background pt-16 pb-10 sm:pt-24 sm:pb-16 flex flex-col">
       {/* Hero Text */}
-      <div className="container mx-auto px-4 sm:px-6 pt-12 sm:pt-16 lg:pt-20">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-5xl md:text-[5rem] font-bold leading-tight tracking-tight px-4" style={{ color: '#233666' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold leading-tight tracking-tight px-2 sm:px-4" style={{ color: '#233666' }}>
             <span className="block">Code, Content & Coaching.</span>
-            <span className="block">By Buddhists, for Buddhists.</span>
+            <span className="block mt-2">By Buddhists, for Buddhists.</span>
           </h1>
         </div>
       </div>
 
       {/* Auto-scrolling Image Carousel */}
-      <div className="flex-grow flex items-center overflow-hidden mt-12 sm:mt-16 lg:mt-20">
+      <div className="w-full overflow-hidden mt-16 sm:mt-24">
         <div className="w-full">
           <div className="relative">
             <div className="flex animate-scroll-left">
               {/* First set of images */}
               {projectImages.map((image, index) => (
-                <div key={`first-${index}`} className="flex-shrink-0 px-4 sm:px-6 lg:px-8">
-                  <a 
-                    href={image.link} 
-                    target="_blank" 
+                <div key={`first-${index}`} className="flex-shrink-0 px-3 sm:px-6 lg:px-8">
+                  <a
+                    href={image.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="block group"
                   >
-                    <div className="w-[250px] h-[150px] sm:w-[300px] sm:h-[200px] lg:w-[400px] lg:h-[280px] rounded-xl overflow-hidden shadow-xl transition-transform duration-300 group-hover:scale-105">
+                    <div className="w-[280px] h-[180px] sm:w-[300px] sm:h-[200px] lg:w-[400px] lg:h-[280px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl transition-transform duration-300 group-hover:scale-105">
                       <img
                         src={image.src}
                         alt={image.alt}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="mt-3 sm:mt-4 text-center">
-                      <h3 className="text-sm sm:text-base lg:text-xl font-bold text-foreground tracking-tight px-2">
+                    <div className="mt-2 sm:mt-4 text-center">
+                      <h3 className="text-xs sm:text-base lg:text-xl font-bold text-foreground tracking-tight px-1 sm:px-2">
                         {image.name}
                       </h3>
                     </div>
@@ -52,22 +52,22 @@ const HeroSection = () => {
               ))}
               {/* Duplicate set for seamless loop */}
               {projectImages.map((image, index) => (
-                <div key={`second-${index}`} className="flex-shrink-0 px-4 sm:px-6 lg:px-8">
-                  <a 
-                    href={image.link} 
-                    target="_blank" 
+                <div key={`second-${index}`} className="flex-shrink-0 px-3 sm:px-6 lg:px-8">
+                  <a
+                    href={image.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="block group"
                   >
-                    <div className="w-[250px] h-[150px] sm:w-[300px] sm:h-[200px] lg:w-[400px] lg:h-[280px] rounded-xl overflow-hidden shadow-xl transition-transform duration-300 group-hover:scale-105">
+                    <div className="w-[280px] h-[180px] sm:w-[300px] sm:h-[200px] lg:w-[400px] lg:h-[280px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl transition-transform duration-300 group-hover:scale-105">
                       <img
                         src={image.src}
                         alt={image.alt}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="mt-3 sm:mt-4 text-center">
-                      <h3 className="text-sm sm:text-base lg:text-xl font-bold text-foreground tracking-tight px-2">
+                    <div className="mt-2 sm:mt-4 text-center">
+                      <h3 className="text-xs sm:text-base lg:text-xl font-bold text-foreground tracking-tight px-1 sm:px-2">
                         {image.name}
                       </h3>
                     </div>

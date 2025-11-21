@@ -11,13 +11,13 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     "name": "KALZANG FURBU",
-    "role": "Co-Founder",
+    "role": "Buddhist Text Specialist",
     "image": "/team/operation/kalsang.jpg",
     "working_group": "Operation"
   },
   {
     "name": "YONTEN WANGCHUK",
-    "role": "Co-Founder",
+    "role": "Education Specialist",
     "image": "/team/operation/yonten.jpg",
     "working_group": "Operation"
   },
@@ -238,12 +238,6 @@ const teamMembers: TeamMember[] = [
     "working_group": "Pecha Data & API Team"
   },
   {
-    "name": "TENZIN THUTOP",
-    "role": "Buddhist Text Specialist",
-    "image": "/team/pecha_server/thutop.jpg",
-    "working_group": "Pecha Data & API Team"
-  },
-  {
     "name": "TENZIN RABTEN",
     "role": "Buddhist Text Specialist",
     "image": "/team/pecha_server/rabten.jpg",
@@ -285,7 +279,7 @@ const teamMembers: TeamMember[] = [
     "image": "/team/pecha_server/tseyang.jpg",
     "working_group": "Pecha Data & API Team"
   },
-  
+
 ]
 
 const TeamSection = () => {
@@ -297,37 +291,37 @@ const TeamSection = () => {
   }, {} as Record<string, TeamMember[]>);
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-background">
+    <section className="py-8 sm:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16 px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground">
+          <div className="text-center mb-8 sm:mb-16">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-foreground">
               Meet Our Team
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              A collaborative community of practitioners, scholars, and technologists working 
+            <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              A collaborative community of practitioners, scholars, and technologists working
               together to bridge ancient wisdom with modern technology.
             </p>
           </div>
 
           {/* Working Groups */}
-          <div className="space-y-12 sm:space-y-16">
+          <div className="space-y-8 sm:space-y-16">
             {Object.entries(groupedMembers).map(([groupName, members]) => (
-              <div key={groupName} className="p-4 sm:p-6 lg:p-8">
-                <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8 border-b border-border pb-3 sm:pb-4 px-4">
+              <div key={groupName} className="py-4 sm:p-6 lg:p-8">
+                <h2 className="text-lg sm:text-2xl font-semibold text-foreground mb-4 sm:mb-8 border-b border-border pb-2 sm:pb-4">
                   {groupName}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
                   {members.map((member) => (
-                    <div 
+                    <div
                       key={member.name}
                       className="bg-card border border-border rounded-xl p-4 hover:shadow-lg transition-shadow"
                     >
                       <div className="flex items-start space-x-3 sm:space-x-4">
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-muted flex-shrink-0">
-                          <img 
-                            src={member.image} 
+                        <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-muted flex-shrink-0">
+                          <img
+                            src={member.image}
                             alt={member.name}
                             className="w-full h-full object-cover"
                           />
@@ -336,7 +330,7 @@ const TeamSection = () => {
                           <h3 className="text-base sm:text-lg font-semibold text-foreground mb-1 break-words">
                             {member.name}
                           </h3>
-                          <p className="text-sm sm:text-base text-primary font-medium mb-2 break-words">
+                          <p className="text-xs sm:text-base text-primary font-medium mb-2 break-words">
                             {member.role}
                           </p>
                           <div className="flex space-x-3">

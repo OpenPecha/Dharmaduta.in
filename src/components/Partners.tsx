@@ -1,7 +1,21 @@
 const partners = [
-  { name: 'OpenPecha Charitable Trust', a: 'https://www.openpecha.org/' },
-  { name: 'BDRC', a: 'https://www.bdrc.io/' },
-  { name: 'PaganTibet', a: 'https://www.crcao.fr/recherche/pagantibet-documenter-la-premiere-reconstruction-de-pratiques-prebouddhiques-au-tibet/?lang=en' },
+  {
+    name: 'OpenPecha',
+    a: 'https://www.openpecha.org/'
+  },
+  {
+    name: 'BDRC',
+    a: 'https://www.bdrc.io/'
+  },
+  {
+    name: 'PaganTibet',
+    a: 'https://www.crcao.fr/recherche/pagantibet-documenter-la-premiere-reconstruction-de-pratiques-prebouddhiques-au-tibet/?lang=en'
+  },
+  {
+    name: "Garchen Institute",
+    logo: "/collaborators_logo/garchen_logo.jpeg",
+    url: "https://garchen.net/"
+  }
 ];
 
 const Partners = () => {
@@ -14,10 +28,10 @@ const Partners = () => {
           </h2>
           <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-8">
             {partners.map((partner) => (
-              <a 
-                key={partner.name} 
-                href={partner.a} 
-                target="_blank" 
+              <a
+                key={partner.name}
+                href={partner.a}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex justify-center items-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
               >

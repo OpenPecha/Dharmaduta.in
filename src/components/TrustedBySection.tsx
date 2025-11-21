@@ -6,8 +6,8 @@ interface Collaborator {
 
 const collaborators: Collaborator[] = [
   {
-    name: "OpenPecha Charitable Trust",
-    logo: "/collaborators_logo/openpecha.png",
+    name: "OpenPecha",
+    logo: "/collaborators_logo/openpecha.svg",
     url: "https://www.openpecha.org/"
   },
   {
@@ -29,7 +29,7 @@ const collaborators: Collaborator[] = [
 
 const TrustedBySection = () => {
   return (
-    <section className="py-12 sm:py-16 bg-background">
+    <section className="py-8 sm:py-12 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -43,18 +43,15 @@ const TrustedBySection = () => {
                   href={collaborator.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center space-y-3 sm:space-y-4 hover:scale-105 transition-transform duration-300 cursor-pointer min-h-[120px] sm:min-h-[140px]"
+                  className="flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300 cursor-pointer min-h-[120px] sm:min-h-[140px]"
                 >
                   <div className="h-16 sm:h-20 lg:h-24 flex items-center justify-center w-full">
-                    <img 
-                      src={collaborator.logo} 
+                    <img
+                      src={collaborator.logo}
                       alt={collaborator.name}
                       className="max-h-14 sm:max-h-16 lg:max-h-20 w-auto object-contain transition-all duration-300"
                     />
                   </div>
-                  <p className="text-xs sm:text-sm font-medium text-muted-foreground text-center break-words px-2">
-                    {collaborator.name}
-                  </p>
                 </a>
               ))}
             </div>
