@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="w-7 h-7 sm:w-8 sm:h-8">
                 <img
-                  src="/logo.png"
+                  src="/dharmaduta_logo.png"
                   alt="Dharmaduta Services Logo"
                   className="w-full h-full object-contain"
                 />
@@ -80,7 +80,7 @@ const Footer = () => {
 
           <div className="border-t border-border pt-6 sm:pt-8 mt-6 sm:mt-8">
             <p className="text-muted-foreground text-xs sm:text-sm text-center px-4">
-              © 2024 Dharmaduta Services. We build Buddhist Technologies.
+              © 2025 Dharmaduta Services. We build Buddhist Technologies.
             </p>
           </div>
         </div>
