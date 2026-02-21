@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Base path for GitHub Pages deployment
-export const BASE_PATH = "/"
+export const BASE_PATH = ""
 
 // Helper function to get full image path
 export function getImagePath(imagePath: string): string {
