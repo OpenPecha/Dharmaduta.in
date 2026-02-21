@@ -160,12 +160,6 @@ const teamMembers: TeamMember[] = [
     "working_group": "Pecha AI Studio Team"
   },
   {
-    "name": "TENZIN GAYCHE",
-    "role": "Senior Software Developer I",
-    "image": "/team/pecha_studio/gayche.jpg",
-    "working_group": "Pecha AI Studio Team"
-  },
-  {
     "name": "GANGA GYATSO",
     "role": "Software Developer I",
     "image": "/team/pecha_studio/ganga.jpg",
