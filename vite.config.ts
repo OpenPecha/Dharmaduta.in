@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => ({
     componentTagger(),
     nojekyll(),
   ].filter(Boolean),
-  base: "/Dharmaduta.in",
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
