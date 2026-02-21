@@ -65,7 +65,7 @@ const Header = () => {
           >
             <div className="w-10 h-10 sm:w-12 sm:h-12">
               <img
-                src={getImagePath("/dharmaduta_logo.png")}
+                src={getImagePath("/logo.png")}
                 alt="Dharmaduta Services Logo"
                 className="w-full h-full object-contain"
               />
