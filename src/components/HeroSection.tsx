@@ -1,12 +1,14 @@
+import { getImagePath } from "../lib/utils";
+
 const HeroSection = () => {
   const projectImages = [
-    { src: "/webuddhist_web.png", alt: "WeBuddhist Web", name: "WEBUDDHIST", link: "https://webuddhist.com/" },
-    { src: "/webuddhist_app.png", alt: "WeBuddhist App", name: "WEBUDDHIST APP", link: "#" },
-    { src: "/sherab.png", alt: "Sherab", name: "SHERAB", link: "https://sherab.org/" },
-    { src: "/pecha_ai.png", alt: "Buddhist AI Tools", name: "Buddhist AI Tools", link: "https://buddhistai.tools/" },
-    { src: "/pecha_server.jpeg", alt: "Pecha Data & API", name: "PECHA DATA & API", link: "https://pecha-backend.web.app/swagger/#/" },
-    { src: "/buddhist_creators_convention_en.jpeg", alt: "Buddhist Creators Convention", name: "Buddhist Creators Convention", link: "http://buddhistcreators.com" },
-    { src: "/buddhist_creators_convention-hi.jpeg", alt: "बुद्धिस्ट सृजनकर्ता सम्मेलन", name: "बुद्धिस्ट सृजनकर्ता सम्मेलन", link: "http://buddhistcreators.com" }
+    { src: getImagePath("/webuddhist_web.png"), alt: "WeBuddhist Web", name: "WEBUDDHIST", link: "https://webuddhist.com/" },
+    { src: getImagePath("/webuddhist_app.png"), alt: "WeBuddhist App", name: "WEBUDDHIST APP", link: "#" },
+    { src: getImagePath("/sherab.png"), alt: "Sherab", name: "SHERAB", link: "https://sherab.org/" },
+    { src: getImagePath("/pecha_ai.png"), alt: "Buddhist AI Tools", name: "Buddhist AI Tools", link: "https://buddhistai.tools/" },
+    { src: getImagePath("/pecha_server.jpeg"), alt: "Pecha Data & API", name: "PECHA DATA & API", link: "https://pecha-backend.web.app/swagger/#/" },
+    { src: getImagePath("/buddhist_creators_convention_en.jpeg"), alt: "Buddhist Creators Convention", name: "Buddhist Creators Convention", link: "http://buddhistcreators.com" },
+    { src: getImagePath("/buddhist_creators_convention-hi.jpeg"), alt: "बुद्धिस्ट सृजनकर्ता सम्मेलन", name: "बुद्धिस्ट सृजनकर्ता सम्मेलन", link: "http://buddhistcreators.com" }
   ];
 
   return (

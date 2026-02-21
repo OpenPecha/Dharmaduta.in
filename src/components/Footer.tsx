@@ -1,5 +1,6 @@
 
 import { Mail, Linkedin, X, Youtube, Instagram, Facebook } from "lucide-react";
+import { getImagePath } from "../lib/utils";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="w-7 h-7 sm:w-8 sm:h-8">
                 <img
-                  src="/dharmaduta_logo.png"
+                  src={getImagePath("/dharmaduta_logo.png")}
                   alt="Dharmaduta Services Logo"
                   className="w-full h-full object-contain"
                 />

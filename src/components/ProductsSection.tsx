@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { getImagePath } from "../lib/utils";
 
 // Google Play Store Icon Component
 const GooglePlayIcon = ({ className }: { className?: string }) => (
@@ -29,7 +30,7 @@ const ProductsSection = () => {
 }
 
 const products: Product[] = [
-    
+
     {
       name: "WEBUDDHIST",
       title: "Comprehensive Buddhist Study Platform",
@@ -37,7 +38,7 @@ const products: Product[] = [
       description: "Whether you're seeking authentic Buddhist teachings, conducting research, or deepening your practice, WeBuddhist is at your disposal 24 hours a day, 7 days a week.",
       link: "https://webuddhist.com/",
       buttonText: "Try Now",
-      image: "/webuddhist_web.png"
+      image: getImagePath("/webuddhist_web.png")
     },
     {
       name: "WEBUDDHIST APP",
@@ -46,7 +47,7 @@ const products: Product[] = [
       description: "Mobile application for Buddhist practice, meditation guidance, and daily spiritual activities. Available on both iOS and Android platforms for practitioners worldwide.",
       link: "#",
       buttonText: "Coming soon",
-      image: "/webuddhist_app.png",
+      image: getImagePath("/webuddhist_app.png"),
     },
     {
       name: "SHERAB",
@@ -60,7 +61,7 @@ const products: Product[] = [
       ],
       link: "https://sherab.org/",
       buttonText: "Learn More",
-      image: "/sherab.png",
+      image: getImagePath("/sherab.png"),
       stores: ["App Store", "Google Play"]
     },
     {
@@ -75,7 +76,7 @@ const products: Product[] = [
       ],
       link: "https://buddhistai.tools/",
       buttonText: "Try Tools",
-      image: "/pecha_ai.png"
+      image: getImagePath("/pecha_ai.png")
     },
     {
       name: "PECHA DATA & API",
@@ -89,7 +90,7 @@ const products: Product[] = [
       ],
       link: "https://pecha-backend.web.app/swagger/#/",
       buttonText: "Explore API",
-      image: "/pecha_server.jpeg"
+      image: getImagePath("/pecha_server.jpeg")
     }
   ];
 

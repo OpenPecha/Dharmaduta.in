@@ -1,3 +1,5 @@
+import { getImagePath } from "../lib/utils";
+
 interface Founder {
   name: string;
   role: string;
@@ -8,17 +10,17 @@ const dataSpecialists: Founder[] = [
   {
     name: "TENZIN RABTEN",
     role: "Buddhist Data Specialist",
-    image: "/team/pecha_server/rabten.jpg"
+    image: getImagePath("/team/pecha_server/rabten.jpg")
   },
   {
     name: "TSERING",
     role: "Buddhist Data Specialist",
-    image: "/team/webuddhist/tsering.jpg"
+    image: getImagePath("/team/webuddhist/tsering.jpg")
   },
   {
     name: "GADE",
     role: "Buddhist Data Specialist",
-    image: "/team/webuddhist/gade.jpg"
+    image: getImagePath("/team/webuddhist/gade.jpg")
   }
 ];
 
@@ -26,17 +28,17 @@ const eduMgmtSpecialists: Founder[] = [
   {
     name: "KALZANG FURBU",
     role: "Education & Management Specialist",
-    image: "/team/operation/kalsang.jpg"
+    image: getImagePath("/team/operation/kalsang.jpg")
   },
   {
     name: "YONTEN WANGCHUK",
     role: "Education & Management Specialist",
-    image: "/team/operation/yonten.jpg"
+    image: getImagePath("/team/operation/yonten.jpg")
   },
   {
     name: "TENZIN NORYANG",
     role: "Education & Management Specialist",
-    image: "/team/operation/noryang.jpg"
+    image: getImagePath("/team/operation/noryang.jpg")
   }
 ];
 
@@ -44,17 +46,17 @@ const techSpecialists: Founder[] = [
   {
     name: "TENZIN KALDAN",
     role: "Buddhist Tech Specialist",
-    image: "/team/webuddhist/kaldan.jpg"
+    image: getImagePath("/team/webuddhist/kaldan.jpg")
   },
   {
     name: "TASHI TSERING",
     role: "Buddhist Tech Specialist",
-    image: "/team/pecha_server/tatse.jpg"
+    image: getImagePath("/team/pecha_server/tatse.jpg")
   },
   {
     name: "TENZIN KUNSANG",
     role: "Buddhist Tech Specialist",
-    image: "/team/pecha_studio/tenkus.jpg"
+    image: getImagePath("/team/pecha_studio/tenkus.jpg")
   }
 ];
 

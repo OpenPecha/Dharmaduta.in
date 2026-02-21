@@ -1,3 +1,5 @@
+import { getImagePath } from "../lib/utils";
+
 const EventsAndCommunity = () => {
   return (
     <div className="pt-20 sm:pt-24 bg-background text-foreground">
@@ -30,9 +32,9 @@ const EventsAndCommunity = () => {
                   className="block hover:opacity-90 transition-opacity"
                 >
                   <div className="aspect-[3/4] w-full">
-                    <img 
-                      src="/buddhist_creators_convention_en.jpeg" 
-                      alt="Buddhist Creators Convention 2026 - English" 
+                    <img
+                      src={getImagePath("/buddhist_creators_convention_en.jpeg")}
+                      alt="Buddhist Creators Convention 2026 - English"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -46,9 +48,9 @@ const EventsAndCommunity = () => {
                   className="block hover:opacity-90 transition-opacity"
                 >
                   <div className="aspect-[3/4] w-full">
-                    <img 
-                      src="/buddhist_creators_convention-hi.jpeg" 
-                      alt="Buddhist Creators Convention 2026 - Hindi" 
+                    <img
+                      src={getImagePath("/buddhist_creators_convention-hi.jpeg")}
+                      alt="Buddhist Creators Convention 2026 - Hindi"
                       className="w-full h-full object-cover"
                     />
                   </div>

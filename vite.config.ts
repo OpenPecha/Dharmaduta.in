@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path";
+import path from "node:path";
 import { componentTagger } from "lovable-tagger";
+import { nojekyll } from "./vite-plugin-nojekyll";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -14,6 +15,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' &&
     componentTagger(),
+    nojekyll(),
   ].filter(Boolean),
   base: "/Dharmaduta.in",
   resolve: {

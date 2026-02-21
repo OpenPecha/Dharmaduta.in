@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { getImagePath } from "../lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,9 +64,9 @@ const Header = () => {
             className="flex items-center space-x-2 sm:space-x-3 min-h-[44px]"
           >
             <div className="w-10 h-10 sm:w-12 sm:h-12">
-              <img 
-                src="/dharmaduta_logo.png" 
-                alt="Dharmaduta Services Logo" 
+              <img
+                src={getImagePath("/dharmaduta_logo.png")}
+                alt="Dharmaduta Services Logo"
                 className="w-full h-full object-contain"
               />
             </div>

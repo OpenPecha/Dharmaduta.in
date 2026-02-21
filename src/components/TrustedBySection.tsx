@@ -1,3 +1,5 @@
+import { getImagePath } from "../lib/utils";
+
 interface Collaborator {
   name: string;
   logo: string;
@@ -7,22 +9,22 @@ interface Collaborator {
 const collaborators: Collaborator[] = [
   {
     name: "OpenPecha",
-    logo: "/collaborators_logo/openpecha_logo.svg",
+    logo: getImagePath("/collaborators_logo/openpecha_logo.svg"),
     url: "https://www.openpecha.org/"
   },
   {
     name: "BDRC",
-    logo: "/collaborators_logo/BDRC_Logo.png",
+    logo: getImagePath("/collaborators_logo/BDRC_Logo.png"),
     url: "https://www.bdrc.io/"
   },
   {
     name: "PaganTibet",
-    logo: "/collaborators_logo/pagan_logo.png",
+    logo: getImagePath("/collaborators_logo/pagan_logo.png"),
     url: "https://www.crcao.fr/recherche/pagantibet-documenter-la-premiere-reconstruction-de-pratiques-prebouddhiques-au-tibet/?lang=en"
   },
   {
     name: "Garchen Institute",
-    logo: "/collaborators_logo/garchen_logo.jpeg",
+    logo: getImagePath("/collaborators_logo/garchen_logo.jpeg"),
     url: "https://garchen.net/"
   }
 ];
